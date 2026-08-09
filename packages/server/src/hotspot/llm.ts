@@ -1,5 +1,5 @@
 /**
- * LLM 客户端（OpenAI-compatible），复用 novel-studio 根 .env 的 LLM_* 配置。
+ * LLM 客户端（OpenAI-compatible），复用 XianxiaForge 根 .env 的 LLM_* 配置。
  * 提供带 JSON 解析与重试的聊天补全封装（容忍 ```json 围栏、噪声、max_tokens 截断）。
  */
 import OpenAI from 'openai';

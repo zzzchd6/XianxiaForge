@@ -47,7 +47,7 @@ AI小说创作系统 — 基于诛仙世界观数据库的多Agent管线章节�
 ## 2. 项目结构
 
 ```
-novel-studio/
+XianxiaForge/
 ├── .env                          # 环境变量（数据库连接、LLM配置）
 ├── package.json                  # monorepo根配置
 ├── pnpm-workspace.yaml           # pnpm工作区定义
@@ -1609,7 +1609,7 @@ return json as T
 
 **背景**：此前前端无"当前项目"概念，所有项目作用域页面硬取 `useProjects()→projects?.[0]?.id`。后端项目列表按 `createdAt` 升序，故 `projects[0]` 恒为第一个项目——新建的第二个项目在任何页面都无法生效（"第二个项目啥也做不了"）。
 
-**方案**：`hooks/useCurrentProject.tsx` 提供 `ProjectProvider`（React Context + `localStorage` 持久化，键 `novel-studio:currentProjectId`），在 `App.tsx` 根部包裹全部路由。存储的 ID 若不在项目列表中（如项目被删），自动回退到列表首个项目。
+**方案**：`hooks/useCurrentProject.tsx` 提供 `ProjectProvider`（React Context + `localStorage` 持久化，键 `xianxiaforge:currentProjectId`），在 `App.tsx` 根部包裹全部路由。存储的 ID 若不在项目列表中（如项目被删），自动回退到列表首个项目。
 
 对外 API：
 
@@ -1936,7 +1936,7 @@ curl http://localhost:3456/api/health
 ### 14.5 Epic5 项目导出/导入 zip
 
 - **路由命名警示**：zip 导出路由为 `GET /api/projects/:pid/export-package`。不得使用 `/projects/:pid/export`——该路径已被 chapters.ts 既有整书 txt/md 导出占用，且 chaptersRouter 先于 exportRouter 注册，Hono 按注册顺序匹配会导致新路由永不可达。
-- 导出含 manifest.json（format='novel-studio-export'）+ 世界观/人物/大纲/章节/状态等全量数据；导出侧每个查询以 `safe()` 容错包裹（缺失表/列 → 空数据 + warn，不阻断整包）。
+- 导出含 manifest.json（format='xianxiaforge-export'）+ 世界观/人物/大纲/章节/状态等全量数据；导出侧每个查询以 `safe()` 容错包裹（缺失表/列 → 空数据 + warn，不阻断整包）。
 - 导入：`POST /api/projects/import`（FormData field=file），单事务 13 步插入 + 旧→新 ID 重映射；`readJson` 带 ISO 日期 reviver（JSON 序列化把 Date 变字符串，drizzle timestamp 列插入需 Date 对象，否则 `toISOString is not a function`）。
 - 跨库漂移场景（目标库缺表）导入会失败，同库往返安全——导入在单事务内无法逐表 catch。
 - 前端：Dashboard 每项目卡片「导出」按钮（blob 下载）+ 顶部「导入项目」按钮（隐藏 file input，导入后刷新项目列表）。
