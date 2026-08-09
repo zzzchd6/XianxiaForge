@@ -6,7 +6,7 @@
 
 **AI 不是代笔，是世界引擎——你导演故事，剩下的交给仙侠工坊。**
 
-*基于「诛仙」结构化世界观的多 Agent 管线 AI 长篇小说创作工作台*
+*基于仙侠结构化世界观的多 Agent 管线 AI 长篇小说创作工作台*
 
 [![Version](https://img.shields.io/badge/version-v1.5.1-blue)](https://github.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6)](https://www.typescriptlang.org/)
@@ -155,7 +155,7 @@ Auditor 30维审计                                ├ 分支生成    │
 ├ 先天禀赋(166选3-8)    ├ 五感兵器卡                 ├ 千人千面个人变种
 │  ├ 3-8正向/每类≤2     ├ 强化·进化·变异·融合         ├ 配套招式自动生成
 │  └ 23选1小缺陷         ├ 烙印·羁绊·魔改·克制         ├ 武学档案融合小传
-└ AI判词(七绝+考语)      ├ 0.1% 诛仙遗珍彩蛋           └ 确定性随机引擎（零token）
+└ AI判词(七绝+考语)      ├ 0.1% 仙古遗珍彩蛋           └ 确定性随机引擎（零token）
                          └ 数值平衡数学约束 🔒
 ```
 
@@ -227,7 +227,7 @@ Auditor 30维审计                                ├ 分支生成    │
           ┌─────────────┴─────────────┐
           ▼                           ▼
 ┌──────────────────┐      ┌──────────────────────┐
-│ 🗄️ 诛仙库 novel_db │      │ 🗄️ 创作库 novel_studio │
+│ 🗄️ 世界库 world_db │      │ 🗄️ 创作库 novel_studio │
 │ 世界观知识源(RAG)   │      │ 创作资产(读写)         │
 │ 18 核心表          │      │ Drizzle 56 表         │
 │ pgvector 512维向量 │      │ 全链路可追溯           │
@@ -257,7 +257,7 @@ Auditor 30维审计                                ├ 分支生成    │
 - **Node.js** ≥ 20 LTS
 - **pnpm** ≥ 9
 - **PostgreSQL** ≥ 15（含 pgvector 扩展）
-- 诛仙小说数据库（novel_db）已导入
+- 仙侠世界数据库（world_db）已导入
 
 ### 安装
 
