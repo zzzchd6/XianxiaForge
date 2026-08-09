@@ -1,12 +1,12 @@
 # 指尖仙侠 技术手册
 
-AI小说创作系统 — 基于诛仙世界观数据库的多Agent管线章节生成平台
+AI小说创作系统 — 基于仙侠世界观数据库的多Agent管线章节生成平台
 
 ---
 
 ## 1. 系统概述
 
-指尖仙侠 是一个本地化部署的AI小说创作工具，核心能力是：以诛仙小说结构化数据库（33表/3层/pgvector 512维向量）为世界观知识源，通过多Agent管线自动生成符合设定的小说章节。
+指尖仙侠 是一个本地化部署的AI小说创作工具，核心能力是：以源世界小说结构化数据库（33表/3层/pgvector 512维向量）为世界观知识源，通过多Agent管线自动生成符合设定的小说章节。
 
 系统采用 TypeScript 全栈开发，pnpm monorepo 组织，前后端分离架构，一键启动。
 
@@ -14,7 +14,7 @@ AI小说创作系统 — 基于诛仙世界观数据库的多Agent管线章节�
 
 ### 1.1 核心特性
 
-- 双库联动：诛仙库（RAG检索 + 世界观CRUD）+ 创作库（读写项目数据）
+- 双库联动：世界库（RAG检索 + 世界观CRUD）+ 创作库（读写项目数据）
 - 多Agent管线：ContextComposer → WriterAgent → AuditorAgent → ReviserAgent，生成后由 StateExtractorAgent 自动抽取人物状态/时间线（pending待确认）
 - SSE流式输出：生成过程实时推送到前端
 - OpenAI-compatible接口：支持任意兼容API（DeepSeek/OpenAI/Claude/本地模型）
@@ -64,7 +64,7 @@ XianxiaForge/
 │   │       ├── types.ts          # 内部类型定义
 │   │       ├── db/
 │   │       │   ├── index.ts      # 双库连接实例
-│   │       │   ├── zhuxian-schema.ts   # 诛仙库Drizzle Schema
+│   │       │   ├── zhuxian-schema.ts   # 世界库Drizzle Schema
 │   │       │   └── creative-schema.ts  # 创作库Drizzle Schema
 │   │       ├── llm/
 │   │       │   └── client.ts     # LLM客户端（流式/非流式）
@@ -122,7 +122,7 @@ XianxiaForge/
 │   │       │   ├── weapon-bond.ts       # 因果羁绊自动匹配（三维度评分，7.31）
 │   │       │   ├── weapon-demonize.ts   # 走火入魔魔改/净化（7.31）
 │   │       │   ├── weapon-counter.ts    # 天命克制计算（7.31）
-│   │       │   ├── weapon-relic.ts      # 诛仙遗珍彩蛋（0.1%，7.31）
+│   │       │   ├── weapon-relic.ts      # 仙古遗珍彩蛋（0.1%，7.31）
 │   │       │   ├── trait-composer.ts    # 方向组合式特质零token组合引擎（7.30）
 │   │       │   ├── technique-random.ts  # 功法确定性随机引擎（6.28）
 │   │       │   ├── technique-variant.ts # 千人千面个人变种引擎（6.28）
@@ -227,12 +227,12 @@ XianxiaForge/
 - Node.js >= 20 LTS
 - pnpm >= 9
 - PostgreSQL >= 15（含 pgvector 扩展）
-- 诛仙小说数据库（novel_db）已导入
+- 源世界小说数据库（novel_db）已导入
 
 ### 3.2 环境变量 (.env)
 
 ```env
-# ===== 诛仙库（只读，世界观RAG） =====
+# ===== 世界库（只读，世界观RAG） =====
 ZHUXIAN_DB_HOST=localhost
 ZHUXIAN_DB_PORT=5432
 ZHUXIAN_DB_NAME=novel_db
@@ -283,9 +283,9 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 
 ## 4. 数据库设计
 
-### 4.1 诛仙库 / 世界观库 (novel_db) — 可写多书籍（WS0 升级）
+### 4.1 世界库 / 世界观库 (novel_db) — 可写多书籍（WS0 升级）
 
-世界观知识源，18张表，3层结构，含 pgvector 512维向量索引。WS0 起由「只读」升级为**可写多书籍世界观库**：`novel_book` 增 `description`/`source_type`/`cover_url` 三字段，`source_type='system'` 的诛仙三书（book_id=1/2/3）只读保护（禁改禁删），`source_type='user'` 的自建书可写（实体 CRUD + 跨书引入 + 文本抽取入库）。RAG 检索与生成管线当前仍锁定 bookId=1（WS5 二期解锁用户书消费）。
+世界观知识源，18张表，3层结构，含 pgvector 512维向量索引。WS0 起由「只读」升级为**可写多书籍世界观库**：`novel_book` 增 `description`/`source_type`/`cover_url` 三字段，`source_type='system'` 的系统三书（book_id=1/2/3）只读保护（禁改禁删），`source_type='user'` 的自建书可写（实体 CRUD + 跨书引入 + 文本抽取入库）。RAG 检索与生成管线当前仍锁定 bookId=1（WS5 二期解锁用户书消费）。
 
 **核心表（系统使用的）：**
 
@@ -326,16 +326,16 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 | generation_log | 生成日志 | id, project_id, task_id, agent_name, action, detail(jsonb) |
 | pipeline_checkpoint | 管线断点（架构升级v1.3 Epic1） | id, task_id(可空,后验独立工作流手动触发时无任务), step_name(如step3_writer/post_state_extract), step_order(主管线10-50,后验步骤≥100), step_data(jsonb 步骤产出,断点续跑恢复用), status(pending/running/completed/failed/skipped), token_input, token_output, error_message |
 | scene_node | 场景脚本节点 | id, project_id, outline_id, sort_order, title, time_setting, location_desc, core_event, effect_and_result, foreshadowing_note, scene_type(key/transition/foreshadow), is_key_plot, ai_status(manual/generated/refined), metadata(jsonb 含chapterNumber/fromKeyEvent，导入自卷大纲keyEvents时记录对应章号) |
-| scene_node_character | 场景-人物关联 | id, scene_node_id, character_id(诛仙库人物ID), appearance_type(protagonist/core_support/mention), role_note, sort_order |
-| scene_node_element | 场景-要素关联 | id, scene_node_id, element_type(location/skill/item/monster/material/daily_item/foreshadow_template), element_id(诛仙库主键), element_note, foreshadow_direction(plant/payoff), sort_order |
+| scene_node_character | 场景-人物关联 | id, scene_node_id, character_id(世界库人物ID), appearance_type(protagonist/core_support/mention), role_note, sort_order |
+| scene_node_element | 场景-要素关联 | id, scene_node_id, element_type(location/skill/item/monster/material/daily_item/foreshadow_template), element_id(世界库主键), element_note, foreshadow_direction(plant/payoff), sort_order |
 | scene_node_relation | 节点间关系连线 | id, source_node_id, target_node_id, relation_type(causal/sequential/foreshadow_echo), description |
 | scene_edit_log | 场景脚本对话修改日志 | id, project_id, outline_id, user_instruction, parsed_plan(jsonb), snapshot_before(jsonb), snapshot_after(jsonb), apply_status(pending/applied/rolled_back), operation_type |
-| character_state_snapshot | 人物状态快照 | id, project_id, character_id(诛仙库人物ID,可空), character_name, volume_no, chapter_no(0=初始), location, realm, injury, mental_state, possessed_items(jsonb), extra_state(jsonb), status(pending/confirmed), source(manual/auto/bootstrap), task_id |
+| character_state_snapshot | 人物状态快照 | id, project_id, character_id(世界库人物ID,可空), character_name, volume_no, chapter_no(0=初始), location, realm, injury, mental_state, possessed_items(jsonb), extra_state(jsonb), status(pending/confirmed), source(manual/auto/bootstrap), task_id |
 | timeline_milestone | 时间线里程碑 | id, project_id, volume_no, chapter_no(0=初始), story_time, title, description, importance(key/normal), status(pending/confirmed), source(manual/auto/bootstrap), task_id, sort_order |
 | foreshadow_thread | 伏笔台账 | id, project_id, title, description, hint_clue(text 埋设线索关键词,模块2), status(pending待埋入/planted/resolved/abandoned), priority(high/normal/low), plant_chapter, resolve_chapter, scene_ids(jsonb 关联场景节点ID数组), source_scene_id(从哪条note提升) |
 | chapter_branch_option | 剧情分支选项 | id, project_id, source_chapter_plan_id(来源章计划id), option_title, option_description, next_chapter_intent, next_scene_hint(jsonb), impact_tags(jsonb 影响标签数组), option_type(varchar20 分支类型 normal=常规/encounter=奇遇,默认normal), source_materials(jsonb 本选项借鉴的剧情素材 [{table,id,title,label}],默认[]), main_direction(varchar32 主方向编码,方向体系), secondary_directions(jsonb 次方向编码数组≤2), direction_match_score(int 方向匹配度0-100), is_selected, created_at |
 | style_audit_record | 文风校验记录 | id, project_id, chapter_plan_id, generation_task_id(可空), config_snapshot(jsonb 校验时文风配置快照), overall_score(int 百分制), dimension_scores(jsonb 各维度分), issues(jsonb StyleIssue[]含excerpt), issue_count, status(completed/failed), created_at |
-| character_growth_stage | 人物成长阶段（模块3） | id, project_id, character_id(诛仙库人物ID), character_name, stage_no(阶段序号), name(阶段名), traits(jsonb 特质数组), description, chapter_start(生效起始章,NULL=不限), chapter_end(生效结束章,NULL=不限), created_at |
+| character_growth_stage | 人物成长阶段（模块3） | id, project_id, character_id(世界库人物ID), character_name, stage_no(阶段序号), name(阶段名), traits(jsonb 特质数组), description, chapter_start(生效起始章,NULL=不限), chapter_end(生效结束章,NULL=不限), created_at |
 | custom_character_relation | 自定义人物关系（模块8） | id, project_id, char_a_id, char_a_name, char_b_id, char_b_name, relation_type(关系类型), description(关系描述), interact_pattern(互动模式), is_active(是否生效), created_at |
 | project_quote_lib | 金句库（模块11） | id, project_id, chapter_id(来源章节), character_name(角色名), quote_text(金句当前文本,美化后为选中版), original_text(提取原文,美化前), polished_text(已应用的美化版本), polished_versions(jsonb 三档美化版本[{style:conservative/balanced/deep,text,note}]), scores(jsonb 五维评分{imagery意境/rhythm韵律/philosophy哲理/emotion情感/viral传播点}+total), grade(legendary≥90/good80-89/candidate70-79), polish_status(none/polished/applied 美化状态), applied_at(美化版应用时间), scene_desc(场景描述), quality_score(int 质量分), is_collected(是否收藏), source_type(来源 auto自动/manual手动/import导入), created_at |
 | custom_skill_lib | 自定义功法（模块9，**阶段6已退役**：保留为空表，功法能力由 custom_technique 取代） | id, project_id, name, grade(品阶黄/玄/地/天/仙), grade_level(1-3层), skill_type, core_effect, effects(jsonb 特效数组含type/rarity/strength), side_effects, description, growth_type(base/fusion/mutation/upgrade/evolution), base_entity_id, source_entity_ids(jsonb), evolution_stage, is_evolved, linked_character_ids(jsonb 关联人物ID数组), is_deleted, created_at |
@@ -350,7 +350,7 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 | relation_impact_snapshot | 关系影响快照（阶段4） | id, project_id, char_a_id/char_b_id(约定a<b), char_a_name/char_b_name, volume_no, chapter_no, rel_type(师徒/仇敌等), relation_values(jsonb 全量关系维度{affection,trust,respect,intimacy}), relation_delta(jsonb 本次变更量), status(pending/confirmed), source(branch/manual/bootstrap), task_id |
 | custom_weapon | 自定义武器（神兵坊） | id, project_id, name, category(martial/taoist/demonic/strange/array), type(形制), grade(凡造/灵淬/宝胎/道纹/仙蜕/神蕴), grade_level(1-3), fake_grade(伪装底蕴), base_material, forge_traits/soak_traits/attach_traits/cavity_traits(jsonb 四类特质ID数组), soul_refine_level(none/soul_mark/blood_merge/dao_resonance), core_direction(jsonb), growth_type(base/fusion/mutation/upgrade/evolution), base_entity_id, source_entity_ids(jsonb), evolution_stage, is_evolved, linked_character_ids(jsonb), breakthrough_narrative(突破叙事片段), reverse_mode(jsonb), source_ref(jsonb,引用来源{table,id,name}), entity_status(draft草稿/official正式,实体自动维护), chapter_updates(jsonb 自动维护更新记录[{chapterNo,volumeNo,updateText,category,extractedAt}]), is_deleted |
 | weapon_lore | 武器文案（兵器谱） | id, project_id, weapon_id, name(生成名号), fake_name(对外化名), intro(一句话简介), moves(jsonb 配套招式[{name,desc}]), is_current(当前生效版本，一武器可存多版本) |
-| custom_character | 自定义人物（三步向导） | id, project_id, name, gender, race_category(7大类), race_sub(56小类), position(实力档位 chenjie/tongtu/dazhe/zhelong/tianyou), fake_position(伪装定位), stance(0-100 立场值), inner_personality(内在性格单选), outer_personality(jsonb 外在标签2-3个), talents(jsonb 天赋3正向+可选1缺陷), strengths/weaknesses(jsonb 种族擅长/短板), description(LLM小传300-500字), verdict_poem(判词七绝), verdict_comment(二字考语), dao_title(套装道号), combo_ability(套装大招), source_ref(jsonb,引用来源{table,id,name}), entity_status(draft草稿/official正式,实体自动维护), chapter_updates(jsonb 自动维护更新记录), is_deleted；**对外暴露负数ID**（真实自增ID取负），与诛仙库正数ID共存分流 |
+| custom_character | 自定义人物（三步向导） | id, project_id, name, gender, race_category(7大类), race_sub(56小类), position(实力档位 chenjie/tongtu/dazhe/zhelong/tianyou), fake_position(伪装定位), stance(0-100 立场值), inner_personality(内在性格单选), outer_personality(jsonb 外在标签2-3个), talents(jsonb 天赋3正向+可选1缺陷), strengths/weaknesses(jsonb 种族擅长/短板), description(LLM小传300-500字), verdict_poem(判词七绝), verdict_comment(二字考语), dao_title(套装道号), combo_ability(套装大招), source_ref(jsonb,引用来源{table,id,name}), entity_status(draft草稿/official正式,实体自动维护), chapter_updates(jsonb 自动维护更新记录), is_deleted；**对外暴露负数ID**（真实自增ID取负），与世界库正数ID共存分流 |
 | custom_technique | 自定义功法（九大道则） | id, project_id, name, main_dao(主修道则9选1), assist_dao(jsonb 辅修0-3门), guidance_depth(rudimentary/complete/essential 指引深度非品级), fake_depth(藏拙), style_type(cultivate/attack/defense/assist/special), threshold(jsonb 适配门槛), core_traits(jsonb 本源运用方向), practice_path(行功路线), body_mark(jsonb 身体印记), usage_skills(jsonb), abilities(jsonb 分道境神通[{daoRealm:入微/化境/合道/超脱}]), backlash(jsonb 反噬), inheritance(传承方式), evolution(jsonb 演化方向), inherent_conflict(先天矛盾), core_direction/fit_monk(jsonb 自动标签), description(LLM详解500-700字), growth_type(base/evolution/fusion/mutation), base_entity_id, source_entity_ids(jsonb), linked_character_ids(jsonb 自定义人物ID), source_ref(jsonb,引用来源{table,id,name}), entity_status(draft草稿/official正式,实体自动维护), chapter_updates(jsonb 自动维护更新记录), is_deleted |
 | character_technique_variant | 人物功法个人变种（千人千面） | id, project_id, character_id(custom_character.id), base_technique_id, variant_name, rarity(common/remarkable/rare 60/30/10), dao_weight_offset(jsonb 道则权重偏移), trait_offset(jsonb), ability_variant(jsonb 神通变种), backlash_offset(jsonb), body_mark(jsonb 专属印记), exclusive_skill(jsonb), cultivation_effect(jsonb 修炼适配{speed,bottleneck,risk,note}), version(变种版本号), is_deleted |
 | custom_map | 山河舆图-地图（山河舆图） | id, project_id, name, width(int 画布宽), height(int 画布高), background(背景样式,可空), description, is_default(默认地图,至少保留一张不可删), created_at |
@@ -369,7 +369,7 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 **场景脚本表说明：**
 - `scene_node` 通过 `outline_id` 归属到某一卷大纲，`sort_order` 控制节点排序
 - 人物与要素分两张关联表：人物用 `scene_node_character`（区分出场类型），地点/功法/法宝/妖兽统一用 `scene_node_element`（以 `element_type` 区分）
-- `character_id` / `element_id` 均为诛仙库对应表的主键，仅存ID不冗余名称
+- `character_id` / `element_id` 均为世界库对应表的主键，仅存ID不冗余名称
 - `scene_edit_log` 记录自然语言指令修改的前后快照，支持回滚
 
 **全局状态追踪表说明（防长篇设定漂移）：**
@@ -397,17 +397,17 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 **文风校验表说明（章节文风校验，需求13）：**
 - `style_audit_record` 以"章节"为粒度存储一次专项文风审计的结果；`chapter_plan_id` 关联章节稳定身份（跨版本不变），`config_snapshot` 保存校验当时的文风引擎配置（StyleContext）用于历史追溯与配置变更对比
 - `dimension_scores` 为各维度分项得分（0-100），`overall_score` 为各激活维度得分均值（确定性计算）；`issues` 为 `StyleIssue[]`，每条含 `dimension/severity/description/suggestion/excerpt`，`excerpt` 为违规原文片段供前端定位高亮
-- 校验标准 100% 复用文风引擎配置（诛仙库 `style_global_config`，按项目 `source_book_id` 隔离、缺省回退书1），不新增独立规则；配置变更后重新校验即同步生效
+- 校验标准 100% 复用文风引擎配置（世界库 `style_global_config`，按项目 `source_book_id` 隔离、缺省回退书1），不新增独立规则；配置变更后重新校验即同步生效
 - 状态 `completed`/`failed`；同一章节可多次校验形成历史，按 `created_at` 倒序
 
 **人物成长阶段表说明（模块3 成长弧光卡点）：**
 - `character_growth_stage` 以"人物×阶段"为粒度定义角色在不同章节区间的成长状态（如"青云门初学→第1-30章→特质：青涩/倔强/重情义"）
 - `chapter_start`/`chapter_end` 为 NULL 表示不限（从开篇起/到结尾止），上下文构建时按当前章号匹配生效阶段，同一人物多阶段命中取 `stage_no` 最大者
-- `character_id` 引用诛仙库人物ID（只读引用，不写诛仙库），`character_name` 冗余存储便于展示
+- `character_id` 引用世界库人物ID（只读引用，不写世界库），`character_name` 冗余存储便于展示
 - 注入管线：`ContextPackage.growthStages` → Writer【出场人物设定】块渲染"★当前成长阶段"→ Auditor 第15维"人物阶段一致性"审查言行是否违背阶段特质
 
 **自定义人物关系表说明（模块8 人物关系动态推演）：**
-- `custom_character_relation` 存储用户自定义/AI推演的人物间关系（如"师徒→决裂→仇敌"的演变），独立于诛仙库原生 `lib_character_relation`
+- `custom_character_relation` 存储用户自定义/AI推演的人物间关系（如"师徒→决裂→仇敌"的演变），独立于世界库原生 `lib_character_relation`
 - 上下文构建时与原生关系合并：同一对人物若存在自定义关系则覆盖原生（优先级更高），标记 `source='custom'`；Writer/Auditor 对自定义关系以★标识并附互动模式描述
 - `is_active` 控制是否参与上下文注入（可临时禁用某条关系而不删除）
 - AI推演：`POST /projects/:id/relations/infer` 输入两人物+触发事件，LLM（温度0.9）返回3个候选关系演变方案供用户选择确认
@@ -424,7 +424,7 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 **山河舆图表说明（山河舆图模块）：**
 - `custom_map` 以项目为粒度存多张地图（画布尺寸 width/height），`is_default` 标记默认地图；DELETE 守卫"至少保留一张地图"。首次访问经 `getOrCreateDefaultMap(projectId)` 自动创建默认地图（`services/custom-map-helpers.ts`）
 - `custom_location` 存地点点位（x/y 画布坐标），`location_type` 七类（sect宗门/city城镇/secret_realm秘境/danger险地/teleport传送阵/battlefield战场/generic通用），`danger_level` 四档（safe/normal/danger/deadly，`mapDangerLevel` 由 location_type 推断默认值），`affiliated_faction` 归属势力文本
-- 地点来源三通道，均记 `metadata.source`：`manual` 前端布点；`auto-extract` 实体自动维护管线从正文抽取（draft 草稿，带 chapterNo/volumeNo）；`zhuxian-import` 诛仙库地点批量导入（`POST /import-zhuxian` 上限500条，draft + 地图边缘坐标 `edgeCoordinate` + metadata.zhuxianId 溯源）
+- 地点来源三通道，均记 `metadata.source`：`manual` 前端布点；`auto-extract` 实体自动维护管线从正文抽取（draft 草稿，带 chapterNo/volumeNo）；`zhuxian-import` 世界库地点批量导入（`POST /import-zhuxian` 上限500条，draft + 地图边缘坐标 `edgeCoordinate` + metadata.zhuxianId 溯源）
 - `entity_status` draft→official 的转正路径：前端确认按钮 `POST :locId/confirm`，或 `PUT` 更新时携带 `confirm:true`
 - `custom_location_link` 存地点间路径连线（from/to 双向语义，无向图），`link_type` 四类（main_road官道/path小径/teleport传送/secret_path秘径），各方式通行时间字段（travel_time_walk/fly/ship/teleport，分钟）
 - **行程时间估算**（`services/travel-time.ts`）：Dijkstra 最短路，速度常量御剑 0.1 分钟/单位（偏宽松）等；`GET /custom-locations/distance?fromId=&toId=` 返回 estimateTravel（分钟换算可读文案）+ pathNames（途经地点）
@@ -435,16 +435,16 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 - `custom_character` / `custom_weapon` / `custom_technique` 三表共用 `entity_status`（draft/official）+ `chapter_updates`(jsonb) 两列，支持"章节生成后自动发现新实体→草稿→人工转正"闭环
 - **管线接入**：`runner.ts` 步骤7.8 正文定稿后 `await processChapterEntities()`（`services/custom-entity-pipeline.ts`，try/catch 包裹不阻断），成功后 SSE 推送 `entities_extracted` 事件（含新增人物/武器/功法/地点计数）
 - **配置**（`resolveEntityMaintainConfig` 读 `generation_config`）：`autoExtractCustomEntities`（总开关，缺省开）、`entitySensitivity`（strict/balanced/loose 抽取灵敏度，strict 档无对白不抽人物）、`extractWeapons`/`extractTechniques`/`extractLocations`（分项开关，缺省开）
-- **去重三保险**：LLM 提取前先收集本项目已有实体名 + 诛仙库对应表名单（人物/法宝/功法/地点）喂给 Agent 要求排除；入库前再按名字 Set 双保险比对（含诛仙库名单）；`strict` 档追加"无对白不抽"过滤，minor 级 mentionCount<2 且无对白者丢弃
+- **去重三保险**：LLM 提取前先收集本项目已有实体名 + 世界库对应表名单（人物/法宝/功法/地点）喂给 Agent 要求排除；入库前再按名字 Set 双保险比对（含世界库名单）；`strict` 档追加"无对白不抽"过滤，minor 级 mentionCount<2 且无对白者丢弃
 - **草稿内容差异**：人物草稿带 description（≤500字），地点草稿带 description + 默认地图边缘坐标；武器/功法草稿仅占位常量（无 description，待人工补全）
 - **已有实体增量更新**：正文中老实体出现新信息（境界突破/获得新能力等）时以 `{chapterNo,volumeNo,updateText,category,extractedAt}` 追加进 `chapter_updates`（同章号去重覆盖），不改实体主字段；前端工坊页以徽章/时间线展示
 - 前端触点：众生百态（CharacterGallery）草稿筛选+转正/忽略徽章；铸器天工、道法自然同理；地点草稿进山河舆图待确认
 
 **成长工坊表说明（模块9 功法/法宝成长工坊）：**
-- `custom_skill_lib` / `custom_magic_item_lib` 结构对称，存储用户创建或经融合/变异/进化产生的自定义功法/法宝实体，独立于诛仙库（只读）
+- `custom_skill_lib` / `custom_magic_item_lib` 结构对称，存储用户创建或经融合/变异/进化产生的自定义功法/法宝实体，独立于世界库（只读）
 - 品阶体系：黄阶→玄阶→地阶→天阶→仙阶，每阶3层（`grade_level` 1-3）；`effects`(jsonb) 为特效数组 `[{name, type(element|spacetime|soul|body|curse|domain), rarity(normal|rare|legendary), description, strength}]`，品阶约束特效稀有度（黄/玄仅normal，地阶可rare，天阶+可legendary）
 - `growth_type` 标记实体来源：base(用户创建) / fusion(融合) / mutation(变异) / upgrade(强化) / evolution(进化)；`source_entity_ids` 记录来源实体ID数组
-- `linked_character_ids`(jsonb) 关联使用此功法/法宝的人物ID数组（诛仙库人物ID），上下文构建时按出场人物匹配注入
+- `linked_character_ids`(jsonb) 关联使用此功法/法宝的人物ID数组（世界库人物ID），上下文构建时按出场人物匹配注入
 - `entity_growth_record` 记录每次成长操作的前后快照（`before_snapshot`/`after_snapshot` 完整实体JSON），支持回滚（revert 将 before_snapshot 写回实体）
 - 进化为预览确认制：LLM 生成进化预览（不入库），用户确认后 `POST /confirm` 才真正插入新实体；融合/变异同理（先预览后确认），强化为直接执行（原地修改）
 
@@ -568,7 +568,7 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 | POST | /api/projects/:id/state/timeline | 手动创建时间线 |
 | PUT | /api/state/timeline/:tid | 更新时间线 |
 | POST | /api/state/timeline/:tid/confirm | 确认时间线 |
-| POST | /api/projects/:id/state/bootstrap | 引导初始化（从诛仙人物库+卷大纲生成 chapter_no=0 的 pending 初始状态；body 可传 characterIds） |
+| POST | /api/projects/:id/state/bootstrap | 引导初始化（从世界人物库+卷大纲生成 chapter_no=0 的 pending 初始状态；body 可传 characterIds） |
 | POST | /api/projects/:id/state/extract | 对指定章节已生成正文运行LLM状态抽取（body: {chapterNo}，结果 pending 落库） |
 | GET | /api/projects/:id/foreshadow?status=&sourceType=&overdueOnly=&threshold= | 伏笔台账列表（含计算的 overdue/chaptersOpen，可按状态/来源/仅超期过滤；summary含branchDerived/unconfirmed/pendingBackfill） |
 | GET | /api/projects/:id/foreshadow/overdue?threshold= | 超期未回收伏笔提醒 |
@@ -755,7 +755,7 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 | PUT | /api/projects/:id/custom-locations/:locId | 更新地点（body 带 confirm:true 时同时 draft→official 转正） |
 | DELETE | /api/projects/:id/custom-locations/:locId | 软删除地点 |
 | POST | /api/projects/:id/custom-locations/:locId/confirm | 地点转正（draft→official） |
-| POST | /api/projects/:id/custom-locations/import-zhuxian | 诛仙库地点批量导入（上限500条，draft+边缘坐标+metadata.zhuxianId 溯源，按名去重） |
+| POST | /api/projects/:id/custom-locations/import-zhuxian | 世界库地点批量导入（上限500条，draft+边缘坐标+metadata.zhuxianId 溯源，按名去重） |
 | GET | /api/projects/:id/custom-locations/distance?fromId=&toId= | 行程估算（Dijkstra 最短路 + estimateTravel 文案 + pathNames 途经点） |
 | GET | /api/projects/:id/custom-location-links?mapId= | 地点路径连线列表 |
 | POST | /api/projects/:id/custom-location-links | 新建连线（重复边复用返回已有） |
@@ -804,7 +804,7 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 
 ### 5.4 RAG检索
 
-`retriever.ts` 负责从诛仙库检索世界观数据：
+`retriever.ts` 负责从世界库检索世界观数据：
 - `searchCharacters(keyword)` — 人物搜索（支持 text[] 数组列 ::text ILIKE）
 - `getCharacterRelations(charIds)` — 人物关系
 - `getRecentChapterAnalyses(limit)` — 最近章节分析
@@ -818,11 +818,11 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 - 根据章节计划中的人物/地点/功法ID收集设定
 - 拼接前文摘要、作者规则
 - `trimToTokenBudget()` 按token预算裁剪
-- **人物心智模型层（需求5）**：为每个出场人物附加诛仙库蒸馏的深层行为逻辑——`mentalModels`(心智模型one_liner)、`heuristics`(决策启发式"规则名：规则内容")、`lifeStages`(人生阶段"阶段名：性格状态")。仅加载有蒸馏数据的人物，token极省。WriterAgent在【出场人物设定】块渲染这三类，让人物言行有内在依据而非只有表层性格。超token预算时次要人物(第4个起)的蒸馏会被裁剪。
-- **功法蒸馏层（需求11）**：zaomeng 工具将功法蒸馏写入诛仙库 4 张表——`technique_attribute`(品阶/属性/难度/效果)、`technique_move`(招式名/效果/施展条件)、`technique_relation`(功法间克制/互补/同宗关系)、`technique_distill_archive`(原始JSON归档)，均带 `distill_source='zaomeng'`、`is_deleted`、`skill_id` 外键指向 `novel_skill_lib.id`。生成管线经 `getTechniqueDistillations` 批量加载涉及功法的蒸馏，WriterAgent 在功法设定块渲染「功法属性/招式/功法关系」三类，让战斗与修炼场景能引用具体招式名与功法克制关系。世界浏览器功法详情弹窗（SkillDetail）设「设定/深度蒸馏」标签页展示全部四块（归档为可折叠原始JSON）。
+- **人物心智模型层（需求5）**：为每个出场人物附加世界库蒸馏的深层行为逻辑——`mentalModels`(心智模型one_liner)、`heuristics`(决策启发式"规则名：规则内容")、`lifeStages`(人生阶段"阶段名：性格状态")。仅加载有蒸馏数据的人物，token极省。WriterAgent在【出场人物设定】块渲染这三类，让人物言行有内在依据而非只有表层性格。超token预算时次要人物(第4个起)的蒸馏会被裁剪。
+- **功法蒸馏层（需求11）**：zaomeng 工具将功法蒸馏写入世界库 4 张表——`technique_attribute`(品阶/属性/难度/效果)、`technique_move`(招式名/效果/施展条件)、`technique_relation`(功法间克制/互补/同宗关系)、`technique_distill_archive`(原始JSON归档)，均带 `distill_source='zaomeng'`、`is_deleted`、`skill_id` 外键指向 `novel_skill_lib.id`。生成管线经 `getTechniqueDistillations` 批量加载涉及功法的蒸馏，WriterAgent 在功法设定块渲染「功法属性/招式/功法关系」三类，让战斗与修炼场景能引用具体招式名与功法克制关系。世界浏览器功法详情弹窗（SkillDetail）设「设定/深度蒸馏」标签页展示全部四块（归档为可折叠原始JSON）。
 - **自定义功法/法宝层（模块9）**：`getCustomEntitiesForCharacters(projectId, characterIds)` 查询创作库 `custom_magic_item_lib` + `custom_technique`（+自定义武器，均 is_deleted=false），按 `linked_character_ids` 与章节出场人物ID交集匹配，注入 `ContextPackage.customEntities`。WriterAgent 渲染【自定义功法/法宝设定】块（品阶/特效含稀有度标签/副作用+铁律），AuditorAgent 第16维据此审查表现一致性。注：旧 `custom_skill_lib` 已退役（见 6.28），功法注入改由 `custom_technique` 承担。
 
-`style.ts` 文风引擎（诛仙库 `style_*` 表）：
+`style.ts` 文风引擎（世界库 `style_*` 表）：
 - 三层结构：全局文风配置（`style_global_config`）、场景维度映射（`style_scene_mapping`，按情绪/功能/交互等维度建 triggerKey）、禁用词表（`style_banned_word`）。
 - 接入管线三处：`context-builder` 将匹配到的文风指令注入 `ContextPackage.style` 供 Writer 参考；`runner` 在生成后做确定性禁用词扫描（不耗 LLM）；Auditor 第9维度「风格一致性」据此打分。
 - 前端经 `GET /api/world/style?bookId=` 读取配置。
@@ -846,7 +846,7 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 
 | Agent | 职责 | 输入 | 输出 |
 |-------|------|------|------|
-| ContextComposer | 从诛仙库检索世界观数据，编排上下文包（含本项目已生成章节摘要、已确认状态快照与时间线） | 章节计划 + 项目配置 | ContextPackage |
+| ContextComposer | 从世界库检索世界观数据，编排上下文包（含本项目已生成章节摘要、已确认状态快照与时间线） | 章节计划 + 项目配置 | ContextPackage |
 | WriterAgent | 根据上下文和计划生成章节正文（注入【状态追踪】块防漂移） | ContextPackage + 章节计划 | 章节文本 |
 | AuditorAgent | 30维度审计+加权计分（auditor.ts:352，人物连续性细分1.1-1.5、情节逻辑细分6.1-6.5；人物连续性五类/关系/门派/功法法宝/地点/情节逻辑五层因果链/情绪冲突/文笔/风格一致性/状态一致性/视角合规性/分支承接/锚点覆盖/伏笔呼应/人物阶段/自定义功法法宝/对白张力/章末拉力/冲突强度一致性/因果律与代价守恒/方向匹配度/影响状态一致性/命格与资质合理性/宗门身份合理性/因果回收率/关系一致性/自定义人物OOC/指定素材融入率/任务推进合理性/认知越界），情节逻辑+对白权重1.5x | 章节文本 + ContextPackage | AuditReport (score + dimensionScores + issues) |
 | ReviserAgent | 根据审计问题修订文本，含六层修订优先级（逻辑>人物>场景>对白>章末>文风）+对白定向修订策略+去AI味五分型改写 | 章节文本 + AuditReport | 修订后文本 + 修订笔记 |
@@ -861,7 +861,7 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 | TechniqueLoreAgent | 功法详解生成Skill：按全部选中标签生成500-700字功法详解（核心逻辑/修行要点/战斗表现，温度0.4、约1000token；铁律：功法无品级只有道则深度之别） | 功法参数（custom_technique行子集） | 详解文本 |
 | WorldEntityExtractorAgent | 世界观文本抽取（WS3）：粘贴的设定文本→8类实体（人物/门派/地点/功法/法宝/妖兽/灵材/信物）结构化（温度0.2、约3000token；zod逐类校验，仅抽取原文明确字段，未知字段省略） | 原始文本 + 目标类型集 | WorldExtractionResult（8个实体数组） |
 | ForgeSmartMatchAgent | 三工坊智能匹配（WS4）：自然语言描述→人物/法宝/功法表单枚举参数（温度0.3、约1000token；LLM仅做描述→枚举键映射，互斥/上限/兼容等确定性约束由 services/forge-smart-match.ts 防御性校验兜底） | 工坊类型 + 描述 + 枚举上下文 | 合法枚举参数对象 |
-| CustomEntityExtractorAgent | 章节实体自动抽取（实体自动维护）：从章节正文识别新人物/武器/功法/地点 + 老实体增量动态（低温；入参带已有实体名与诛仙库名单做排除，sensitivity 分档输出） | 章节正文 + 已有实体名单 + 诛仙库名单 + 配置 | ExtractionResult（newCharacters/newWeapons/newTechniques/newLocations + updates[]） |
+| CustomEntityExtractorAgent | 章节实体自动抽取（实体自动维护）：从章节正文识别新人物/武器/功法/地点 + 老实体增量动态（低温；入参带已有实体名与世界库名单做排除，sensitivity 分档输出） | 章节正文 + 已有实体名单 + 世界库名单 + 配置 | ExtractionResult（newCharacters/newWeapons/newTechniques/newLocations + updates[]） |
 | QuoteJudgeAgent | 金句评审（模块11质量升级）：五维评分（意境画面/韵律节奏/哲理深度/情感张力/传播记忆点各0-20）+ worthy 判定（temp0.1，prompt 内置反膨胀打分纪律，宁缺毋滥）；total 本地求和定级（≥90 legendary / 80-89 good / 70-79 candidate） | 金句候选列表（≤10条批量一次调用） | [{worthy, scores, reason}] |
 | QuotePolisherAgent | 金句美化（模块11质量升级）：对达标金句生成三档美化版本（conservative保守润色/balanced意象升级/deep升华重构），铁律"宁可不改不改坏"、保留原意与角色口吻 | 金句原文 + 角色名 + 场景描述 | PolishVersion[]（style/text/note） |
 
@@ -901,7 +901,7 @@ pending(queued) → running → auditing → revising → completed
 
 章节计划可声明 POV 视角人物（`chapter_plan.pov_character_ids`，`bigint[]`），用于约束生成时不得出现上帝视角、跳他人心理、写不在场事件等问题。
 
-- **数据链路**：前端章节计划表单用 `CharacterMultiSelect` 角色选择器（数据源 `useAllCharacters` = 诛仙库原生人物 + 本项目自定义人物，自定义人物名称带★、ID 为负数）直接勾选产出 `povCharacterIds`（含负数ID）提交。后端 `chapters.ts` 的 `resolvePovCharacterIds(projectId, explicitIds, names)` 仍兼容按名解析：诛仙库人物经 `getEntityNameDirectory()` 精确匹配（同名取最小ID），自定义人物查 `custom_character` 表按名匹配返回负数ID，两路均与显式ID合并去重、解析失败不阻断 → 落库 `pov_character_ids`。`buildContextForChapter` 把 POV 人物并入出场人物加载（负数ID 分流到 `getCustomCharactersByIds`），并解析出 `povCharacterNames` 挂到 `chapterPlan`。
+- **数据链路**：前端章节计划表单用 `CharacterMultiSelect` 角色选择器（数据源 `useAllCharacters` = 世界库原生人物 + 本项目自定义人物，自定义人物名称带★、ID 为负数）直接勾选产出 `povCharacterIds`（含负数ID）提交。后端 `chapters.ts` 的 `resolvePovCharacterIds(projectId, explicitIds, names)` 仍兼容按名解析：世界库人物经 `getEntityNameDirectory()` 精确匹配（同名取最小ID），自定义人物查 `custom_character` 表按名匹配返回负数ID，两路均与显式ID合并去重、解析失败不阻断 → 落库 `pov_character_ids`。`buildContextForChapter` 把 POV 人物并入出场人物加载（负数ID 分流到 `getCustomCharactersByIds`），并解析出 `povCharacterNames` 挂到 `chapterPlan`。
 - **Writer 视角铁律**：仅当 `povCharacterNames` 非空时，系统提示注入【视角铁律】块。单视角人物=全程锚定一人；多视角人物=允许章内切换但须以场景转换/空行分隔、任一时刻只锚定一人。均禁止写他人内心、禁止上帝视角写不在场事件。未声明 POV 时回退文风层全局 `perspectiveRules`（书级通用，不锚定具体人物）。
 - **Auditor 第11维度视角合规性**：仅当声明了 POV 人物时审查，越界（跳他人内心/上帝视角写不在场）报 major，轻微游移报 minor；未声明时不审查此项。
 - **前端**：`OutlineEditor` 章节计划创建弹窗"添加"按钮已接通 `chaptersApi.create` 真正落库（原为空壳），POV 由 `CharacterMultiSelect` 选择器勾选（可搜索、含★自定义人物，选中即产出负数ID，不再依赖人名解析）；`GET /projects/:id/outlines` 携带各卷 `chapters` 并解析 `povCharacterNames` 供列表展示（负数ID 解析为★前缀自定义人物名）。
@@ -980,7 +980,7 @@ pending(queued) → running → auditing → revising → completed
 
 - **模块6 单场景视角切换**：`generated_chapter` 新增 `perspective_versions`(jsonb) 列存储视角改写版本数组。`POST /chapters/:id/rewrite-perspective` 接受 `{targetCharacter, instruction?}`，取当前正文调用 `ReviserAgent.reviseWithInstruction()` 以目标人物视角改写，结果追加到 `perspective_versions`（不覆盖原文）。后端API已完整交付；前端 ChapterReader 集成（选中文本→右键菜单→视角改写）因组件复杂度（5模式）延后。
 - **模块7 临时文风档位**：`settings.ts` 导出 `STYLE_PRESETS`（4个预设：hot_battle热血战斗/lyrical抒情/daily_light日常轻松/eerie_mystery诡异悬疑），每个含 `overrides`（descriptionRatio/sentenceRules/matchedSceneFlavor）。`GET /settings/style-presets` 供前端读取。生成时 `generation.ts` 接受 `stylePreset` 参数，`runner.ts` 在 `trimToTokenBudget` 后将预设 overrides 合并到 `context.style`（覆盖式，styleName 加后缀标识），实现任务级文风微调而不改全局配置。前端 `GenerationConsole` 新增预设下拉选择。
-- **模块3 人物成长弧光卡点**：新建 `character_growth_stage` 表（创作库，人物引用诛仙库ID只读）。`store.ts` 新增 `getGrowthStagesForChapter(projectId, chapterNo)` 按章节区间匹配（JS过滤，NULL=不限，同人物多阶段取最大 stageNo）。`context-builder.ts` 将匹配结果注入 `ContextPackage.growthStages` 并在人物设定中附加 `currentGrowthStage`。Writer 渲染"★当前成长阶段「name」: 特质=..."；Auditor 第15维"人物阶段一致性"审查言行违背阶段特质（major）或特质体现不足（minor），无阶段数据不审查。前端 `GrowthStagePage`（/growth 路由）：按人物分组时间线UI + Dialog表单CRUD + 统计卡。
+- **模块3 人物成长弧光卡点**：新建 `character_growth_stage` 表（创作库，人物引用世界库ID只读）。`store.ts` 新增 `getGrowthStagesForChapter(projectId, chapterNo)` 按章节区间匹配（JS过滤，NULL=不限，同人物多阶段取最大 stageNo）。`context-builder.ts` 将匹配结果注入 `ContextPackage.growthStages` 并在人物设定中附加 `currentGrowthStage`。Writer 渲染"★当前成长阶段「name」: 特质=..."；Auditor 第15维"人物阶段一致性"审查言行违背阶段特质（major）或特质体现不足（minor），无阶段数据不审查。前端 `GrowthStagePage`（/growth 路由）：按人物分组时间线UI + Dialog表单CRUD + 统计卡。
 - **模块11 名场面金句提取**（提取编排已于 6.35 升级：`extractQuotesFromChapter` 被 `quote-service.ts runQuotePipeline` 取代，本节为 v1.2 历史描述）：新建 `project_quote_lib` 表 + `pipeline/quote-extractor.ts`。生成完成后 `runner.ts` fire-and-forget 调用 `extractQuotesFromChapter()`（LLM temp0.3 提取≤5条金句，含角色/场景/质量分，source_type=auto）。`getCollectedQuotes(projectId, characterNames?)` 人物感知召回收藏金句（POV/出场人物优先+质量分补足），注入 `ContextPackage.collectedQuotes`，Writer 渲染【收藏金句参考】块。**批量导入**：`extractQuotesFromPastedText()`（LLM temp0.3 从粘贴文本预筛≤20条含说话人推断）经 import-preview/import 两端点入库（source_type=import，默认收藏）。前端 `QuoteLibrary`（/quotes 路由）：按角色分组、全部/收藏 Tabs、收藏/删除/手动录入、批量导入对话框（粘贴→智能提取→审阅编辑→勾选导入）、来源徽标+来源筛选、统计卡；项目ID经 useProjects() 动态获取。
 - **模块8 人物关系动态推演**：新建 `custom_character_relation` 表。`store.ts` 新增 `getCustomRelations(projectId, characterIds)` 取 is_active=true 的自定义关系。`context-builder.ts` 合并逻辑：自定义关系覆盖同对原生关系（双向key匹配），标记 `source='custom'`。Writer 对自定义关系显示★标签+互动模式；Auditor 关系参照中自定义优先标注。`POST /projects/:id/relations/infer` AI推演（LLM temp0.9，输入两人物+触发事件→3个候选方案）。前端 `RelationPanel` 组件嵌入 `WorldBrowser` 底部：自定义关系列表 + 推演Dialog（选人物→输入事件→展示3方案→确认入库）。
 
@@ -1401,13 +1401,13 @@ pending(queued) → running → auditing → revising → completed
 
 **关键约定/坑**：①`linked_character_ids` 存负数对外ID，`variant.characterId` 存正数DB id，跨表 join 须取负匹配（context-builder `linked.includes(-Number(v.characterId))`）；②customCharacterApi.list 返回负数 id；③UsageSkill 用 `text` 字段非 `name`；④功法无品级，渲染/审计须 `e.grade ?` 守卫；⑤E2E 31/31 通过 + LLM 详解抽查通过。
 
-**旧 `custom_skill_lib` 退役（阶段6，方案B 入口隔离）**：本模块**取代**旧自定义功法库（D4 决策）。诊断证实旧库 0 存量、`entity_growth_record` 无 skill 历史，故无需数据迁移，退役为纯代码操作。已拆除三处用户可达入口/自动注入点：①`context-builder.ts` 删除 `getCustomEntitiesForCharacters` 中查询 `customSkillLib` 并 push `entityType:'skill'` 的整段（写作上下文不再注入旧功法）；②`branch-context.ts` `gatherWorkshopEntities` 删除 skill 采集分支，`WorkshopEntityRef.type` 收窄为 `'magic_item'`，`branch.ts` prompt 文案同步去掉"功法"（分支生成不再注入旧功法）；③`GrowthWorkshop.tsx` 移除"功法"页签与切换 Select，`entityType` 固定 `'magic_item'`，清理 skill 文案/表单分支。**保留项**：`workshop.ts` 路由内部 skill 分支与 `custom_skill_lib` 空表均保留为不可达休眠代码（与法宝 magic_item 深度共用 `getTable`/zod 枚举，拆之风险高、收益低；空表保留避免破坏性 schema 变更并留回滚余地）。**回归**：两包 tsc 零错误；成长工坊法宝 CRUD E2E 6/6 通过（确认共用路由未受误伤）；上下文/分支无 skill 注入由代码结构保证。**注意**：WorldBrowser/SceneOutlinePanel 中的 `skill`/`skillType` 属世界观设定库（诛仙库功法设定条目），与 `custom_skill_lib` 无关，不在退役范围。
+**旧 `custom_skill_lib` 退役（阶段6，方案B 入口隔离）**：本模块**取代**旧自定义功法库（D4 决策）。诊断证实旧库 0 存量、`entity_growth_record` 无 skill 历史，故无需数据迁移，退役为纯代码操作。已拆除三处用户可达入口/自动注入点：①`context-builder.ts` 删除 `getCustomEntitiesForCharacters` 中查询 `customSkillLib` 并 push `entityType:'skill'` 的整段（写作上下文不再注入旧功法）；②`branch-context.ts` `gatherWorkshopEntities` 删除 skill 采集分支，`WorkshopEntityRef.type` 收窄为 `'magic_item'`，`branch.ts` prompt 文案同步去掉"功法"（分支生成不再注入旧功法）；③`GrowthWorkshop.tsx` 移除"功法"页签与切换 Select，`entityType` 固定 `'magic_item'`，清理 skill 文案/表单分支。**保留项**：`workshop.ts` 路由内部 skill 分支与 `custom_skill_lib` 空表均保留为不可达休眠代码（与法宝 magic_item 深度共用 `getTable`/zod 枚举，拆之风险高、收益低；空表保留避免破坏性 schema 变更并留回滚余地）。**回归**：两包 tsc 零错误；成长工坊法宝 CRUD E2E 6/6 通过（确认共用路由未受误伤）；上下文/分支无 skill 注入由代码结构保证。**注意**：WorldBrowser/SceneOutlinePanel 中的 `skill`/`skillType` 属世界观设定库（世界库功法设定条目），与 `custom_skill_lib` 无关，不在退役范围。
 
 ### 6.29 世界观内容生产（一期 WS0-WS4）
 
-将诛仙库从「只读 RAG 知识源」升级为**可写多书籍世界观库**，并围绕「自建书籍」补齐四条内容生产管线。一期范围 WS0-WS4，WS5（生成管线 bookId 解锁，让写作管线消费用户书）延后至二期。
+将世界库从「只读 RAG 知识源」升级为**可写多书籍世界观库**，并围绕「自建书籍」补齐四条内容生产管线。一期范围 WS0-WS4，WS5（生成管线 bookId 解锁，让写作管线消费用户书）延后至二期。
 
-**WS0 多书籍管理**：`novel_book` 增 3 字段 `description`/`source_type`/`cover_url`。诛仙三书（book_id=1/2/3）标 `source_type='system'` 只读保护（禁改禁删），用户新建书 `source_type='user'` 可写。`POST /api/world/books` 建用户书；system 书的写操作返回 403。
+**WS0 多书籍管理**：`novel_book` 增 3 字段 `description`/`source_type`/`cover_url`。系统三书（book_id=1/2/3）标 `source_type='system'` 只读保护（禁改禁删），用户新建书 `source_type='user'` 可写。`POST /api/world/books` 建用户书；system 书的写操作返回 403。
 
 **WS1 公共批量管线**（`services/world-batch-pipeline.ts`）：跨书复制的统一底座。8 类实体表多以**名称文本**互相关联（非外键），仅 `lib_character_relation`(char_a_id/char_b_id) 与 `lib_faction_member`(faction_id/char_id) 用真实 ID——故复制策略为「整行 INSERT...SELECT 改 book_id」（embedding 向量留在库内不落地）+ 两张关系表的 ID 重映射。**关键坑**：postgres-js 将 bigint 主键返回为**字符串**，idMap 须 `set(Number(src.id), Number(ins.id))` 归一化，否则关系重映射以数字键查字符串键全 miss（relationsCopied 恒 0）。导出 `importFromBook`/`listImportableEntities`/`insertExtractedEntities`。
 
@@ -1465,7 +1465,7 @@ pending(queued) → running → auditing → revising → completed
 
 **前端**：新增 `components/ImportFromWorldDialog.tsx`（书下拉→人物列表 名字+境界+门派+称号→搜索/全选/多选→批量引用→结果三格）、`ExtractCharactersDialog.tsx`（文本框→抽取→预览可编辑名/性别/档位+删+勾选→批量创建）、`BatchCreateCharactersDialog.tsx`（数量滑杆1-20+随机开关+生成小传开关）。`CharacterGallery.tsx` 头部四按钮：引用人物（改接 ImportFromWorldDialog，删旧单条搜索 ImportCharacterDialog）/从项目引入/文本抽取/批量新建。`api.ts` customCharacterApi +worldBooks/worldSources/importBatch/extractFromText/batchCreateFromCandidates/batchCreate。
 
-**真实 schema 关键事实**（踩坑预防）：创作库表导出名单数 `schema.customCharacter`（表 custom_character），无 bio（小传=description）/verdictText（=verdictPoem+verdictComment）/flaws（并入 talents），innerPersonality 是 varchar、stance 是 integer(0-100)；诛仙库 `novelCharacterLib` 无 gender/alias/sect/position/description 列（真实：allTitles/faction/realm/coreSkills/personality/growthLine）；书籍表 `novelBook`（bookId/bookName/author）。
+**真实 schema 关键事实**（踩坑预防）：创作库表导出名单数 `schema.customCharacter`（表 custom_character），无 bio（小传=description）/verdictText（=verdictPoem+verdictComment）/flaws（并入 talents），innerPersonality 是 varchar、stance 是 integer(0-100)；世界库 `novelCharacterLib` 无 gender/alias/sect/position/description 列（真实：allTitles/faction/realm/coreSkills/personality/growthLine）；书籍表 `novelBook`（bookId/bookName/author）。
 
 **验证**：双包 tsc 零错误；运行时冒烟 ALL PASS——world-books 4 本、world-sources(book=1) 96 人、import/batch 首引 created=2 再引 skipped=2（去重生效）、batch-create created=2、batch-create-from-candidates created=2（中文境界归一）、extract-from-text LLM 抽出 3 人；冒烟数据已按时间窗软删清理。
 
@@ -1491,8 +1491,8 @@ pending(queued) → running → auditing → revising → completed
 
 **后端核心**（`services/custom-entity-pipeline.ts`）：
 - `resolveEntityMaintainConfig(generationConfig)`：读 `autoExtractCustomEntities`（总开关，缺省 true）、`entitySensitivity`（strict/balanced/loose）、`extractWeapons/extractTechniques/extractLocations`（分项开关，缺省 true）。
-- `processChapterEntities(projectId, chapterNo, volumeNo, content)`：① 预取本项目已有实体名（四表）+ 诛仙库名单（人物/法宝/功法/地点）→ ② `customEntityExtractorAgent.extract()` LLM 抽取（existingXxx 名单 + zhuxianCharacters 入参排除，sensitivity 分档）→ ③ 新实体逐条入库为 draft（人物带 description≤500字；武器/功法仅占位常量无 description；地点经 `getOrCreateDefaultMap` + `edgeCoordinate` 落默认地图边缘，metadata.source='auto-extract'）→ ④ 老实体动态以 `{chapterNo,volumeNo,updateText,category,extractedAt}` 追加 `chapter_updates`（同章号去重：`prev.filter(e => e.chapterNo !== chapterNo)` 后追加）。
-- 双保险去重：LLM 名单排除之外，入库前再按 `charNames/weaponNames/techNames/locNames` + 诛仙库名单 Set 比对；strict 档无对白不抽人物；minor 级 mentionCount<2 且无对白丢弃。单条插入失败 catch 跳过不阻断。
+- `processChapterEntities(projectId, chapterNo, volumeNo, content)`：① 预取本项目已有实体名（四表）+ 世界库名单（人物/法宝/功法/地点）→ ② `customEntityExtractorAgent.extract()` LLM 抽取（existingXxx 名单 + zhuxianCharacters 入参排除，sensitivity 分档）→ ③ 新实体逐条入库为 draft（人物带 description≤500字；武器/功法仅占位常量无 description；地点经 `getOrCreateDefaultMap` + `edgeCoordinate` 落默认地图边缘，metadata.source='auto-extract'）→ ④ 老实体动态以 `{chapterNo,volumeNo,updateText,category,extractedAt}` 追加 `chapter_updates`（同章号去重：`prev.filter(e => e.chapterNo !== chapterNo)` 后追加）。
+- 双保险去重：LLM 名单排除之外，入库前再按 `charNames/weaponNames/techNames/locNames` + 世界库名单 Set 比对；strict 档无对白不抽人物；minor 级 mentionCount<2 且无对白丢弃。单条插入失败 catch 跳过不阻断。
 
 **管线接入**（`pipeline/runner.ts` 步骤7.8）：正文定稿后 `await processChapterEntities()`（try/catch 包裹，失败仅 console.error 不阻断），成功后 `emitEvent('entities_extracted', {result})`。注意与步骤7.7 金句管线（fire-and-forget）不同，7.8 是 await 但包在 try/catch 里。
 
@@ -1504,13 +1504,13 @@ pending(queued) → running → auditing → revising → completed
 
 ### 6.34 山河舆图（v1.4）
 
-源自外部 PRD 10 评审修订版。目标：项目级可视化地图——地点布点/路径连线/行程估算/诛仙库导入/正文地点注入/瞬移预警。一期范围 US-1/2/3/5/8/9，US-4 势力多边形（affiliated_faction 文本字段替代）/US-6 行程时间轴/US-7 伏笔地图标注明确不做。
+源自外部 PRD 10 评审修订版。目标：项目级可视化地图——地点布点/路径连线/行程估算/世界库导入/正文地点注入/瞬移预警。一期范围 US-1/2/3/5/8/9，US-4 势力多边形（affiliated_faction 文本字段替代）/US-6 行程时间轴/US-7 伏笔地图标注明确不做。
 
 **DDL**（`scripts/ddl-world-map.sql`，已执行）：`custom_map`（画布尺寸+is_default）/`custom_location`（x/y坐标+location_type七类+danger_level四档+affiliated_faction+entity_status+metadata jsonb）/`custom_location_link`（from/to+link_type四类+四种通行时间）+ 3 索引。
 
 **后端**：
 - `routers/custom-maps.ts`：地图 CRUD（GET/POST `/projects/:id/custom-maps`、PUT/DELETE `/projects/:id/custom-maps/:mapId`），DELETE 守卫"至少保留一张地图"。
-- `routers/custom-locations.ts`：地点 CRUD（GET 支持 mapId/entityStatus/locationType 过滤）；`POST :locId/confirm` 转正；`PUT` 带 `confirm:true` 同时转正；`POST /projects/:id/custom-locations/import-zhuxian` 诛仙库地点批量导入（上限500条，draft + `edgeCoordinate` 边缘坐标 + `metadata.zhuxianId` 溯源，按名去重）；`GET /distance?fromId=&toId=` 行程估算（返回 estimateTravel/分钟 + pathNames 途经点）；连线 CRUD（`custom-location-links`，重复边复用返回已有）。
+- `routers/custom-locations.ts`：地点 CRUD（GET 支持 mapId/entityStatus/locationType 过滤）；`POST :locId/confirm` 转正；`PUT` 带 `confirm:true` 同时转正；`POST /projects/:id/custom-locations/import-zhuxian` 世界库地点批量导入（上限500条，draft + `edgeCoordinate` 边缘坐标 + `metadata.zhuxianId` 溯源，按名去重）；`GET /distance?fromId=&toId=` 行程估算（返回 estimateTravel/分钟 + pathNames 途经点）；连线 CRUD（`custom-location-links`，重复边复用返回已有）。
 - `services/custom-map-helpers.ts`：`getOrCreateDefaultMap`（首次自动建默认地图）/`edgeCoordinate`（按序排布边缘坐标）/`mapDangerLevel`（location_type→danger_level 默认推断）/`guessLocationType`。
 - `services/travel-time.ts`：Dijkstra 最短路 + 分交通方式速度常量（御剑 0.1 分钟/单位，偏宽松）。
 - `services/teleport-detector.ts`：正文出现≥2地点名时按御剑速度估算行程，过短即产出 warning。
@@ -1523,7 +1523,7 @@ pending(queued) → running → auditing → revising → completed
 
 **验证**：双包 tsc 零错误；DDL 已执行（3表+3索引）；API 冒烟——地图 CRUD（含最后一张守卫 400）、地点 CRUD/confirm、连线重复边复用均通过。
 
-**关键约定/坑**：① 上下文注入靠地点名子串匹配，地点改名需人工同步，否则召回失联；② 诛仙库136条地点导入端点已就绪但**前端未触发**（需用户在页面手动点，或后续挂初始化钩子）；③ 御剑速度常量偏宽松，瞬移预警阈值保守；④ 布点交互 v1.4 为「布点模式+左键」，v1.5 已改为双击空白处新建（US-13a）；⑤ 默认底图不存 DB：存 vite import URL 会因构建 hash 变化失效，故采用渲染层兜底；⑥ custom_map 创建/更新 zod 校验 description/parentMapId 需兼容前端传 null/''（已修为 nullable）。
+**关键约定/坑**：① 上下文注入靠地点名子串匹配，地点改名需人工同步，否则召回失联；② 世界库136条地点导入端点已就绪但**前端未触发**（需用户在页面手动点，或后续挂初始化钩子）；③ 御剑速度常量偏宽松，瞬移预警阈值保守；④ 布点交互 v1.4 为「布点模式+左键」，v1.5 已改为双击空白处新建（US-13a）；⑤ 默认底图不存 DB：存 vite import URL 会因构建 hash 变化失效，故采用渲染层兜底；⑥ custom_map 创建/更新 zod 校验 description/parentMapId 需兼容前端传 null/''（已修为 nullable）。
 
 ### 6.35 金句库质量升级与智能美化（v1.4）
 
@@ -1557,7 +1557,7 @@ pending(queued) → running → auditing → revising → completed
 | /outlines | OutlineEditor | 卷大纲CRUD、AI生成、章节计划；内嵌 SceneOutlinePanel 场景脚本拖拽编排 |
 | /chapters | ChapterReader | 章节阅读、编辑、版本历史；右侧剧情分支面板（3:6:3 常显，叙事方向可选定向/自动合一） |
 | /generation | GenerationConsole | 生成控制台、SSE实时预览、参数配置 |
-| /world | WorldBrowser | 诛仙世界观多类浏览+搜索+条目CRUD+深度蒸馏，顶部书籍切换（book_id 隔离），底部嵌入 RelationPanel 自定义人物关系推演 |
+| /world | WorldBrowser | 仙侠世界观多类浏览+搜索+条目CRUD+深度蒸馏，顶部书籍切换（book_id 隔离），底部嵌入 RelationPanel 自定义人物关系推演 |
 | /characters | CharacterGallery | 众生百态：自定义人物列表+三步向导入口+引用/文本抽取/批量新建；实体自动维护后增草稿筛选与转正/忽略徽章（6.33） |
 | /growth | GrowthStagePage | 人物成长弧光卡点：按人物分组时间线、阶段CRUD、统计卡、推荐高光素材（模块3） |
 | /quotes | QuoteLibrary | 金句库：按角色分组、全部/收藏Tabs、收藏/删除/手动录入、批量导入（LLM预筛+审阅）、来源徽标+筛选；质量升级后增分级徽章（legendary/good/candidate）+五维评分+QuotePolishModal 三版本打磨对比+重评+回写原文（模块11） |
@@ -1568,7 +1568,7 @@ pending(queued) → running → auditing → revising → completed
 | /timeline | TimelinePage | 人物状态快照与时间线里程碑：pending/confirmed 管理、引导初始化、手动抽取 |
 | /weapons | CustomWeaponForge | 神兵坊：自定义武器创建（图鉴点选/随机骰子）、强化/进化/变异/融合养成、兵器谱文案生成与版本管理 |
 | /techniques | CustomTechniqueForge | 功法铸造：九大道则三步点选/随机创建、功法详解生成、绑定人物触发个人变种（千人千面） |
-| /maps | WorldMapPage | 山河舆图：多地图切换、布点模式左键落点、地点类型/危险度/归属势力编辑、草稿确认转正、地点路径连线、行程估算（Dijkstra）、诛仙库地点批量导入（lazy加载） |
+| /maps | WorldMapPage | 山河舆图：多地图切换、布点模式左键落点、地点类型/危险度/归属势力编辑、草稿确认转正、地点路径连线、行程估算（Dijkstra）、世界库地点批量导入（lazy加载） |
 | /health | HealthCheck | 健康度体检：9维零LLM规则评分仪表盘（伏笔/因果/方向/钩子/状态确认等） |
 | /direction-stats | DirectionStats | 剧情方向统计：分支主方向占比分布与失衡预警 |
 | /technique-library | TechniqueLibrary | 叙事技法库：技法原子浏览/筛选（内容规划/呈现技法/节奏控制/人物逻辑）、详情（生成指导/审计维度/修复模板）、启用切换（数据源 techniques.ts，注意与 /techniques 功法铸造区分） |
@@ -1633,7 +1633,7 @@ useProjectContext()                  // { currentProjectId, projects, setCurrent
 
 ## 8. 场景脚本编排模块（原"场景小纲"）
 
-场景脚本（原名"场景小纲"，因"小纲"一词过于含糊、不能体现其"逐场景可落笔剧本"的实际定位而更名）是介于「卷级大纲」与「章节计划」之间的中间层，把每一卷拆分为若干场景节点，并为每个节点关联诛仙库中的人物、地点、功法、法宝、妖兽等素材，形成可落笔的细粒度剧情骨架。
+场景脚本（原名"场景小纲"，因"小纲"一词过于含糊、不能体现其"逐场景可落笔剧本"的实际定位而更名）是介于「卷级大纲」与「章节计划」之间的中间层，把每一卷拆分为若干场景节点，并为每个节点关联世界库中的人物、地点、功法、法宝、妖兽等素材，形成可落笔的细粒度剧情骨架。
 
 ### 8.1 数据模型
 
@@ -1642,7 +1642,7 @@ useProjectContext()                  // { currentProjectId, projects, setCurrent
 ```
 卷大纲 (story_outline)
   └── 场景节点 (scene_node)            ← 标题/时间/地点/核心事件/作用结果/伏笔
-        ├── 人物关联 (scene_node_character)  ← 诛仙库人物 + 出场类型 + 备注
+        ├── 人物关联 (scene_node_character)  ← 世界库人物 + 出场类型 + 备注
         └── 要素关联 (scene_node_element)    ← 地点/功法/法宝/妖兽 + 备注 + 伏笔方向
 ```
 
@@ -1652,7 +1652,7 @@ useProjectContext()                  // { currentProjectId, projects, setCurrent
 
 整体为左右两栏布局，外层包裹单一 `DndContext`（@dnd-kit）：
 
-- **左栏 素材池**：分类展示诛仙库素材（人物/地点/功法/法宝/妖兽/灵材/信物），支持关键词搜索。每个素材项是 `useDraggable` 拖拽源。
+- **左栏 素材池**：分类展示世界库素材（人物/地点/功法/法宝/妖兽/灵材/信物），支持关键词搜索。每个素材项是 `useDraggable` 拖拽源。
 - **右栏 节点画布**：场景节点卡片纵向排列，使用 `useSortable` 支持上下拖拽排序。卡片同时是拖放目标——从素材池拖素材到卡片上即添加关联（拖拽悬停时卡片高亮）。
 - **DragOverlay**：拖拽素材时显示悬浮的素材芯片。
 
@@ -1721,7 +1721,7 @@ Drizzle Schema 的列名必须与 PostgreSQL 实际列名完全一致。创作�
 | is_current | isCurrent | chapter.isCurrent |
 | task_id | taskId | chapter.taskId |
 
-### 9.2 诛仙库查询注意
+### 9.2 世界库查询注意
 
 - `text[]` 数组列搜索：`sql\`${column}::text ILIKE ${'%' + kw + '%'}\``
 - `lib_character_relation` 无 `is_deleted` 列，不要加该过滤条件

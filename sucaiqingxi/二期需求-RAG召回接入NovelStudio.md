@@ -54,7 +54,7 @@
 | 数据 | 表 | 向量字段 | 向量来源 |
 |------|----|---------|---------|
 | 奇遇/伏笔/高光/任务链 | `plot_material_encounter` / `_foreshadow` / `_highlight` / `_task` | `embedding VECTOR(512)` | `core_plot` |
-| 作者文风预设 | `style_preset`（25 列，列名对齐诛仙 `style_global_config`） | `embedding VECTOR(512)`（可空，风格摘要） | 风格摘要 |
+| 作者文风预设 | `style_preset`（25 列，列名对齐仙侠世界 `style_global_config`） | `embedding VECTOR(512)`（可空，风格摘要） | 风格摘要 |
 | 专业领域知识 | `plot_domain_knowledge`（5 类 `knowledge_type`） | `embedding VECTOR(512)` | `content` |
 
 - 所有向量：**`BAAI/bge-small-zh-v1.5`，512 维，归一化，cosine**，HNSW 索引 `vector_cosine_ops`，距离算子 `<=>`。
@@ -214,7 +214,7 @@ LIMIT 1;
 3. **向量同源**：查询向量只能来自 `embedding_server`（bge-small-zh-v1.5 / 512 维 / 归一化），不得换模型。
 4. **只读不写创作库素材表**：二期只 SELECT；不 INSERT/UPDATE/DELETE 那 6 张表。
 5. **召回失败降级不阻断**：`embedding_server` 挂了或查询异常，写作流程照常（空召回 + 告警日志）。
-6. **诛仙原著库只读**：全程不连不写诛仙库。
+6. **源世界原著库只读**：全程不连不写世界库。
 7. **过滤逻辑分作用域**：`project_id = 当前项目 OR IS NULL`，不得跨项目泄露归属素材。
 
 ---

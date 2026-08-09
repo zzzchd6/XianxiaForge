@@ -80,7 +80,7 @@
 | POST | /api/chapters/:id/fix-issue | 修复单条审计问题（quality/style，预览） |
 | POST | /api/chapters/:id/fix-all-quality | 质量审计一键修复（critical/major） |
 
-## 5. 世界观（诛仙库 + WS0-WS4）
+## 5. 世界观（世界库 + WS0-WS4）
 
 | 方法 | 路径 | 功能 |
 |------|------|------|
@@ -226,7 +226,7 @@
 | GET/POST | .../custom-locations | 地点列表（按地图/草稿/类型过滤）/ 新建 |
 | PUT | .../custom-locations/:locId | 更新（带 confirm:true 转正） |
 | POST | .../custom-locations/:locId/confirm | 地点转正 draft→official |
-| POST | .../custom-locations/import-zhuxian | 诛仙库地点批量导入（上限 500） |
+| POST | .../custom-locations/import-zhuxian | 世界库地点批量导入（上限 500） |
 | GET | .../custom-locations/distance?fromId=&toId= | 行程估算（Dijkstra + 途经点） |
 | GET/POST/DELETE | .../custom-location-links | 路径连线 CRUD |
 

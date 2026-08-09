@@ -26,7 +26,7 @@
      ┌──────────┴──────────┐
      ▼                     ▼
 ┌──────────────┐    ┌─────────────────┐
-│ 诛仙库 novel_db │    │ 创作库 novel_studio │
+│ 世界库 novel_db │    │ 创作库 novel_studio │
 │ 只读 RAG 源     │    │ 读写项目数据        │
 │ 18 核心表/     │    │ Drizzle 56 表       │
 │ pgvector 512维  │    │ 项目/大纲/章节/     │
@@ -48,7 +48,7 @@
         │  ← DB 即队列：worker 每 2s 轮询，原子认领（UPDATE...WHERE status='pending' RETURNING）
         ▼
 [step1_build_context (10)] 构建上下文 ContextPackage
-    ├ RAG 检索诛仙库设定（人物/门派/地点/功法/法宝 + 蒸馏/心智模型）
+    ├ RAG 检索世界库设定（人物/门派/地点/功法/法宝 + 蒸馏/心智模型）
     ├ 创作库状态：快照/时间线/伏笔/影响/因果/成长阶段/自定义实体/收藏金句/声音配置
     ├ 文风指令 + 作者规则 + 前文摘要 + 分支上下文 + 素材召回（语义+确定性合并）
     └ trimToTokenBudget 按 token 预算裁剪（estimateTokens 中文约 1.5 字/token）
@@ -136,7 +136,7 @@ XianxiaForge/                          # monorepo 根
 
 | 决策 | 原因 |
 |------|------|
-| **双库联动**（诛仙库只读做 RAG + 创作库读写） | 世界观知识源与创作资产分离：诛仙库是"设定事实"（含 512 维向量），创作库是"创作过程"。诛仙库升级 WS0 后 system 书仍只读保护，user 书可写；RAG 检索与生成管线当前锁定 bookId=1 |
+| **双库联动**（世界库只读做 RAG + 创作库读写） | 世界观知识源与创作资产分离：世界库是"设定事实"（含 512 维向量），创作库是"创作过程"。世界库升级 WS0 后 system 书仍只读保护，user 书可写；RAG 检索与生成管线当前锁定 bookId=1 |
 | **DB 即队列**（generation_task 表 + 轮询 worker） | 无 Redis 依赖，任务持久化在 PostgreSQL，服务重启不丢任务；`UPDATE...WHERE status='pending' RETURNING` 原子认领防重复执行；`QUEUE_CONCURRENCY` 控制并发（默认 1=顺序，保证后章吃到前章摘要） |
 | **pnpm monorepo** | 前后端共享 TypeScript 类型（packages/shared），`pnpm dev` 一键启动两端，构建顺序受控（shared → server → web） |
 | **pgvector 混合检索** | 场景向量（scene_emb 512 维，余弦距离 `<=>`）+ 结构化 SQL（ILIKE/字段过滤）双路召回，兼顾语义相似与精确设定 |

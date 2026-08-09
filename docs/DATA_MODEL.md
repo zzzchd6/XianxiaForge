@@ -1,18 +1,18 @@
 # 数据模型
 
 > Agent 理解本项目最快的方式是看懂数据结构。本文档为双库全貌 + 字段级核心表。
-> **以代码为准**：创作库表定义见 `packages/server/src/db/creative-schema.ts`（56 张），诛仙库见 `packages/server/src/db/zhuxian-schema.ts`（33 张）。技术手册 §4 声称的"48 表/18 表"为旧数据，已过时。
+> **以代码为准**：创作库表定义见 `packages/server/src/db/creative-schema.ts`（56 张），世界库见 `packages/server/src/db/zhuxian-schema.ts`（33 张）。技术手册 §4 声称的"48 表/18 表"为旧数据，已过时。
 
 ## 双库概述
 
 | 库 | 库名 | 角色 | schema 表数 | 说明 |
 |----|------|------|------|------|
-| 诛仙库（世界观库） | `novel_db` | RAG 世界观源（system 书只读保护，user 书可写） | **33** | 3 层结构（原始设定 18 核心表 + 蒸馏/心智模型/文风/分析扩展 15 表），含 pgvector 512 维向量 |
+| 世界库（世界观库） | `novel_db` | RAG 世界观源（system 书只读保护，user 书可写） | **33** | 3 层结构（原始设定 18 核心表 + 蒸馏/心智模型/文风/分析扩展 15 表），含 pgvector 512 维向量 |
 | 创作库 | `novel_studio` | 读写项目数据 | **56**（Drizzle） | 7 核心业务表 + 49 张支撑表 |
 
 > 另有 Python 素材蒸馏侧独立管理的素材表（不在 Drizzle schema，后端只读查询）：`plot_material_encounter/foreshadow/highlight/task`、`style_preset`、`domain_knowledge`（DDL 见 `sucaiqingxi/ddl-*.sql`）。
 
-## 一、诛仙库（世界观库）表——33 张
+## 一、世界库（世界观库）表——33 张
 
 ### 核心设定表（18 张，手册已述 + 补充）
 
@@ -64,7 +64,7 @@
 |------|------|------|
 | id | bigserial | 主键 |
 | title / description / genre | text | 标题 / 描述 / 题材 |
-| sourceBookId | bigint | 绑定诛仙库书籍 ID（默认 1，RAG 隔离源） |
+| sourceBookId | bigint | 绑定世界库书籍 ID（默认 1，RAG 隔离源） |
 | status | varchar(20) | 默认 'planning' |
 | llmConfig / generationConfig | jsonb | 项目级 LLM 覆盖 / 生成参数 |
 | defaultImpactCharacterIds | bigint[] | 默认影响对象人物 ID（影响体系 POV 兜底） |
@@ -215,7 +215,7 @@
 | technique_atom | 叙事技法原子 | technique_id(T_PLAN_001), name, category(content_planning/presentation/rhythm/character_logic), level(principle/pattern/example), source(manual/custom), core_rules(jsonb 可计算规则), generation_guidance, audit_prompt_segment, auto_fix_template, examples, applicable_genres, status |
 | chapter_technique_map | 章节-技法关联 | chapter_plan_id, technique_id, enabled, params, audit_score, audit_detail, fixed |
 | info_point | 章节信息点（双维度） | chapter_plan_id, content, importance(core/secondary/foreshadow), function(plot/character/world/atmosphere/foreshadow), sort_order |
-| character_voice_config | 角色声音配置（PRD-A） | character_id(正=诛仙/负=自定义), speech_style, catchphrases, address_habit, tone_base, example_quotes, forbidden_expressions, enabled |
+| character_voice_config | 角色声音配置（PRD-A） | character_id(正=仙侠世界/负=自定义), speech_style, catchphrases, address_habit, tone_base, example_quotes, forbidden_expressions, enabled |
 | character_knowledge | 角色已知信息 | character_id, knowledge_content, info_level(core/common/secret), source_type(manual/foreshadow/timeline), source_ref, acquired_chapter, enabled |
 | character_memory_card | 角色记忆卡 | character_id, event_summary, chapter_no, emotional_impact, importance, source(auto/manual), enabled |
 | treasure_item | 淘宝物品 | project_id, name, item_type(trinket/secret), trinket_category, full_data(jsonb 秘宝数据), unlock_stage(0-5), unlock_progress, bound_character_id, bound_chapter_no, use_count, is_fake(打眼), fake_reveal, hunt_location, hunt_record_id, is_collected, is_converted, converted_id, note, is_deleted |
@@ -255,8 +255,8 @@
 
 1. **基础字段**：所有核心实体含 `id`、`created_at`、`updated_at`；多数含 `is_deleted` 软删除标记。
 2. **复杂结构一律 JSONB**：关系/特效/评分/快照/更新记录等不拆表，适度冗余，不做过度范式化。
-3. **负数 ID = 自定义实体**：`custom_character` 等自定义实体对外暴露**负数 ID**（真实自增 ID 取负），与诛仙库正数 ID 共存分流——POV 数组、影响目标解析、声音配置（character_voice_config.character_id）均按符号分流（负数查创作库，正数查诛仙库）。
-4. **只读引用**：创作库对诛仙库实体只存 ID/名称做只读引用，不写诛仙库（character_id、element_id 等）。
+3. **负数 ID = 自定义实体**：`custom_character` 等自定义实体对外暴露**负数 ID**（真实自增 ID 取负），与世界库正数 ID 共存分流——POV 数组、影响目标解析、声音配置（character_voice_config.character_id）均按符号分流（负数查创作库，正数查世界库）。
+4. **只读引用**：创作库对世界库实体只存 ID/名称做只读引用，不写世界库（character_id、element_id 等）。
 5. **`bigint[]` 是真数组列**：`pov_character_ids`、`key_character_ids`、`default_impact_character_ids` 须用 Drizzle `bigint(...).array()`，勿误声明为 jsonb。
-6. **软删除体系**：`is_deleted` 标记删除，查询一律带 `is_deleted=false` 过滤；诛仙库 system 书禁改禁删。
+6. **软删除体系**：`is_deleted` 标记删除，查询一律带 `is_deleted=false` 过滤；世界库 system 书禁改禁删。
 7. **状态机升级**（v1.4 三期）：状态快照/时间线 status 增加 `auto_confirmed`（LLM 自动生效、用户可否决）与 `rejected`，`confirmed + auto_confirmed` 才进上下文。

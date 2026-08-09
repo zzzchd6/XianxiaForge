@@ -19,7 +19,7 @@
 
 | Agent | 温度 | 职责 | 输入 → 输出 |
 |-------|------|------|-------------|
-| **ContextComposer**（非 LLM，编排器） | - | 从诛仙库 RAG 检索 + 创作库状态/伏笔/影响/成长注入，编排上下文包并按 token 预算裁剪 | 章节计划 + 项目配置 → ContextPackage |
+| **ContextComposer**（非 LLM，编排器） | - | 从世界库 RAG 检索 + 创作库状态/伏笔/影响/成长注入，编排上下文包并按 token 预算裁剪 | 章节计划 + 项目配置 → ContextPackage |
 | **WriterAgent** | 0.85 | 根据上下文包生成章节正文（`agents/writer.ts`，非流式 maxTokens 16384 / 流式 8192，预算给足供思考模型 reasoning token）；内置 `AI_FLAVOR_WORDS` 去 AI 味高频词表；注入【状态追踪】【关键剧情锚点】【未回收伏笔】【视角铁律】【章末铁律】【里程碑方向】等约束块 | ContextPackage + 章节计划 → 章节文本 |
 | **AuditorAgent** | 低温 | **30 维审计** + 加权计分（情节逻辑+对白权重 1.5x）：人物连续性五类(1.1-1.5)/关系/门派/功法法宝/地点/情节逻辑五层因果链/情绪冲突/文笔/风格/状态/视角合规/分支承接/锚点覆盖/伏笔呼应/人物阶段/自定义功法法宝/对白张力/章末拉力/冲突强度/因果律与代价守恒/方向匹配/影响状态/命格资质/宗门身份/因果回收率/关系一致性/自定义人物 OOC/素材融入率/任务推进/认知越界 | 章节文本 + ContextPackage → AuditReport(score + dimensionScores + issues) |
 | **ReviserAgent** | - | 按审计问题修订：**六层修订优先级**（逻辑>人物>场景>对白>章末>文风）+ 对白定向修订策略 + 去 AI 味分型改写；对话式修订 `reviseWithInstruction()` 严格按指令改、未涉及内容不动 | 章节文本 + AuditReport → 修订文本 + 修订笔记 |
@@ -71,15 +71,15 @@
 
 - **上下文块 20+ 项**（`ContextPackage`，见 `types.ts`）：chars/factions/locations/skills/items/relations、prevSummaries 前文摘要、scenes、chapterPlan、rules 作者规则、plotMaterials 四类素材（encounter/foreshadow/highlight/task，语义召回 + 确定性命中合并）、growthStages 成长阶段、collectedQuotes 收藏金句、style 文风指令、customEntities 自定义实体、resonanceEffects 特效共鸣、breakthroughNarrative 突破叙事、状态快照/时间线、影响状态、因果待兑现、分支上下文、里程碑方向、地图地点等。
 - **角色心智三层**（v1.4 PRD-A，`context-builder.ts` 的 `buildVoiceContextBlock` / `buildKnowledgeContextBlock` / `buildMemoryContextBlock`）：`character_voice_config` 声音配置（说话方式/口癖/语气/示例台词/禁用表达）、`character_knowledge` 已知信息（core/common/secret 分级 + acquiredChapter 获知章，供信息差写作与认知越界审计）、`character_memory_card` 记忆卡（经历摘要+情绪印记）。
-- **人物心智模型层（需求5）**：为每个出场人物附加诛仙库蒸馏的 `mentalModels`（心智模型 one_liner）/`heuristics`（决策启发式"规则名：规则内容"）/`lifeStages`（人生阶段），让人物言行有内在依据。
-- **功法蒸馏层（需求11）**：zaomeng 工具将功法蒸馏写入诛仙库 4 表（属性/招式/关系/归档），管线批量加载后 Writer 渲染「功法属性/招式/功法关系」，战斗场景可引用具体招式名与克制关系。
+- **人物心智模型层（需求5）**：为每个出场人物附加世界库蒸馏的 `mentalModels`（心智模型 one_liner）/`heuristics`（决策启发式"规则名：规则内容"）/`lifeStages`（人生阶段），让人物言行有内在依据。
+- **功法蒸馏层（需求11）**：zaomeng 工具将功法蒸馏写入世界库 4 表（属性/招式/关系/归档），管线批量加载后 Writer 渲染「功法属性/招式/功法关系」，战斗场景可引用具体招式名与克制关系。
 - **自定义实体层（模块9）**：按 `linked_character_ids` 与出场人物交集匹配注入自定义功法/法宝，Writer 渲染【自定义功法/法宝设定】块（品阶/特效/副作用 + 铁律"不得凭空新增未列出能力"）。
 - **收藏金句参考**：`getCollectedQuotes()` 人物感知召回（POV/出场人物优先 + 质量分补足），失败返回空不阻断。
 - **素材召回双通道**：`mergePlotMaterials()` 合并语义召回（`plot-material-retriever.ts` 向量/关键词）与确定性命中（固定素材 pinnedMaterialIds），`buildHardFacts()` 组装硬事实块。
 
 ## 风格约束
 
-- **诛仙仙侠古风**：文风引擎三层结构——全局配置（`style_global_config`）/ 场景维度映射（`style_scene_mapping`，按情绪/功能/交互建 triggerKey）/ 禁用词表（`style_banned_word`）。
+- **仙侠世界仙侠古风**：文风引擎三层结构——全局配置（`style_global_config`）/ 场景维度映射（`style_scene_mapping`，按情绪/功能/交互建 triggerKey）/ 禁用词表（`style_banned_word`）。
 - **文风档位预设**：4 个任务级临时档位（热血战斗/抒情/日常轻松/诡异悬疑），覆盖式合并不改全局。
 - **去 AI 味 5 分型**：`empty_summary` 空泛总结 / `cliche_atmosphere` 套话氛围 / `adjective_stack` 形容堆叠 / `explanatory_dialogue` 解释腔 / `uniform_rhythm` 平均工整——StyleAuditor 输出分类，Reviser 按分型生成定向改写指令。
 - **章末铁律（4条）**：禁总结句 / 停在变化拍 / 不说满 / 末句短。

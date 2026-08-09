@@ -52,7 +52,7 @@ copy .env.example .env            # Windows；Linux/Mac: cp .env.example .env
 
 - `PG_*`：创作库连接（与 Novel Studio 的 `CREATIVE_DB_*` 指向同一库 `novel_studio`）
 - `LLM_BASE_URL / LLM_API_KEY / LLM_MODEL`：抽取用 LLM（与 Novel Studio 的 `LLM_*` 一致即可）
-- `EMBEDDING_MODEL=BAAI/bge-small-zh-v1.5`：**勿改维度**，必须 512 维与诛仙库对齐
+- `EMBEDDING_MODEL=BAAI/bge-small-zh-v1.5`：**勿改维度**，必须 512 维与世界库对齐
 - `TARGET_PROJECT_ID`：**留空 = 全局共享素材**（推荐）；填数字 = 归属指定项目
 - 调参：`CHUNK_SIZE=2000` / `CHUNK_OVERLAP=200` / `DEDUP_THRESHOLD=0.92` /
   `MIN_QUALITY_TO_STORE=4` / `LLM_CONCURRENCY=5`
