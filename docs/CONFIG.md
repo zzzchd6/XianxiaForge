@@ -56,11 +56,11 @@ pnpm --filter web dev      # 仅前端（Vite）
 
 ```env
 # ===== 世界库（只读，世界观 RAG） =====
-ZHUXIAN_DB_HOST=localhost
-ZHUXIAN_DB_PORT=5432
-ZHUXIAN_DB_NAME=novel_db          # 源世界小说数据库
-ZHUXIAN_DB_USER=noveluser
-ZHUXIAN_DB_PASSWORD=
+WORLD_DB_HOST=localhost
+WORLD_DB_PORT=5432
+WORLD_DB_NAME=novel_db          # 源世界小说数据库
+WORLD_DB_USER=noveluser
+WORLD_DB_PASSWORD=
 
 # ===== 创作库（读写，项目数据，自动创建） =====
 CREATIVE_DB_HOST=localhost
@@ -104,7 +104,7 @@ EMBEDDING_SERVER_PORT=8600
 
 | 配置项 | 说明 |
 |--------|------|
-| `ZHUXIAN_DB_*` | 仙侠世界观库连接（只读 RAG + WS0 起 user 书可写）。连接串由 `db/index.ts` 的 `buildConnString()` 拼接：缺省 host=localhost/port=5432/user=postgres/pass=空/库名=novel_db；连接池 `max=5` |
+| `WORLD_DB_*` | 仙侠世界观库连接（只读 RAG + WS0 起 user 书可写）。连接串由 `db/index.ts` 的 `buildConnString()` 拼接：缺省 host=localhost/port=5432/user=postgres/pass=空/库名=novel_db；连接池 `max=5` |
 | `CREATIVE_DB_*` | 创作工作库连接（读写，`pnpm db:init` 自动建表）。缺省库名 novel_studio；连接池 `max=10`，idle_timeout 20s、connect_timeout 10s |
 | `LLM_BASE_URL` | 任意 OpenAI-compatible API 地址 |
 | `LLM_WRITER_MODEL` | 写作步骤专用模型（质量关键步可配思考模型，审计/修订用默认快模型） |
@@ -147,7 +147,7 @@ curl http://localhost:3456/api/health
 
 ## 常见问题
 
-- **世界库连接失败**：确认 PostgreSQL 运行、`.env` 的 `ZHUXIAN_DB_*` 正确、世界库已安装 pgvector。
+- **世界库连接失败**：确认 PostgreSQL 运行、`.env` 的 `WORLD_DB_*` 正确、世界库已安装 pgvector。
 - **生成速度慢**：取决于 LLM 响应；本地用 14B 以下模型，云端检查网络。
 - **生成内容与设定不一致**：① 章节计划 `required_entity_ids` 是否正确指定；② 世界库实体数据是否完整；③ 在「作者规则」中添加硬约束。
 - **更换 LLM**：改 `.env` 重启后端，或「设置」页面在线修改（项目级覆盖）。

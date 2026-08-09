@@ -40,6 +40,7 @@ import QuoteLibrary from './pages/QuoteLibrary'
 import CustomWeaponForge from './pages/CustomWeaponForge'
 import CustomTechniqueForge from './pages/CustomTechniqueForge'
 import HealthCheck from './pages/HealthCheck'
+import GameConsole from './pages/GameConsole'
 import DirectionStats from './pages/DirectionStats'
 import SettingsPage from './pages/Settings'
 import HotspotSniffer from './pages/HotspotSniffer'
@@ -255,6 +256,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Dashboard />} />
+          <Route path="game" element={<GameConsole />} />
           <Route path="characters" element={<CharacterGallery />} />
           <Route path="weapons" element={<CustomWeaponForge />} />
           <Route path="techniques" element={<CustomTechniqueForge />} />

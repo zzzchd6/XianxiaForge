@@ -113,7 +113,7 @@ XianxiaForge/                          # monorepo 根
     ├── server/src/
     │   ├── env.ts                     # 环境变量加载（必须最先 import）
     │   ├── index.ts                   # Hono 服务入口（CORS/日志/耗时中间件）
-    │   ├── db/                        # 双库连接 + zhuxian-schema + creative-schema
+    │   ├── db/                        # 双库连接 + world-schema + creative-schema
     │   ├── llm/client.ts              # OpenAI-compatible 客户端（流式/非流式/主备切换）
     │   ├── rag/                       # retriever / context-builder / style 文风引擎 + ai-flavor-detector / conflict-score / continuity-scanner / fact-checker / plot-material-retriever / quality-gate
     │   ├── agents/                    # 24 个 Agent（base/writer/auditor/reviser/extractor/branch/branch-foreshadow-extractor/causal-extractor/style-auditor/growth/naming/weapon-lore/weapon-sense-card/trait-naming/technique-lore/technique-variant-lore/character-martial-lore/world-entity-extractor/forge-smart-match/custom-entity-extractor/quote-judge/quote-polisher/conflict-generator/iceberg-dialogue）

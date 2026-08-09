@@ -45,6 +45,7 @@ import techniquesRouter from './routers/techniques.js';
 import characterAspectsRouter from './routers/character-aspects.js';
 import customMapsRouter from './routers/custom-maps.js';
 import customLocationsRouter from './routers/custom-locations.js';
+import gameRouter from './routers/game.js';
 import exportRouter from './routers/export.js';
 import polishRouter from './routers/polish.js';
 import narrativeRouter from './routers/narrative.js';
@@ -201,6 +202,9 @@ app.route('/api', customMapsRouter);
 
 // 山河舆图（/api/projects/:id/custom-locations/*：地点CRUD+路径+距离+诛仙库导入）
 app.route('/api', customLocationsRouter);
+
+// 文字修仙游戏（/api/game/*：存档CRUD+动作处理+SSE流）
+app.route('/api', gameRouter);
 
 // ===== 404处理 =====
 app.notFound((c) => {

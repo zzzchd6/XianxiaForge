@@ -64,7 +64,7 @@ XianxiaForge/
 │   │       ├── types.ts          # 内部类型定义
 │   │       ├── db/
 │   │       │   ├── index.ts      # 双库连接实例
-│   │       │   ├── zhuxian-schema.ts   # 世界库Drizzle Schema
+│   │       │   ├── world-schema.ts   # 世界库Drizzle Schema
 │   │       │   └── creative-schema.ts  # 创作库Drizzle Schema
 │   │       ├── llm/
 │   │       │   └── client.ts     # LLM客户端（流式/非流式）
@@ -233,11 +233,11 @@ XianxiaForge/
 
 ```env
 # ===== 世界库（只读，世界观RAG） =====
-ZHUXIAN_DB_HOST=localhost
-ZHUXIAN_DB_PORT=5432
-ZHUXIAN_DB_NAME=novel_db
-ZHUXIAN_DB_USER=noveluser
-ZHUXIAN_DB_PASSWORD=<password>
+WORLD_DB_HOST=localhost
+WORLD_DB_PORT=5432
+WORLD_DB_NAME=novel_db
+WORLD_DB_USER=noveluser
+WORLD_DB_PASSWORD=<password>
 
 # ===== 创作库（读写，项目数据） =====
 CREATIVE_DB_HOST=localhost
@@ -354,7 +354,7 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 | custom_technique | 自定义功法（九大道则） | id, project_id, name, main_dao(主修道则9选1), assist_dao(jsonb 辅修0-3门), guidance_depth(rudimentary/complete/essential 指引深度非品级), fake_depth(藏拙), style_type(cultivate/attack/defense/assist/special), threshold(jsonb 适配门槛), core_traits(jsonb 本源运用方向), practice_path(行功路线), body_mark(jsonb 身体印记), usage_skills(jsonb), abilities(jsonb 分道境神通[{daoRealm:入微/化境/合道/超脱}]), backlash(jsonb 反噬), inheritance(传承方式), evolution(jsonb 演化方向), inherent_conflict(先天矛盾), core_direction/fit_monk(jsonb 自动标签), description(LLM详解500-700字), growth_type(base/evolution/fusion/mutation), base_entity_id, source_entity_ids(jsonb), linked_character_ids(jsonb 自定义人物ID), source_ref(jsonb,引用来源{table,id,name}), entity_status(draft草稿/official正式,实体自动维护), chapter_updates(jsonb 自动维护更新记录), is_deleted |
 | character_technique_variant | 人物功法个人变种（千人千面） | id, project_id, character_id(custom_character.id), base_technique_id, variant_name, rarity(common/remarkable/rare 60/30/10), dao_weight_offset(jsonb 道则权重偏移), trait_offset(jsonb), ability_variant(jsonb 神通变种), backlash_offset(jsonb), body_mark(jsonb 专属印记), exclusive_skill(jsonb), cultivation_effect(jsonb 修炼适配{speed,bottleneck,risk,note}), version(变种版本号), is_deleted |
 | custom_map | 山河舆图-地图（山河舆图） | id, project_id, name, width(int 画布宽), height(int 画布高), background(背景样式,可空), description, is_default(默认地图,至少保留一张不可删), created_at |
-| custom_location | 山河舆图-地点（山河舆图） | id, project_id, map_id(所属地图), name, x/y(int 画布坐标), location_type(sect宗门/city城镇/secret_realm秘境/danger险地/teleport传送阵/battlefield战场/generic通用), danger_level(safe/normal/danger/deadly), affiliated_faction(归属势力文本), description, entity_status(draft草稿/official正式), metadata(jsonb {source:auto-extract/zhuxian-import/manual, zhuxianId, chapterNo, volumeNo}), is_deleted |
+| custom_location | 山河舆图-地点（山河舆图） | id, project_id, map_id(所属地图), name, x/y(int 画布坐标), location_type(sect宗门/city城镇/secret_realm秘境/danger险地/teleport传送阵/battlefield战场/generic通用), danger_level(safe/normal/danger/deadly), affiliated_faction(归属势力文本), description, entity_status(draft草稿/official正式), metadata(jsonb {source:auto-extract/world-import/manual, worldId, chapterNo, volumeNo}), is_deleted |
 | custom_location_link | 山河舆图-地点路径（山河舆图） | id, project_id, map_id, from_location_id, to_location_id, link_type(main_road官道/path小径/teleport传送/secret_path秘径), travel_time_walk/fly/ship/teleport(int 分钟,可空), description, is_deleted |
 | hotspot_crawl_batch | 热点嗅探-爬取批次 | id, source_names(jsonb 榜单源数组), status(running/completed/failed/partial), item_count, note, started_at, finished_at；无 project_id（全局） |
 | hotspot_raw_novel | 热点嗅探-原始榜单书目 | id, batch_id, source(榜单源), rank, title, author, category, tags(jsonb), intro, word_count, popularity, url, raw(jsonb 原始抓取字段) |
@@ -424,7 +424,7 @@ pnpm --filter web dev      # 前端 http://localhost:5173（Vite）
 **山河舆图表说明（山河舆图模块）：**
 - `custom_map` 以项目为粒度存多张地图（画布尺寸 width/height），`is_default` 标记默认地图；DELETE 守卫"至少保留一张地图"。首次访问经 `getOrCreateDefaultMap(projectId)` 自动创建默认地图（`services/custom-map-helpers.ts`）
 - `custom_location` 存地点点位（x/y 画布坐标），`location_type` 七类（sect宗门/city城镇/secret_realm秘境/danger险地/teleport传送阵/battlefield战场/generic通用），`danger_level` 四档（safe/normal/danger/deadly，`mapDangerLevel` 由 location_type 推断默认值），`affiliated_faction` 归属势力文本
-- 地点来源三通道，均记 `metadata.source`：`manual` 前端布点；`auto-extract` 实体自动维护管线从正文抽取（draft 草稿，带 chapterNo/volumeNo）；`zhuxian-import` 世界库地点批量导入（`POST /import-zhuxian` 上限500条，draft + 地图边缘坐标 `edgeCoordinate` + metadata.zhuxianId 溯源）
+- 地点来源三通道，均记 `metadata.source`：`manual` 前端布点；`auto-extract` 实体自动维护管线从正文抽取（draft 草稿，带 chapterNo/volumeNo）；`world-import` 世界库地点批量导入（`POST /import-world` 上限500条，draft + 地图边缘坐标 `edgeCoordinate` + metadata.worldId 溯源）
 - `entity_status` draft→official 的转正路径：前端确认按钮 `POST :locId/confirm`，或 `PUT` 更新时携带 `confirm:true`
 - `custom_location_link` 存地点间路径连线（from/to 双向语义，无向图），`link_type` 四类（main_road官道/path小径/teleport传送/secret_path秘径），各方式通行时间字段（travel_time_walk/fly/ship/teleport，分钟）
 - **行程时间估算**（`services/travel-time.ts`）：Dijkstra 最短路，速度常量御剑 0.1 分钟/单位（偏宽松）等；`GET /custom-locations/distance?fromId=&toId=` 返回 estimateTravel（分钟换算可读文案）+ pathNames（途经地点）
@@ -755,7 +755,7 @@ Hono 应用，端口 3456。全局中间件：CORS（允许 localhost:5173）、
 | PUT | /api/projects/:id/custom-locations/:locId | 更新地点（body 带 confirm:true 时同时 draft→official 转正） |
 | DELETE | /api/projects/:id/custom-locations/:locId | 软删除地点 |
 | POST | /api/projects/:id/custom-locations/:locId/confirm | 地点转正（draft→official） |
-| POST | /api/projects/:id/custom-locations/import-zhuxian | 世界库地点批量导入（上限500条，draft+边缘坐标+metadata.zhuxianId 溯源，按名去重） |
+| POST | /api/projects/:id/custom-locations/import-world | 世界库地点批量导入（上限500条，draft+边缘坐标+metadata.worldId 溯源，按名去重） |
 | GET | /api/projects/:id/custom-locations/distance?fromId=&toId= | 行程估算（Dijkstra 最短路 + estimateTravel 文案 + pathNames 途经点） |
 | GET | /api/projects/:id/custom-location-links?mapId= | 地点路径连线列表 |
 | POST | /api/projects/:id/custom-location-links | 新建连线（重复边复用返回已有） |
@@ -1413,7 +1413,7 @@ pending(queued) → running → auditing → revising → completed
 
 **WS2 跨书引入**：`GET /api/world/import/sources?bookId=` 列其他书可引入实体；`POST /api/world/import` 执行复制（去重 + 关系重映射 + 日志）。前端 `WorldBrowser` `ImportDialog`（源书选择 + 按类型勾选 + 全选/indeterminate + 结果网格）。**列表不刷新（bug修复）**：用户引入成功后"看不到"新实体（DB 实已写入），根因是 `ImportDialog`/`ExtractDialog` 的 `onDone` 只失效 `['world-books']` 与 `['world-stats']`，而实体列表用 `['world-all', key, bookId]` 缓存键未被失效→列表停在旧缓存。修复：两处 `onDone` 均补 `queryClient.invalidateQueries({ queryKey: ['world-all'] })` 前缀失效（react-query 前缀匹配会刷新所有实体类型列表）。
 
-**WS3 文本抽取入库**：`WorldEntityExtractorAgent`（`agents/world-entity-extractor.ts`，温度0.2）把粘贴设定文拆成 8 类实体；zod 逐类 schema 内嵌于该 server agent 模块（**偏离约定**：未放 `@xianxiaforge/shared`，因 shared 是零运行时依赖纯类型包，而校验纯服务端职责）。三步端点：`POST /batch-import/extract`（拆解→暂存任务 `awaiting_confirm`）→ `GET /batch-import/:id`（查状态）→ `POST /batch-import/:id/confirm`（`insertExtractedEntities` 按名去重入库，`source='text-extract'`）。前端 `ExtractDialog`（粘贴→预览勾选→确认入库三阶段）。**边界清洗（bug修复）**：系统提示词示例把未知字段写成 `""`，会诱导 LLM 输出空串/null/数字，原严格 schema（`.min(1)`/`z.string()`）整批 parse 抛错→抽取 500 且不留任务记录（用户侧"没结果"）。现 `extractionResultSchema` 每类数组用 `z.preprocess(cleanEntities,…)` 先归一化（空串/null/空白→省略、数字/布尔→字符串、数组空串过滤、无合法 name 的实体整条丢弃），working case 不受影响；extract 端点 catch 加 `console.error` 留痕。**失败可见化（二次bug修复）**：用户报"点开始拆解卡很久后变回原样、没数据"，根因是 LLM 偶发超时/限流抛错后，catch 仅调 `toast(error,'error')`（ui.tsx toast 3 秒自动消失），对话框停在输入页→误以为卡死。修复：`ExtractDialog` 新增 `extractError` 状态，catch 时按"超时/限流/解析"归类后写入对话框内**持久红色横幅**（不再只靠闪逝 toast）；「开始拆解」按钮加 `loading={extracting}` 旋转图标 + 抽取时显示"LLM 抽取约需 10 秒，请稍候"提示。`world-entity-extractor.ts` maxTokens 曾误降 1500→**回归**：实体多、字段长（如 personality 长描述）的文本输出被截断、JSON 不闭合而解析失败；已改为 **4096**（模型上限 8192 的一半，留足余量），并在 `extract` 加截断检测——`parseJsonResponse` 抛错且原始输出 trim 后未以 `}` 闭合时，抛"模型输出被截断，请缩短文本或减少实体类型"的精准错误（前端横幅据此给对症提示）。不动表结构/路由契约/Toast 全局组件。**入库失败（三次bug修复）**：confirm 后部分实体 failed，根因是 `insertExtractedEntities` 把 `new Date()` 作为**原生 postgres-js 绑定参数**（`created_at` 列），postgres-js 拒绝序列化 Date，抛 `The "string" argument must be of type string… Received an instance of Date`→该实体计入 failed。修复：`created_at` 移出 cols/vals，SQL 里直接用 `now()`。**通用坑**：Drizzle ORM `.set({ updatedAt: new Date() })` 由 ORM 正确序列化、安全；但 `zhuxianClient.unsafe()/tx.unsafe()` 等**原生**调用绝不能把 Date 当 `$n` 参数，须用 SQL `now()`（已审计全 server，仅此处犯病，`importFromBook` 等其余原生 INSERT 均已用 now()）。
+**WS3 文本抽取入库**：`WorldEntityExtractorAgent`（`agents/world-entity-extractor.ts`，温度0.2）把粘贴设定文拆成 8 类实体；zod 逐类 schema 内嵌于该 server agent 模块（**偏离约定**：未放 `@xianxiaforge/shared`，因 shared 是零运行时依赖纯类型包，而校验纯服务端职责）。三步端点：`POST /batch-import/extract`（拆解→暂存任务 `awaiting_confirm`）→ `GET /batch-import/:id`（查状态）→ `POST /batch-import/:id/confirm`（`insertExtractedEntities` 按名去重入库，`source='text-extract'`）。前端 `ExtractDialog`（粘贴→预览勾选→确认入库三阶段）。**边界清洗（bug修复）**：系统提示词示例把未知字段写成 `""`，会诱导 LLM 输出空串/null/数字，原严格 schema（`.min(1)`/`z.string()`）整批 parse 抛错→抽取 500 且不留任务记录（用户侧"没结果"）。现 `extractionResultSchema` 每类数组用 `z.preprocess(cleanEntities,…)` 先归一化（空串/null/空白→省略、数字/布尔→字符串、数组空串过滤、无合法 name 的实体整条丢弃），working case 不受影响；extract 端点 catch 加 `console.error` 留痕。**失败可见化（二次bug修复）**：用户报"点开始拆解卡很久后变回原样、没数据"，根因是 LLM 偶发超时/限流抛错后，catch 仅调 `toast(error,'error')`（ui.tsx toast 3 秒自动消失），对话框停在输入页→误以为卡死。修复：`ExtractDialog` 新增 `extractError` 状态，catch 时按"超时/限流/解析"归类后写入对话框内**持久红色横幅**（不再只靠闪逝 toast）；「开始拆解」按钮加 `loading={extracting}` 旋转图标 + 抽取时显示"LLM 抽取约需 10 秒，请稍候"提示。`world-entity-extractor.ts` maxTokens 曾误降 1500→**回归**：实体多、字段长（如 personality 长描述）的文本输出被截断、JSON 不闭合而解析失败；已改为 **4096**（模型上限 8192 的一半，留足余量），并在 `extract` 加截断检测——`parseJsonResponse` 抛错且原始输出 trim 后未以 `}` 闭合时，抛"模型输出被截断，请缩短文本或减少实体类型"的精准错误（前端横幅据此给对症提示）。不动表结构/路由契约/Toast 全局组件。**入库失败（三次bug修复）**：confirm 后部分实体 failed，根因是 `insertExtractedEntities` 把 `new Date()` 作为**原生 postgres-js 绑定参数**（`created_at` 列），postgres-js 拒绝序列化 Date，抛 `The "string" argument must be of type string… Received an instance of Date`→该实体计入 failed。修复：`created_at` 移出 cols/vals，SQL 里直接用 `now()`。**通用坑**：Drizzle ORM `.set({ updatedAt: new Date() })` 由 ORM 正确序列化、安全；但 `worldClient.unsafe()/tx.unsafe()` 等**原生**调用绝不能把 Date 当 `$n` 参数，须用 SQL `now()`（已审计全 server，仅此处犯病，`importFromBook` 等其余原生 INSERT 均已用 now()）。
 
 **WS4 智能匹配**（`agents/forge-smart-match.ts` + `services/forge-smart-match.ts`）：三工坊（人物/法宝/功法）「以文拟X」描述框。设计原则**参数对齐真实 schema**——service 从真实 config 模块（RACE_CONFIG/CATEGORIES/DAO_RULES 等单一事实来源）拼装枚举上下文喂 LLM，LLM **仅**做描述→枚举键映射；互斥/每类上限/辅修不重复主修/忌讳≤2 等**确定性约束**全由 `validateCharacter/validateWeapon/validateTechnique` 防御性过滤兜底，不依赖 LLM 自觉。三端点 `POST /projects/:id/custom-{characters,weapons,techniques}/smart-match`。前端三个 ForgeDialog 左列加描述 Textarea + 「智能匹配参数」按钮，回填尊重锁定项（法宝的 temperament/pastType/taboos/reverseMode 为独立 state，须分别 set）。
 
@@ -1491,7 +1491,7 @@ pending(queued) → running → auditing → revising → completed
 
 **后端核心**（`services/custom-entity-pipeline.ts`）：
 - `resolveEntityMaintainConfig(generationConfig)`：读 `autoExtractCustomEntities`（总开关，缺省 true）、`entitySensitivity`（strict/balanced/loose）、`extractWeapons/extractTechniques/extractLocations`（分项开关，缺省 true）。
-- `processChapterEntities(projectId, chapterNo, volumeNo, content)`：① 预取本项目已有实体名（四表）+ 世界库名单（人物/法宝/功法/地点）→ ② `customEntityExtractorAgent.extract()` LLM 抽取（existingXxx 名单 + zhuxianCharacters 入参排除，sensitivity 分档）→ ③ 新实体逐条入库为 draft（人物带 description≤500字；武器/功法仅占位常量无 description；地点经 `getOrCreateDefaultMap` + `edgeCoordinate` 落默认地图边缘，metadata.source='auto-extract'）→ ④ 老实体动态以 `{chapterNo,volumeNo,updateText,category,extractedAt}` 追加 `chapter_updates`（同章号去重：`prev.filter(e => e.chapterNo !== chapterNo)` 后追加）。
+- `processChapterEntities(projectId, chapterNo, volumeNo, content)`：① 预取本项目已有实体名（四表）+ 世界库名单（人物/法宝/功法/地点）→ ② `customEntityExtractorAgent.extract()` LLM 抽取（existingXxx 名单 + worldCharacters 入参排除，sensitivity 分档）→ ③ 新实体逐条入库为 draft（人物带 description≤500字；武器/功法仅占位常量无 description；地点经 `getOrCreateDefaultMap` + `edgeCoordinate` 落默认地图边缘，metadata.source='auto-extract'）→ ④ 老实体动态以 `{chapterNo,volumeNo,updateText,category,extractedAt}` 追加 `chapter_updates`（同章号去重：`prev.filter(e => e.chapterNo !== chapterNo)` 后追加）。
 - 双保险去重：LLM 名单排除之外，入库前再按 `charNames/weaponNames/techNames/locNames` + 世界库名单 Set 比对；strict 档无对白不抽人物；minor 级 mentionCount<2 且无对白丢弃。单条插入失败 catch 跳过不阻断。
 
 **管线接入**（`pipeline/runner.ts` 步骤7.8）：正文定稿后 `await processChapterEntities()`（try/catch 包裹，失败仅 console.error 不阻断），成功后 `emitEvent('entities_extracted', {result})`。注意与步骤7.7 金句管线（fire-and-forget）不同，7.8 是 await 但包在 try/catch 里。
@@ -1510,7 +1510,7 @@ pending(queued) → running → auditing → revising → completed
 
 **后端**：
 - `routers/custom-maps.ts`：地图 CRUD（GET/POST `/projects/:id/custom-maps`、PUT/DELETE `/projects/:id/custom-maps/:mapId`），DELETE 守卫"至少保留一张地图"。
-- `routers/custom-locations.ts`：地点 CRUD（GET 支持 mapId/entityStatus/locationType 过滤）；`POST :locId/confirm` 转正；`PUT` 带 `confirm:true` 同时转正；`POST /projects/:id/custom-locations/import-zhuxian` 世界库地点批量导入（上限500条，draft + `edgeCoordinate` 边缘坐标 + `metadata.zhuxianId` 溯源，按名去重）；`GET /distance?fromId=&toId=` 行程估算（返回 estimateTravel/分钟 + pathNames 途经点）；连线 CRUD（`custom-location-links`，重复边复用返回已有）。
+- `routers/custom-locations.ts`：地点 CRUD（GET 支持 mapId/entityStatus/locationType 过滤）；`POST :locId/confirm` 转正；`PUT` 带 `confirm:true` 同时转正；`POST /projects/:id/custom-locations/import-world` 世界库地点批量导入（上限500条，draft + `edgeCoordinate` 边缘坐标 + `metadata.worldId` 溯源，按名去重）；`GET /distance?fromId=&toId=` 行程估算（返回 estimateTravel/分钟 + pathNames 途经点）；连线 CRUD（`custom-location-links`，重复边复用返回已有）。
 - `services/custom-map-helpers.ts`：`getOrCreateDefaultMap`（首次自动建默认地图）/`edgeCoordinate`（按序排布边缘坐标）/`mapDangerLevel`（location_type→danger_level 默认推断）/`guessLocationType`。
 - `services/travel-time.ts`：Dijkstra 最短路 + 分交通方式速度常量（御剑 0.1 分钟/单位，偏宽松）。
 - `services/teleport-detector.ts`：正文出现≥2地点名时按御剑速度估算行程，过短即产出 warning。

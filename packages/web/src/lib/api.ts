@@ -159,6 +159,30 @@ export const projectsApi = {
   },
 }
 
+// ============ 文字修仙游戏 API ============
+export const gameApi = {
+  /** 创建新存档并开始游戏 */
+  start: (data: { project_id: number; character_id: number; save_name?: string; game_mode?: string; start_location_id?: number; start_location_name?: string }) =>
+    post<any>('/game/start', data),
+
+  /** 提交动作（非流式） */
+  action: (data: { save_id: number; action: string }) =>
+    post<any>('/game/action', data),
+
+  /** SSE 流式动作 URL */
+  streamUrl: (saveId: number, action: string) =>
+    `${BASE_URL}/game/stream?save_id=${saveId}&action=${encodeURIComponent(action)}`,
+
+  /** 列出项目存档 */
+  listSaves: (projectId: number) => get<any[]>(`/game/saves?project_id=${projectId}`),
+
+  /** 加载存档 */
+  loadSave: (saveId: number) => get<any>(`/game/saves/${saveId}`),
+
+  /** 删除存档 */
+  deleteSave: (saveId: number) => del<void>(`/game/saves/${saveId}`),
+}
+
 // ============ 叙事体检API ============
 export const healthApi = {
   scoreTrend: (projectId: string) =>

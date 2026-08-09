@@ -1,7 +1,7 @@
 # 数据模型
 
 > Agent 理解本项目最快的方式是看懂数据结构。本文档为双库全貌 + 字段级核心表。
-> **以代码为准**：创作库表定义见 `packages/server/src/db/creative-schema.ts`（56 张），世界库见 `packages/server/src/db/zhuxian-schema.ts`（33 张）。技术手册 §4 声称的"48 表/18 表"为旧数据，已过时。
+> **以代码为准**：创作库表定义见 `packages/server/src/db/creative-schema.ts`（56 张），世界库见 `packages/server/src/db/world-schema.ts`（33 张）。技术手册 §4 声称的"48 表/18 表"为旧数据，已过时。
 
 ## 双库概述
 
@@ -222,7 +222,7 @@
 | treasure_hunt_record | 淘宝记录 | location, item_count(默认10), trinket_count, secret_count |
 | hotspot_crawl_batch / hotspot_raw_novel / hotspot_insight / hotspot_push_log | 热点嗅探 4 表 | 批次/原始书目/灵感条目/推送记录 |
 | custom_map | 山河舆图-地图 | name, description, **bg_image(base64 底图)/bg_opacity**, **min_x~max_y(坐标范围 默认2000×1500)**, **parent_map_id(地图层级 US-3)**, sort_order, is_deleted |
-| custom_location | 山河舆图-地点 | map_id, name, x/y, location_type(sect/city/secret_realm/danger/teleport/battlefield/generic), danger_level(safe/normal/danger/deadly), description, affiliated_faction, **parent_location_id/linked_map_id**, **icon/color**, metadata.source(manual/auto-extract/zhuxian-import), entity_status(draft/official), chapter_updates, is_deleted |
+| custom_location | 山河舆图-地点 | map_id, name, x/y, location_type(sect/city/secret_realm/danger/teleport/battlefield/generic), danger_level(safe/normal/danger/deadly), description, affiliated_faction, **parent_location_id/linked_map_id**, **icon/color**, metadata.source(manual/auto-extract/world-import), entity_status(draft/official), chapter_updates, is_deleted |
 | custom_location_link | 地点路径连线 | from/to_location_id(无向图), link_type(main_road/path/teleport/secret_path), travel_time_walk/fly/ship/teleport, description, is_deleted |
 | plot_material_benchmark | 对标素材库（原生 SQL 直连，v1.5；v1.5.1 扩展整本拆文字段） | project_id, source_book_title, material_type(character/plot_unit/style/setting), title, content_md, tags(jsonb), **pinned(置顶=写作强制融入)**, embedding(vector 512 维), chapter_idx, item_type(asset/skeleton/plot), setup_ratio/develop_ratio/turn_ratio/resolve_ratio(NUMERIC), emotion_curve(NUMERIC[]), hook, quality_score, source_snippet |
 
