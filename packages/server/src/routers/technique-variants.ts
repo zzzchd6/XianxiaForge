@@ -16,7 +16,7 @@ import { z } from 'zod';
 import { and, eq } from 'drizzle-orm';
 import { creativeDb } from '../db/index.js';
 import * as schema from '../db/creative-schema.js';
-import { findTalentByName } from '@novel-studio/shared';
+import { findTalentByName } from '@xianxiaforge/shared';
 import {
   generateVariant,
   validateVariant,

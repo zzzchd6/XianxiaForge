@@ -1,5 +1,5 @@
 {
-  "name": "@novel-studio/shared",
+  "name": "@xianxiaforge/shared",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",

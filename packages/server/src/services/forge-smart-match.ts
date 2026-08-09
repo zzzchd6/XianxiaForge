@@ -9,7 +9,7 @@
 import {
   RACE_CONFIG, POSITION_OPTIONS, INNER_PERSONALITY_OPTIONS, OUTER_PERSONALITY_OPTIONS,
   TALENT_CONFIG, FLAW_OPTIONS, TALENT_MAX_PER_CATEGORY,
-} from '@novel-studio/shared';
+} from '@xianxiaforge/shared';
 import { CATEGORIES, GRADES, MATERIALS } from '../data/weapon-catalog.js';
 import { TEMPERAMENTS, PAST_TYPES, TABOOS } from '../data/trait-directions.js';
 import {

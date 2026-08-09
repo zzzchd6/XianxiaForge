@@ -4,7 +4,7 @@
 > 评审范围：14 个核心模块 + 全局架构
 > 评审方法：五层深度诊断（UI/UX 表层 / 功能完整性 / 数据模型 / 竞品对标 / 优化建议）
 > 数据来源：截图评审 + 功能手册 + 技术手册 + 代码佐证答复（逐项代码验证）
-> 代码根目录：`K:\xiaoshuochaijie\zwrite\novel-studio`
+> 代码根目录：`K:\xiaoshuochaijie\zwrite\XianxiaForge`
 
 ---
 

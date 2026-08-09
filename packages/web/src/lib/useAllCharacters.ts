@@ -4,7 +4,7 @@
  * 供场景素材池、影响目标选择、关系面板等所有人物选择器统一消费。
  */
 import { useQuery } from '@tanstack/react-query'
-import { findPosition, findRaceCategory, findRaceSub } from '@novel-studio/shared'
+import { findPosition, findRaceCategory, findRaceSub } from '@xianxiaforge/shared'
 import { worldApi, customCharacterApi } from './api'
 
 /** 合并后的统一人物条目 */

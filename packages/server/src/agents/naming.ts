@@ -15,7 +15,7 @@ import {
   FORBIDDEN_NAME_CHARS,
   type Gender,
   type PositionKey,
-} from '@novel-studio/shared';
+} from '@xianxiaforge/shared';
 
 export class NamingAgent extends BaseAgent {
   constructor() {

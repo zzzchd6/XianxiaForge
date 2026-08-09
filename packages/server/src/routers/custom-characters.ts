@@ -33,7 +33,7 @@ import {
   type RaceCategoryId,
   type Gender,
   type PositionKey,
-} from '@novel-studio/shared';
+} from '@xianxiaforge/shared';
 import { randomCharacter, randomName, randomTalentInCategory, buildFallbackBio } from '../services/character-generator.js';
 import { namingAgent } from '../agents/naming.js';
 import { generateVerdict, buildFallbackVerdict, type VerdictResult } from '../services/verdict-generator.js';

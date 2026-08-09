@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react'
 import { useProjects } from './useProjects'
 
-const STORAGE_KEY = 'novel-studio:currentProjectId'
+const STORAGE_KEY = 'xianxiaforge:currentProjectId'
 
 interface ProjectContextValue {
   /** 当前生效项目ID（已解析为有效值；列表未加载时为空串） */

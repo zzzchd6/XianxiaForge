@@ -1,9 +1,9 @@
 {
-  "name": "novel-studio",
+  "name": "xianxiaforge",
   "private": true,
   "scripts": {
     "dev": "concurrently \"pnpm --filter server dev\" \"pnpm --filter web dev\"",
-    "build": "pnpm --filter @novel-studio/shared build && pnpm --filter server build && pnpm --filter web build",
+    "build": "pnpm --filter @xianxiaforge/shared build && pnpm --filter server build && pnpm --filter web build",
     "test": "pnpm --filter server test",
     "test:ai-flavor": "pnpm --filter server test:ai-flavor",
     "db:init": "node scripts/init-db.mjs"

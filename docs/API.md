@@ -1,6 +1,6 @@
 # 接口清单（API）
 
-> 完整 200+ 端点路由表见 `Novel-Studio-技术手册.md` §5.2（该表已略旧，缺 `techniques.ts`/`character-aspects.ts` 两个路由模块；实际路由文件 **34 个**，以 `packages/server/src/index.ts` 挂载为准）。本文档按模块分组摘要关键端点。
+> 完整 200+ 端点路由表见 `XianxiaForge-技术手册.md` §5.2（该表已略旧，缺 `techniques.ts`/`character-aspects.ts` 两个路由模块；实际路由文件 **34 个**，以 `packages/server/src/index.ts` 挂载为准）。本文档按模块分组摘要关键端点。
 > 前端经 Vite proxy 将 `/api` 转发到后端，故代码内请求路径统一以 `/api` 开头。
 
 ## API 总览

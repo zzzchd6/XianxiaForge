@@ -264,7 +264,7 @@ Auditor 30维审计                                ├ 分支生成    │
 ```bash
 # 1. 克隆项目
 git clone <your-repo-url>
-cd novel-studio
+cd XianxiaForge
 
 # 2. 配置环境变量
 cp .env.example .env
@@ -296,7 +296,7 @@ pnpm dev
 ## 📂 项目结构
 
 ```
-novel-studio/
+XianxiaForge/
 ├── packages/
 │   ├── server/         # 后端（Hono + Drizzle ORM）
 │   │   └── src/
@@ -323,7 +323,7 @@ novel-studio/
 
 | 文档 | 说明 |
 |------|------|
-| [技术手册](./Novel-Studio-技术手册.md) | 完整架构 · 表结构 · 接口实现 · 25 章深度文档 |
+| [技术手册](./XianxiaForge-技术手册.md) | 完整架构 · 表结构 · 接口实现 · 25 章深度文档 |
 | [功能手册](./指尖仙侠-功能手册.md) | 30 模块功能全景 · 逐功能入口/规格/关联关系 |
 | [项目总览](./docs/PROJECT.md) | 一句话定位 · 核心理念 · 模块清单 |
 | [架构与数据流](./docs/ARCHITECTURE.md) | 整体架构图 · 管线流程 · 设计决策 |

@@ -1,6 +1,6 @@
 # 架构与数据流
 
-> 配套文档：`Novel-Studio-技术手册.md` §2（项目结构）、§5（后端架构）、§6（多 Agent 管线）、§8（场景脚本编排）；`指尖仙侠-功能手册.md` §2（核心关联关系图）
+> 配套文档：`XianxiaForge-技术手册.md` §2（项目结构）、§5（后端架构）、§6（多 Agent 管线）、§8（场景脚本编排）；`指尖仙侠-功能手册.md` §2（核心关联关系图）
 
 ## 整体架构
 
@@ -102,7 +102,7 @@
 ## 目录结构说明
 
 ```
-novel-studio/                          # monorepo 根
+XianxiaForge/                          # monorepo 根
 ├── package.json                       # scripts: dev / build / db:init
 ├── pnpm-workspace.yaml                # packages/*
 ├── .env / .env.example                # 双库连接 + LLM 配置

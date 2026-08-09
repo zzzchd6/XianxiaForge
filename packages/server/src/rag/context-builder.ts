@@ -18,7 +18,7 @@ import {
   getDao, getGuidance, getCoreTrait, getAbility, getBacklash, DAO_REALMS, hasClash,
 } from '../data/technique-catalog.js';
 import { eq, and, inArray, or, isNull, sql, desc } from 'drizzle-orm';
-import { findPosition, findRaceCategory, findRaceSub, findTalentByName, stanceLabel } from '@novel-studio/shared';
+import { findPosition, findRaceCategory, findRaceSub, findTalentByName, stanceLabel } from '@xianxiaforge/shared';
 import {
   getLatestConfirmedSnapshots,
   getConfirmedTimeline,

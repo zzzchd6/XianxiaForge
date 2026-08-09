@@ -23,7 +23,7 @@ import {
   findTalentByName,
   stanceLabel,
   type RandomLocks,
-} from '@novel-studio/shared'
+} from '@xianxiaforge/shared'
 import { Dices, Lock, LockOpen, User, Sparkles, Check } from 'lucide-react'
 import { Dialog, Button, Switch, useToast, Textarea } from './ui'
 import { cn } from '../lib/utils'

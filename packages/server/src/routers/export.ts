@@ -321,7 +321,7 @@ app.get('/projects/:pid/export-package', async (c) => {
       ...Object.fromEntries(Object.entries(states).map(([k, v]) => [k, v.length])),
     };
     put('manifest.json', {
-      format: 'novel-studio-export',
+      format: 'xianxiaforge-export',
       version: 1,
       exportedAt: new Date().toISOString(),
       projectTitle: project.title,
@@ -388,7 +388,7 @@ app.post('/projects/import', async (c) => {
     };
 
     const manifest = await readJson('manifest.json');
-    if (!manifest || manifest.format !== 'novel-studio-export') {
+    if (!manifest || manifest.format !== 'xianxiaforge-export') {
       return c.json({ success: false, error: '无效的导出包：manifest 格式不符' }, 400);
     }
 

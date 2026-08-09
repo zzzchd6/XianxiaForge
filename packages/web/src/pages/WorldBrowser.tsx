@@ -12,7 +12,7 @@ import {
 } from '../components/ui'
 import { worldApi, chaptersApi } from '../lib/api'
 import { useCurrentProjectId } from '../hooks/useCurrentProject'
-import { findPosition, findRaceCategory, findRaceSub, stanceLabel } from '@novel-studio/shared'
+import { findPosition, findRaceCategory, findRaceSub, stanceLabel } from '@xianxiaforge/shared'
 import { cn } from '../lib/utils'
 import RelationPanel from '../components/RelationPanel'
 import RelationGraph from '../components/RelationGraph'

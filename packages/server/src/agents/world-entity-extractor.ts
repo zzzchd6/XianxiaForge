@@ -5,7 +5,7 @@
  * 温度 0.2（抽取求稳），maxTokens 3000，禁止瞎编：文本没写到的字段一律省略（null），
  * 不做任何脑补扩写。输出经 zod 校验（剥离未知字段）后才交给入库管线。
  *
- * zod schema 放在本模块（而非 @novel-studio/shared）：shared 为零运行时依赖的纯类型包，
+ * zod schema 放在本模块（而非 @xianxiaforge/shared）：shared 为零运行时依赖的纯类型包，
  * 而抽取结果校验是纯服务端职责，前端仅渲染预览 JSON，故校验就近放置。
  */
 import { z } from 'zod';

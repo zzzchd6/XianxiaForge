@@ -2,7 +2,7 @@
 setlocal EnableDelayedExpansion
 
 echo ===================================================
-echo   Novel Studio - AI Novel Creation System
+echo   XianxiaForge - AI Novel Creation System
 echo ===================================================
 echo.
 

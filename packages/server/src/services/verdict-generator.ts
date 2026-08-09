@@ -10,7 +10,7 @@ import {
   findTalentByName,
   type CustomCharacterDraft,
   type InnerPersonality,
-} from '@novel-studio/shared';
+} from '@xianxiaforge/shared';
 import { chatCompletion } from '../llm/client.js';
 
 export interface VerdictResult {

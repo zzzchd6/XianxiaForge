@@ -1,6 +1,6 @@
 /**
  * 自定义人物随机生成服务（纯函数，无副作用）
- * 权重口径唯一来源：@novel-studio/shared 的附录A/B/C配置库
+ * 权重口径唯一来源：@xianxiaforge/shared 的附录A/B/C配置库
  *   1. randomName —— 按附录B规则生成姓名（精品成名40%/组内拼字35%/单字15%/辈分字10%，定位/立场风格轻度倾斜，道号/称号后缀，禁用字过滤）
  *   2. randomCharacter —— 按锁定配置随机整卡（种族/定位/姓名/立场/性格/天赋）
  *   3. buildFallbackBio —— LLM 小传生成失败时的模板拼接兜底
@@ -37,7 +37,7 @@ import {
   type RandomLocks,
   type CustomCharacterForm,
   type CustomCharacterDraft,
-} from '@novel-studio/shared';
+} from '@xianxiaforge/shared';
 
 // ─── 基础随机工具 ─────────────────────────────────────────────────────────────
 

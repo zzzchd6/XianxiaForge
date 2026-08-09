@@ -25,4 +25,4 @@
 5. **不重复造轮子**：复用项目既有 hook/组件/约定（见技术手册），不另起炉灶。
 
 ### 更大的省钱杠杆（备查）
-novel-studio 应用内生成管线（writer/auditor/branch 等 agent）才是 token 大头。若豆包走火山方舟 API 单价低，可将 LLM 配置的 `LLM_BASE_URL` 指向豆包模型，让应用内生成/审计直接用豆包跑。涉及此项改动时主动评估可行性。
+XianxiaForge 应用内生成管线（writer/auditor/branch 等 agent）才是 token 大头。若豆包走火山方舟 API 单价低，可将 LLM 配置的 `LLM_BASE_URL` 指向豆包模型，让应用内生成/审计直接用豆包跑。涉及此项改动时主动评估可行性。
