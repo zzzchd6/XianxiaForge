@@ -1,7 +1,7 @@
 # 提示词体系（Prompt / Agent）
 
 > 本项目 **没有独立的 prompt 模板文件目录**（不同于常见的 `/prompts/{module}/` 结构）：全部 prompt 逻辑内嵌在 `packages/server/src/agents/*.ts` 的 22 个 Agent 文件中，输出格式用 Zod 校验。
-> 完整职责表见 `Novel-Studio-技术手册.md` §6.2。
+> 完整职责表见 `XianxiaForge-技术手册.md` §6.2。
 
 ## 设计原则
 

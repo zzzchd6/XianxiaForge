@@ -653,7 +653,7 @@ function EtlTab() {
               <input
                 value={path}
                 onChange={(e) => setPath(e.target.value)}
-                placeholder="如 K:\xiaoshuochaijie\zwrite\novel-studio\sucaiqingxi\xxx.txt"
+                placeholder="如 K:\xiaoshuochaijie\zwrite\XianxiaForge\sucaiqingxi\xxx.txt"
                 className="mt-1 w-full rounded-md border border-gray-700 bg-gray-800 px-2 py-1.5 text-gray-100"
               />
             </label>

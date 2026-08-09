@@ -1,6 +1,6 @@
 # 配置与运行
 
-> 依据 `Novel-Studio-技术手册.md` §3（环境配置）、§10（部署与运维）、README.md、`.env.example`。
+> 依据 `XianxiaForge-技术手册.md` §3（环境配置）、§10（部署与运维）、README.md、`.env.example`。
 
 ## 前置要求
 
