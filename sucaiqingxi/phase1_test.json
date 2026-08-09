@@ -1,0 +1,340 @@
+[
+  {
+    "title": "隐藏任务触发奇遇",
+    "core_plot": "主角通过完成一系列隐藏条件（与NPC对话、提供物品、解谜等）触发隐藏奖励，获得稀有资源，引发众人震惊与忌惮。",
+    "trigger_condition": "存在隐藏任务链，玩家需具备耐心、观察力和推理能力，主动探索并完成非显性任务。",
+    "reward": "获得稀有资源（如住宿券），提升声望，引起强者关注。",
+    "cost_or_risk": "耗费大量时间精力，可能被他人视为怪异或威胁，引来敌意。",
+    "emotional_beat": "疑惑→坚持→震惊→敬佩→忌惮",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "解谜",
+      "资源获取",
+      "声望提升"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "少年扬了扬眉：“何需事先知道？眼看着一个庞大的任务链摆在眼前，任何一个合格的冒险者都会一路走到底啊！”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "隐藏奖励触发奇遇",
+    "core_plot": "主角通过与镇口NPC对话并耐心听完背景故事，触发隐藏任务，获得稀有住宿券，从而在众人无法入住时获得上房，引发他人嫉妒与质疑。",
+    "trigger_condition": "主角在镇口与看似无用的NPC对话，并耐心听完其絮叨的镇子故事和设施情报。",
+    "reward": "获得稀有住宿券，得以在客满的客栈入住上房，享受特权。",
+    "cost_or_risk": "引起其他竞争者的嫉妒和敌意，成为众矢之的。",
+    "emotional_beat": "平静→意外之喜→被质疑→从容解释",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "NPC对话",
+      "奖励触发",
+      "特权"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "首先与在镇门口发传单的老大爷对话，他会给你讲述这个镇子的故事，并告知镇内的一应设施情报……这里要耐心听完，才能触发下一环。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "末日危机擦肩而过，天地异变悄然渗透",
+    "core_plot": "主角所在世界遭遇一场突如其来的末日危机，但危机在最后一刻自行解除。虽然表面恢复平静，但主角意识到危机带来的影响正缓慢渗透世界，预示着未来变化。",
+    "trigger_condition": "世界面临末日危机，主角作为高层感知到危机并准备应对。",
+    "reward": "世界幸存，未来可能迎来黄金时代。",
+    "cost_or_risk": "危机根源不明，后续影响不可控，可能带来未知风险。",
+    "emotional_beat": "紧张→疑惑→庆幸→隐忧",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "末日危机",
+      "天地异变",
+      "伏笔",
+      "黄金时代"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "末日危机过去，想起方才澎湃欲出的激情，掌门人心中只有一声长叹。除此之外，更多的则是疑惑。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "误判天象引发虚惊与机遇",
+    "core_plot": "掌门因近视误将茶剑认作年剑，推演出末法时代将在几盏茶内降临，引发恐慌。但彗星擦过，天地未变，反而出现异象，暗示潜在机遇或危机。",
+    "trigger_condition": "掌门使用错误法器进行占卜，且未仔细核对，导致误判。",
+    "reward": "发现天象异变，获得潜在剧情线索（如彗星带来的机缘或威胁）。",
+    "cost_or_risk": "虚惊一场，但暴露了掌门的疏忽；可能错过真正的预警。",
+    "emotional_beat": "紧张→恐慌→虚惊→疑惑",
+    "applicable_scene_type": "key",
+    "tags": [
+      "误判",
+      "天象",
+      "虚惊",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "掌门师兄一愣：“不是年剑？”……怎么会是茶剑！？这不是说离末法只有三五盏茶的时间！？",
+    "material_type": "encounter"
+  },
+  {
+    "title": "书童意外到来触发剧情",
+    "core_plot": "主角独自参加关键选拔，家族派书童前来陪伴，书童在客栈大堂被众人关注，老板娘出手制止喧哗并借机敲诈其他客人，书童最终与主角汇合。",
+    "trigger_condition": "主角已抵达选拔地点，家族担心其安全而派遣书童跟随。",
+    "reward": "获得忠诚的同伴，增加后续行动的人手。",
+    "cost_or_risk": "书童可能成为弱点或累赘，引起他人注意。",
+    "emotional_beat": "惊讶→无奈→接纳",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "书童",
+      "家族支援",
+      "同伴加入"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆在书桌前惊讶地抬起头：“咦，你怎么来了！？快回去！”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "占卜失误埋下后续线索",
+    "core_plot": "通过角色因近视误用道具导致占卜结果偏差，制造紧张氛围后虚惊一场，但实际天象异变暗示真正危机，为后续剧情埋下伏笔。",
+    "trigger_condition": "角色进行重要占卜时因疏忽使用错误道具。",
+    "reward": null,
+    "cost_or_risk": "角色权威受损，但获得真实线索。",
+    "emotional_beat": "紧张→恐慌→虚惊→疑惑",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "误判",
+      "伏笔",
+      "天象",
+      "喜剧"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "掌门师兄一愣：“不是年剑？”……怎么会是茶剑！？这不是说离末法只有三五盏茶的时间！？",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "隐藏任务链的伏笔与回收",
+    "core_plot": "通过NPC的对话和行为埋下任务线索（如老人咳嗽、口渴），主角逐步解谜，最终回收奖励，同时揭示任务设计者的意图。",
+    "trigger_condition": "存在非显性任务链，线索分散在多个NPC和场景中，需要玩家主动交互和推理。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "好奇→探索→惊喜→成就感",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "任务链",
+      "解谜",
+      "NPC交互"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老人讲完故事，会咳嗽几声，说自己口渴，这时候就要送他水喝啊。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "老板娘强势形象铺垫",
+    "core_plot": "老板娘通过言行展现其强势和神秘，如骂客人、随意涨价、用酒坛砸人并敲诈，暗示其非普通客栈老板，为后续剧情埋下伏笔。",
+    "trigger_condition": "客栈中出现大量参加选拔的年轻人，老板娘观察并评价。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "轻蔑→愤怒→得意",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "神秘角色",
+      "实力暗示",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘冷眼旁观，半晌之后才以微不可察的声音哂笑：“一群傻逼。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "招牌题字伏笔",
+    "core_plot": "客栈招牌上有掌门题字，前期仅作为装饰提及，后期在冲突爆发时揭示题字者身份，瞬间压制众人气焰，化解群体事件。",
+    "trigger_condition": "客栈招牌上有名人题字，但未说明身份；当众人闹事时，有路人指出题字者身份。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "愤怒→震惊→灰心",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "题字",
+      "身份揭示",
+      "权力压制",
+      "伏笔回收"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "只见如家客栈四个字旁，提字人的落款赫然写着风吟。……若在风吟后面加上真人二字，就是修仙界赫赫有名的绝世高人。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "危机后预言黄金时代，为后续剧情埋线",
+    "core_plot": "主角在危机过后预言未来将迎来黄金时代，并据此制定长期计划（如举办选拔大会）。此预言为后续剧情发展提供方向，并暗示世界将发生重大变化。",
+    "trigger_condition": "主角经历重大危机后，感知到世界变化趋势。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "沉思→希望→决心",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "预言",
+      "黄金时代",
+      "长期计划",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "大难不死必有后福，这一次危机过后，很可能迎来修仙界的黄金年代……对了，咱们上一次搞升仙大会是什么时候？",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角解谜后潇洒离场",
+    "core_plot": "主角完成复杂隐藏任务后，面对众人质疑，以自信态度解释过程，并潇洒离去，展现超凡智慧和从容，令强者忌惮。",
+    "trigger_condition": "主角完成高难度任务，成为焦点，他人质疑其动机或能力。",
+    "reward": "提升声望，引起强者关注和忌惮。",
+    "cost_or_risk": "可能树敌，暴露自身能力。",
+    "emotional_beat": "质疑→震惊→敬佩→忌惮",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光时刻",
+      "智力碾压",
+      "潇洒离场",
+      "声望提升"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "少年扬了扬眉：“何需事先知道？眼看着一个庞大的任务链摆在眼前，任何一个合格的冒险者都会一路走到底啊！”说完便转身跟小二上了二楼，背影说不出的潇洒。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "老板娘震慑全场",
+    "core_plot": "老板娘因书童喧哗而发怒，掷酒坛砸向楼梯，并借机敲诈之前被踢飞的客人，以强势手段维护秩序，展现其不容挑衅的威严。",
+    "trigger_condition": "书童在客栈内大声喧哗，违反老板娘规定。",
+    "reward": null,
+    "cost_or_risk": "可能引起客人不满，但暂时无人敢反抗。",
+    "emotional_beat": "愤怒→威慑→得意",
+    "applicable_scene_type": "key",
+    "tags": [
+      "立威",
+      "强势角色",
+      "名场面"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘勃然大怒，一拍柜台：“让你别吵你没听到么！？”然后所有人都看到一坛女儿红从柜台后面飞出去。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "客栈老板娘强势立威，震慑闹事者",
+    "core_plot": "主角（客栈老板娘）面对仗势欺人的客人，以绝对实力碾压对方，不仅口头训斥，还动手将其踢飞，展示其强大实力和强硬作风，令对方屈服。",
+    "trigger_condition": "有客人仗着背景在客栈闹事，要求强住上房。",
+    "reward": "维护客栈秩序，树立威信。",
+    "cost_or_risk": "可能得罪权贵，但主角实力强大不惧。",
+    "emotional_beat": "愤怒→不屑→痛快→威慑",
+    "applicable_scene_type": "key",
+    "tags": [
+      "立威",
+      "强势",
+      "实力碾压",
+      "名场面"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘并不老，看来只有十四五岁，一身粗布长袍，一条油污的围裙，但神色骄傲地像是公主。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角从容化解质疑",
+    "core_plot": "主角因获得隐藏奖励而成为众矢之的，面对众人质疑，他冷静解释触发流程，并幽默调侃以转移焦点，展现机智与从容。",
+    "trigger_condition": "主角获得特权后，被众人嫉妒和质问。",
+    "reward": "成功化解敌意，维持了上房资格。",
+    "cost_or_risk": "可能因调侃老板娘而引发其怒火，但及时转移话题。",
+    "emotional_beat": "被质疑→幽默调侃→从容解释→局势缓和",
+    "applicable_scene_type": "key",
+    "tags": [
+      "机智",
+      "化解冲突",
+      "幽默",
+      "主角光环"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "少年眉头一挑，看出气氛不对，便咳嗽一声。‘事情不是你们想象的那样。’顿了顿，又说。‘我和老板娘并没有奸情。’",
+    "material_type": "highlight"
+  },
+  {
+    "title": "五长老临危护山显身手",
+    "core_plot": "末法危机降临，五长老在关键时刻出手，以竹剑划出光幕抵御天崩，展现强大实力和担当，但危机解除后迅速恢复慵懒本色。",
+    "trigger_condition": "天象异变引发山巅大阵颤抖，疑似末法降临。",
+    "reward": "展现实力，巩固门派地位。",
+    "cost_or_risk": "消耗法力，可能暴露真实修为。",
+    "emotional_beat": "紧张→震撼→释然→轻松",
+    "applicable_scene_type": "key",
+    "tags": [
+      "救场",
+      "实力展示",
+      "反差萌"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "白衣女子明眸流转，眼中映出一枚金丹的倒影疯狂转动，倒拖的竹剑被她随手拖动，懒洋洋斜划向上，却带起一道遮天光幕。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "隐藏住宿券任务链",
+    "core_plot": "任务链：与镇口老人对话听故事→送水→送干粮→询问不满→得知千层糕→去点心铺得知卖完→去茶馆帮老板下棋获胜得千层糕→给老人得推荐信→找镇长收集素材→去裁缝铺→村外→最终得铜戒指给老人换住宿券。",
+    "trigger_condition": "玩家主动与镇口老人对话并耐心听完故事，触发后续隐藏任务。",
+    "reward": "获得稀有住宿券，提升声望。",
+    "cost_or_risk": "耗费大量时间，步骤复杂易失败，可能被他人视为浪费时间。",
+    "emotional_beat": "耐心→探索→挫折→坚持→成就感",
+    "applicable_scene_type": "key",
+    "tags": [
+      "任务链",
+      "隐藏任务",
+      "解谜",
+      "多阶段"
+    ],
+    "quality_score": 10,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "之后要去柳记的点心铺，店主会告诉你千层糕已经卖完了，继续询问下去，得知茶馆老板一口气买了十人份的千层糕。",
+    "material_type": "task"
+  },
+  {
+    "title": "隐藏奖励获取任务链",
+    "core_plot": "任务链：1. 与镇口NPC对话，耐心听完背景故事；2. 获得隐藏奖励线索；3. 前往指定地点领取住宿券；4. 在客栈使用券入住，引发冲突。",
+    "trigger_condition": "主角在镇口遇到发传单的老大爷，并选择耐心对话。",
+    "reward": "获得稀有住宿券，享受上房待遇。",
+    "cost_or_risk": "成为众人嫉妒对象，需应对质疑。",
+    "emotional_beat": "好奇→耐心→惊喜→被质疑→从容应对",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "多阶段",
+      "NPC对话",
+      "奖励获取"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "首先与在镇门口发传单的老大爷对话，他会给你讲述这个镇子的故事……这里要耐心听完，才能触发下一环。",
+    "material_type": "task"
+  },
+  {
+    "title": "举办升仙大会选拔新人",
+    "core_plot": "主角门派决定举办一场选拔大会，面向所有符合条件的少年，不限出身。消息传出后，各地少年蜂拥而至，导致举办地人满为患，引发各种冲突。主角需应对报名热潮和秩序问题。",
+    "trigger_condition": "门派衰落，需要招收新人复兴；主角预言黄金时代到来，决定举办大会。",
+    "reward": "选拔到优秀弟子，门派复兴有望。",
+    "cost_or_risk": "大会筹备复杂，可能引发各方势力冲突，管理难度大。",
+    "emotional_beat": "期待→混乱→紧张→希望",
+    "applicable_scene_type": "key",
+    "tags": [
+      "选拔大会",
+      "门派复兴",
+      "人满为患",
+      "冲突"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "灵剑派举办升仙大会的消息从三年前流传九州，年龄十二以内，其余条件不论，较之考究家世到祖宗十八代的其它门派，简直宽松地不成体统。",
+    "material_type": "task"
+  }
+]

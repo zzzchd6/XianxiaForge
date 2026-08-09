@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+  background-color: #0c0a09;
+  background-image:
+    radial-gradient(1100px 520px at 82% -10%, rgba(192, 154, 82, 0.07), transparent 60%),
+    radial-gradient(800px 460px at 4% 112%, rgba(192, 154, 82, 0.045), transparent 55%);
+  background-attachment: fixed;
+  color: #f0eae0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 自定义滚动条 - 黑金主题 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #40382f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #57493a;
+}
+
+/* Firefox 滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #40382f transparent;
+}
+
+/* 选中文本样式 */
+::selection {
+  background-color: rgba(192, 154, 82, 0.32);
+}
+
+/* 焦点可见性：键盘导航时显示金色焦点环 */
+:focus-visible {
+  outline: 2px solid rgba(192, 154, 82, 0.7);
+  outline-offset: 2px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(192, 154, 82, 0.6);
+  box-shadow: 0 0 0 2px rgba(192, 154, 82, 0.15);
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* 尊重用户减少动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============ 黑金主题工具类 ============ */
+
+/* 鎏金渐变文字：品牌名 / 页面标题点缀（背景裁切文字） */
+.text-gold-grad {
+  background-image: linear-gradient(120deg, #ead9b0, #cfaf6e 55%, #ddc48e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* 鎏金细边卡片：用于强调卡片（状态面板/关键数据），发丝金线 */
+.gold-trim {
+  border-color: rgba(192, 154, 82, 0.38);
+  box-shadow: inset 0 0 0 1px rgba(192, 154, 82, 0.08);
+}
+
+/* 衬线标题：古风字距，用于页面/卡片/弹窗标题 */
+.title-serif {
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+  letter-spacing: 0.06em;
+}
+
+/* 页面主标题统一古风衬线（各页面 h1 均为标题，正文不以 h1 渲染） */
+main h1 {
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+  letter-spacing: 0.05em;
+  text-wrap: balance;
+}

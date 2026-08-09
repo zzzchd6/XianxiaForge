@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnpm-debug.log
+
+# Build outputs
+dist/
+build/
+
+# Environment variables (contains secrets)
+.env
+.env.local
+.env.*.local
+
+# OpenSquilla workspace files
+.opensquilla/
+.opensquilla-cache/
+.v-char227.json
+
+# Python virtual environment and cache
+sucaiqingxi/.venv/
+sucaiqingxi/__pycache__/
+sucaiqingxi/**/*.pyc
+sucaiqingxi/**/*.pyo
+
+# Logs
+*.log
+
+# Large binary / temporary files
+*.zip
+*.docx
+
+# Copyrighted / large data files
+sucaiqingxi/download/
+sucaiqingxi/sucaitest/
+sucaiqingxi/outputs/
+sucaiqingxi/Lorn.NovelWriteSkills-main/
+sucaiqingxi/我有一个修仙世界[搜书吭].txt
+
+# Runtime output directories
+outputs/
+
+# Server runtime temp
+packages/server/tmp/
+
+# Empty placeholder directory
+secend/

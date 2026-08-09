@@ -1,0 +1,1694 @@
+[
+  {
+    "title": "灰烬中惊现绝世秘籍",
+    "core_plot": "主角在烧毁的书籍灰烬中发现一本火烧不毁的古老经卷，经卷是传说中失传的修炼至高秘诀，引发巨大震惊和机遇。",
+    "trigger_condition": "主角因愤怒烧掉一本普通书籍，事后在灰烬中无意发现异常物品。",
+    "reward": "获得失传的修炼至高秘诀，可能带来实力飞跃。",
+    "cost_or_risk": "经卷修炼难度极高，历史上无人成功；可能引来他人觊觎，带来杀身之祸。",
+    "emotional_beat": "愤怒→惊讶→震惊→狂喜→冷静",
+    "applicable_scene_type": "key",
+    "tags": [
+      "奇遇",
+      "秘籍",
+      "灰烬",
+      "修炼",
+      "机缘"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易的目光不由看向了烧掉武经的火盆。...发现火盆灰烬之中暗金色的经文。...《弥陀经》！",
+    "material_type": "encounter"
+  },
+  {
+    "title": "从神怪笔记悟出修炼真谛",
+    "core_plot": "主角在备考时偶然翻阅一本被视为荒诞的神怪笔记，从中领悟到‘神佛由信仰而生’、‘正直聪明为神’等颠覆性思想，打开了修炼世界的大门，获得对力量本质的全新认知。",
+    "trigger_condition": "主角为迎合考官学派而阅读其著作，发现其中蕴含的寓言和修炼理论。",
+    "reward": "获得对神佛本质和修炼境界（阴神/阳神）的深刻理解，开启超凡认知。",
+    "cost_or_risk": null,
+    "emotional_beat": "好奇→惊讶→耳目一新→豁然开朗",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "认知突破",
+      "世界观颠覆",
+      "修炼启蒙"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "神佛本来是没有的，是人的念头信仰所化生出来？正直聪明为神？阴神阳神？洪易觉得耳目一新，这则故事好像是为他打开了神秘的大门。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "目睹狐妖读书的震撼场景",
+    "core_plot": "主角被神秘女子带到山谷，看到一群白狐像人一样围坐篝火旁读书，颠覆认知，意识到自己进入了妖鬼世界。",
+    "trigger_condition": "主角被神秘女子强行带到深山山谷。",
+    "reward": null,
+    "cost_or_risk": "主角陷入妖鬼巢穴，面临生命危险。",
+    "emotional_beat": "震惊→恐惧→认知颠覆",
+    "applicable_scene_type": "key",
+    "tags": [
+      "奇遇",
+      "狐妖读书",
+      "震撼场景",
+      "妖鬼世界"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易看到了自己永生难忘的一幕。山谷中间燃烧了一堆大篝火，篝火的旁边，围坐着几十只雪白皮毛的狐狸。这些狐狸，半蹲半坐，好像是人一样，尤其是它们，一个个捧着书本，发",
+    "material_type": "encounter"
+  },
+  {
+    "title": "妖仙赠酒结知音",
+    "core_plot": "主角在危机后偶遇隐居强者，对方因主角赠诗而引为知音，赠予灵酒并传授修行知识，主角获得机缘与庇护。",
+    "trigger_condition": "主角在危机解除后跟随指引进入强者居所，且以诗文投契。",
+    "reward": "获得灵酒（活通气血、延年益寿）、强者好感与修行指点。",
+    "cost_or_risk": null,
+    "emotional_beat": "紧张→放松→惊喜→豪情",
+    "applicable_scene_type": "key",
+    "tags": [
+      "奇遇",
+      "强者赏识",
+      "灵物馈赠",
+      "知音"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“长剑横九野，高冠拂玄穹，独步圣明世，四海称英雄？”……白子岳全身一震，细细品味着……“喝酒，喝酒，就冲你这首诗，深得我心，可谓是天涯相见遇知音。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "获得珍贵藏书与纯狐友谊",
+    "core_plot": "主角意外进入一处隐秘山谷，获得大量珍贵典籍，并与三只纯白狐妖建立深厚友谊，获得情感支持与修炼指导。",
+    "trigger_condition": "主角在困境中偶然发现山谷石室，内有数万册藏书。",
+    "reward": "获得海量知识资源与忠诚的狐妖朋友，得到修炼指点。",
+    "cost_or_risk": null,
+    "emotional_beat": "惊喜→温暖→归属感",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐秘宝库",
+      "跨种族友谊",
+      "知识传承"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "山谷石室之中的典籍藏书，比任何一个富贵豪门家的藏书都要丰富。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "焚书得金页",
+    "core_plot": "主角因紧急情况焚毁禁书，书页烧尽后灰烬中显现一张未被烧毁的暗金色纸页，上面有经文和图画，成为隐藏的奇遇。",
+    "trigger_condition": "主角因父亲突然召见，为销毁禁书而将其投入火盆，书被烧尽。",
+    "reward": "获得一张暗金色神秘纸页，可能记载高深功法或秘密。",
+    "cost_or_risk": "原书被毁，失去正常阅读途径；若被发现可能招致祸端。",
+    "emotional_beat": "紧张→果断→震惊→好奇",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "焚书",
+      "隐藏传承",
+      "奇遇",
+      "禁书"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易看见书在火盆之中燃尽...突然出现了一张略带暗金色的纸，上面密密麻麻全部都是小字经文，还有图画，似乎是金箔，却并没有被火烧着。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "意外获得海量藏书",
+    "core_plot": "主角受邀至隐居者居所，对方展示其收藏的十万册古籍，主角发现这些书籍来自被毁的圣地，从而获得珍贵知识资源。",
+    "trigger_condition": "主角接受教学邀请，进入隐居者住所。",
+    "reward": "获得十万册古籍，包括失传的武学、佛经等珍贵知识。",
+    "cost_or_risk": "需为隐居者整理分类书籍，耗费时间精力。",
+    "emotional_beat": "惊讶→狂喜→敬畏",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "知识传承",
+      "圣地遗宝",
+      "奇遇"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "这一满石室的书，保守估计，也足足有十万册之多。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "古寺夜遇神秘女子",
+    "core_plot": "主角在深山古寺夜读时，听到异响后出门查看，返回时发现房间内凭空出现一名艳丽女子。主角怀疑其为鬼魅，以正气应对，女子却自称非鬼，并指出自己身上有气血，暗示其身份非凡。",
+    "trigger_condition": "主角独自在破败古寺夜读，听到山中异响后出门查看，返回时发现房间内出现陌生女子。",
+    "reward": "获得神秘女子的关注，可能开启后续机缘或线索。",
+    "cost_or_risk": "主角受到惊吓，可能面临未知危险。",
+    "emotional_beat": "好奇→警惕→恐惧→镇定→惊讶",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "古寺",
+      "夜遇",
+      "神秘女子",
+      "鬼魅疑云"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "突然之间，一个清脆甜润的声音从身后传了过来。洪易这一惊可是非同小可！全身都冒出了冷汗。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "意外获得无上经卷",
+    "core_plot": "主角偶然从贴身处取出一卷经文，发现其书法与佛像具有极高艺术价值，且经文开篇为“如是我闻”，暗示其可能是真正的修行法门，而非普通典籍。主角决定研读并尝试修炼其中神魂壮大之法。",
+    "trigger_condition": "主角在研读前进行焚香洗手等仪式，郑重取出贴身收藏的经卷。",
+    "reward": "获得一卷可能包含修行法门的无上经卷，其书法与佛像均为无价之宝。",
+    "cost_or_risk": "经卷来源不明，可能涉及未知风险；修炼方法需自行摸索，可能走火入魔。",
+    "emotional_beat": "好奇→震惊→期待",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "奇遇",
+      "经卷",
+      "修行法门",
+      "艺术价值"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "经文从贴肉的地方取出来，丝绸一般的顺滑感觉使得洪易非常的舒服。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "狐族藏书阁奇遇",
+    "core_plot": "主角为母守坟读书，意外被狐族请去为藏书分类，发现石室中藏有大量武学道书，包括禁书《武经》《道经》，获得珍贵知识资源。",
+    "trigger_condition": "主角在西山守坟读书，狐族长老因藏书杂乱需分类，主动邀请主角帮忙。",
+    "reward": "获得《武经》《道经》等禁书阅读机会，以及狐族藏书阁使用权。",
+    "cost_or_risk": "可能卷入狐族与皇宫的隐秘关系，带来未知祸福。",
+    "emotional_beat": "疑惑→兴奋→如获至宝",
+    "applicable_scene_type": "key",
+    "tags": [
+      "知识获取",
+      "禁书",
+      "狐族",
+      "藏书阁"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易正翻阅着，突然之间，看见了正中央的书架显赫位置，摆放着两部大书，一部是《武经》一部是《道经》。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "神魂出窍遇险得救",
+    "core_plot": "主角意外神魂出窍，陷入寒冷溺水般的濒死状态，被一只小白狐的神魂所救，并获赠保护神魂的檀香和灵果，从而获得安全出窍交流的能力。",
+    "trigger_condition": "主角在修炼或冥想时无意中神魂出窍，且缺乏保护措施。",
+    "reward": "获得安全出窍的方法（檀香保护）、灵果（提升体质或神魂）、与灵兽建立友谊。",
+    "cost_or_risk": "神魂出窍无保护时极度危险，可能魂飞魄散。",
+    "emotional_beat": "好奇→恐惧→绝望→获救惊喜→温暖感激",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "神魂出窍",
+      "濒死体验",
+      "灵兽救助",
+      "香火保护"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易感觉自己要魂飞魄散了...突然看见一个浑身素白的小女孩一把把自己抱住，推向了自己的身体。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "观想跃塔触发神魂出壳",
+    "core_plot": "主角通过读书明悟大道至简，摒弃繁杂咒语手诀，利用磨墨写字静心，回忆登塔眩晕感，观想跃塔触发神魂出壳，成功实现第一次灵魂出窍。",
+    "trigger_condition": "主角阅读道经中的复杂修炼法门，结合自身读书经验，悟出简化方法，并回忆童年登塔的眩晕恐惧感。",
+    "reward": "成功实现神魂出壳，开启仙术修炼之路。",
+    "cost_or_risk": "若观想失败可能精神受损或走火入魔。",
+    "emotional_beat": "困惑→明悟→紧张→成功后的平静",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "观想",
+      "神魂出壳",
+      "悟道",
+      "简化修炼"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易闭上眼睛，观想自己头顶上有七层宝塔，蹬到最顶层的时候，突然奋力一跃！",
+    "material_type": "encounter"
+  },
+  {
+    "title": "观想修炼中的危险幻象与自救",
+    "core_plot": "修炼者通过观想引发幻象，经历从舒适到恐怖再到飞升的诱惑，最终凭借内心观想的守护神像摆脱幻境，完成一次危险但成功的修炼尝试。",
+    "trigger_condition": "修炼者初次尝试高深观想法，进入深度冥想状态。",
+    "reward": "成功克服幻象，神魂得到锻炼，修炼经验提升。",
+    "cost_or_risk": "若沉溺幻象或神魂出窍，可能导致疯癫或魂飞魄散。",
+    "emotional_beat": "舒适→警觉→恐惧→诱惑→坚定→后怕→疲惫",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "修炼",
+      "幻象",
+      "心魔",
+      "观想",
+      "危险"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易坐了一炷香的时间，观想着，渐渐的就进入了状态。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "獒犬围猎触发狐群危机",
+    "core_plot": "主角在隐居修炼时，意外遭遇贵族猎队携带獒犬围猎狐群。獒犬能看穿神魂，狐群无法自保，主角被迫介入保护，面临暴露风险。",
+    "trigger_condition": "主角与狐群藏身之处被猎队獒犬发现，猎队逼近。",
+    "reward": null,
+    "cost_or_risk": "主角可能暴露自身秘密，与贵族势力结仇；狐群可能被猎杀。",
+    "emotional_beat": "平静→警觉→慌乱→决断",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "危机降临",
+      "被迫行动",
+      "保护弱者"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易听见外面犬吠，三只小白狐慌乱，小殊在地上划拉‘獒犬’二字。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "鬼仙附体解围",
+    "core_plot": "主角在危急时刻，意外遭遇神秘强者以鬼仙附体手段操控獒犬反噬追猎者，从而化解危机，并揭示更高层次力量的存在。",
+    "trigger_condition": "主角与弱小同伴被强大追猎者包围，即将暴露时，远处传来歌声和酒香。",
+    "reward": "危机解除，主角见识到鬼仙级力量，获得成长契机。",
+    "cost_or_risk": "追猎者被激怒，可能引来更强敌人。",
+    "emotional_beat": "绝望→震惊→希望",
+    "applicable_scene_type": "key",
+    "tags": [
+      "奇遇",
+      "强者介入",
+      "附体",
+      "危机化解"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "突然之间，异变陡生。十多只獒犬中突然一只最大的獒猛然的转过了头，好像是被什么东西附上了身一样，眼睛之中闪烁着凶狠的光，吼叫一声，猛的朝景雨行一行人猛扑过去。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "深山遇妖赠秘籍",
+    "core_plot": "主角在深山偶遇隐居的妖族及其强者，对方因赏识主角的品性，赠送珍贵武学典籍和金钱，使主角获得修炼资源和财富基础。",
+    "trigger_condition": "主角独自在深山活动，遇到非人种族及其守护者，且对方对主角有好感。",
+    "reward": "获得武学秘籍（含高人注解）和金钱（赤金币），奠定修炼与生活基础。",
+    "cost_or_risk": "与妖族交往可能引来人类势力猜忌或追杀；接受馈赠可能欠下人情。",
+    "emotional_beat": "惊喜→感动→不舍",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "奇遇",
+      "赠予",
+      "修炼资源",
+      "妖族",
+      "离别"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "小殊眼睛里面显露出忧伤...还有元妃姐姐给你的金饼子...还有里面是一部武经...",
+    "material_type": "encounter"
+  },
+  {
+    "title": "武经道经开篇启发修炼体系认知",
+    "core_plot": "主角在阅读武经和道经时，意外发现两者对超脱生死的不同解释：武术修肉身，仙术修神魂。这一认知转变触发了他对修炼体系的兴趣，并决定开始练武。",
+    "trigger_condition": "主角翻阅武经和道经，读到开篇关于苦海、肉身、神魂的比喻。",
+    "reward": "获得对武术和仙术两大修炼体系的清晰认知，明确修炼方向。",
+    "cost_or_risk": null,
+    "emotional_beat": "困惑→恍然大悟→决心",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "修炼体系",
+      "认知突破",
+      "世界观揭示"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "世间如苦海，肉身如渡海之筏。若肉身坚强，则能载人直达苦海彼岸。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "夜遇神秘女子获高薪聘约",
+    "core_plot": "主角在深夜古庙中遇到一名神秘女子，女子自称非妖鬼，并邀请主角担任家庭教师，提供远超常理的酬金。主角虽心动但保持警惕，最终被女子强行带走，发现女子实为狐妖。",
+    "trigger_condition": "主角独自在深夜古庙中，遇到一名自称非妖鬼的神秘女子。",
+    "reward": "获得月薪十两赤金的高薪工作机会，但尚未接受。",
+    "cost_or_risk": "被强行带走，面临未知危险，可能陷入妖鬼圈套。",
+    "emotional_beat": "警惕→惊讶→犹豫→被迫行动",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "奇遇",
+      "高薪聘约",
+      "神秘女子",
+      "深夜古庙"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“嘻嘻，我今天来西山，是来看亲戚，却想不到遇到了你这样一个有趣的少年。”红衣女子自言自语：“正好，我那些亲戚之中也有小孩子要读书，想雇请你当老师给他们讲课，不知",
+    "material_type": "encounter"
+  },
+  {
+    "title": "附体神通显威",
+    "core_plot": "强者以神魂附体于动物，操控其说话行动，震慑敌人并保护主角，展现超凡手段。",
+    "trigger_condition": "主角团队遭遇强敌围攻，强者暗中观察后决定出手。",
+    "reward": "敌人被吓退，主角安全脱险。",
+    "cost_or_risk": "强者暴露自身存在，可能引来仇家注意。",
+    "emotional_beat": "诡异→震惊→敬畏",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "神通",
+      "附体",
+      "震慑",
+      "救援"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“好！居然能看出鬼仙附体的手段来！不过要我显身，你们还差了一点点……”突然之间，十几头大獒之间，又有一头大獒开口说话了。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "发现典籍中的致命陷阱",
+    "core_plot": "主角在研读官方典籍时，通过分析作者意图和时代背景，发现其中故意隐藏致命缺陷，旨在误导修炼者走向死亡。",
+    "trigger_condition": "主角深入研读典籍，并思考作者著书时的环境与心态。",
+    "reward": "识破陷阱，避免走火入魔，获得正确修炼方向。",
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→警觉→恍然大悟",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "典籍陷阱",
+      "逆向思维",
+      "知识觉醒"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易又揣摩出了道经里面记载的一些修炼方法的弊端，甚至是故意的恶毒。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "雪夜获赠灵药",
+    "core_plot": "主角在雪夜被狐狸精赠予灵药，大幅提升体质，为后续修炼打下基础。",
+    "trigger_condition": "主角在雪天居住于狐狸洞中，狐狸精为报恩或拉拢而赠药。",
+    "reward": "获得灵药，体质增强，修炼速度提升。",
+    "cost_or_risk": "欠下人情，可能卷入狐狸精的恩怨。",
+    "emotional_beat": "惊讶→感激→期待",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "奇遇",
+      "灵药",
+      "雪夜",
+      "妖族馈赠"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": null,
+    "material_type": "encounter"
+  },
+  {
+    "title": "发现前朝宰相神怪笔记",
+    "core_plot": "主角在准备科举时，偶然翻阅一本无人问津的旧书，发现其中记载了神怪内容，这为他日后接触超凡力量埋下伏笔。",
+    "trigger_condition": "主角在备考期间，因需要揣摩文章而寻找冷门书籍，无意中拿起一本被忽视的旧书。",
+    "reward": "获得一本蕴含超凡知识的神怪笔记，开启修炼之路。",
+    "cost_or_risk": "阅读神怪笔记可能被视为不务正业，影响科举备考。",
+    "emotional_beat": "好奇→惊喜→期待",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "奇遇",
+      "知识获取",
+      "超凡启蒙"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易翻开了一本《草堂笔记》。这本书封皮很新，但是纸质很旧，显然是没有人看的老书。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "武经夹注揭示人仙境界",
+    "core_plot": "主角在武经正文夹行中发现印月禅师的注解，指出修炼穴窍可达到人仙境界，超越普通武学层次。这一发现让他意识到武学还有更高目标。",
+    "trigger_condition": "主角仔细阅读武经，注意到夹行中的小字注解。",
+    "reward": "得知人仙境界的存在，获得更高修炼目标。",
+    "cost_or_risk": null,
+    "emotional_beat": "好奇→震惊→向往",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "隐藏信息",
+      "境界突破",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "练武不明窍，终究不能肉身成圣...达致人仙之境。印月禅师于大乾朝立国三十年中秋注。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "圣地覆灭的伏笔",
+    "core_plot": "隐居者透露其藏书来自被剿灭的千年古刹，暗示该圣地曾富可敌国、武学昌盛，为后续圣地传承或复仇线埋下伏笔。",
+    "trigger_condition": "主角询问藏书来源。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "感叹→好奇→沉思",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "圣地覆灭",
+      "历史秘辛",
+      "伏笔"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "其实这些书，是当年中州大禅寺被剿，破寺之时，我们从寺庙里面带出来的。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "母亲被气死埋下复仇动机",
+    "core_plot": "主角幼年时，母亲因在宴会上对诗被正妻当众羞辱，气得吐血病逝。这一事件成为主角奋发图强、为母正名的核心动力。",
+    "trigger_condition": "主角回忆童年，母亲因才情被正妻嫉妒而遭辱骂。",
+    "reward": null,
+    "cost_or_risk": "主角背负仇恨，可能影响心态或做出极端行为。",
+    "emotional_beat": "痛苦→愤怒→坚定",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "复仇动机",
+      "家族矛盾",
+      "情感创伤"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "那天晚上回去之后，自己的母亲就气得血脉郁积，吐血伤身，两个月后就病死了。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "武学境界体系埋下晋升伏笔",
+    "core_plot": "武经详细描述了从武生到武圣的七大层次，并暗示武圣之上还有人仙。这一体系为后续主角的修炼进阶提供了明确路径和悬念。",
+    "trigger_condition": "主角阅读武经中关于练肉、练筋等七层境界的描述。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "惊叹→敬畏→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "修炼体系",
+      "等级设定",
+      "伏笔"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "武术的修炼，分为练肉，练筋，练膜，练骨，练脏，练髓，换血，七大层次。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "官方典籍的恶意设计",
+    "core_plot": "主角发现官方编纂的修炼典籍中暗藏致命缺陷，暗示背后有势力刻意阻碍民间修炼，为后续揭露更大阴谋埋下伏笔。",
+    "trigger_condition": "主角对比不同版本典籍，发现矛盾之处。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "怀疑→确认→警惕",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "典籍阴谋",
+      "官方黑幕",
+      "修炼陷阱"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "道经是大乾王朝收集天下典籍编著的，大乾王朝并不想人修炼仙术。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "武经修炼隐患",
+    "core_plot": "主角研读官方武经，发现其中记载不全且有误导，暗示需要名师指点或另寻秘法。",
+    "trigger_condition": "主角独自研读武经，发现修炼禁忌众多且方法模糊。",
+    "reward": null,
+    "cost_or_risk": "若盲目修炼可能走火入魔或练出畸形。",
+    "emotional_beat": "困惑→失落→谨慎",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "武学",
+      "官方典籍",
+      "隐患"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "要练武很难啊，这么多的禁忌。没有教师指点，自己摸索，很容易出岔子。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "烧书埋下伏笔",
+    "core_plot": "主角因愤怒烧掉一本普通书籍，这一行为看似冲动，却为后续在灰烬中发现隐藏的绝世秘籍埋下伏笔。",
+    "trigger_condition": "主角在情绪激动时烧毁一本看似无用的书。",
+    "reward": null,
+    "cost_or_risk": "烧书可能失去原有内容，但实际隐藏秘籍得以显现。",
+    "emotional_beat": "愤怒→后悔→意外发现",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "烧书",
+      "隐藏",
+      "秘籍"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易心中想道。...有点可惜那本烧掉的“武经”。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "父亲反对学武的深层原因",
+    "core_plot": "主角向权威长辈提出学习武艺的请求，被严厉拒绝。主角事后反思，推测拒绝的真实原因是自己若文武双全、立下军功，可能打破家族等级秩序，威胁长辈的权威和家族规矩。这一推测为后续主角暗中努力、最终颠覆家族格局埋下伏笔。",
+    "trigger_condition": "主角在权威长辈面前提出学习武艺的请求，被当场拒绝。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→猜测→坚定",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "家族矛盾",
+      "权力博弈",
+      "成长伏笔"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "为什么不让我学武艺，莫非是怕我考中进士之后，再入军中，立了战功，有可能封爵？我母亲有可能被封君，搅乱了侯府的规矩。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "科举制度与家族地位关联",
+    "core_plot": "主角意识到只有通过科举考中进士，才能为母亲争取夫人名分，使其灵位进入祠堂。这成为他努力读书的目标。",
+    "trigger_condition": "主角思考如何改变自己和母亲的卑微地位。",
+    "reward": "若成功，可提升母亲地位，改变主角命运。",
+    "cost_or_risk": "科举竞争激烈，失败则前途渺茫。",
+    "emotional_beat": "希望→压力→决心",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "科举",
+      "家族荣誉",
+      "目标设定"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "能不能为死去的母亲正名分，就看开春的恩科和秋天的会考了。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "神佛由信仰而生理论",
+    "core_plot": "笔记中提出‘神佛是人的念头信仰所化生’的理论，并指出拆毁庙宇、断绝信仰即可灭神。这一理论为后续主角可能利用或对抗信仰之力埋下伏笔。",
+    "trigger_condition": "主角阅读笔记中关于媳妇成神的议论。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "惊讶→深思",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "信仰之力",
+      "神佛本质",
+      "理论伏笔"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "其实神不过是人的念头所化，庙宇里面的神佛，之所以能屡屡显灵，是因为承受了人们的香火供奉和信仰。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "大乾王朝武力控制体系伏笔",
+    "core_plot": "主角从武经中意识到大乾王朝对武力有精确控制，从几人敌到百人敌都有严格划分，且晋升途径比科举更严密。这暗示了王朝的统治手段和潜在冲突。",
+    "trigger_condition": "主角读到武经中关于各境界能敌几人、几十人的描述。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "恐惧→警惕→深思",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "世界观",
+      "权力结构",
+      "伏笔"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "大乾王朝以武立国，下了如此之大的功夫...这样强大的武力控制系统。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "老总管的异常同步",
+    "core_plot": "主角推开窗户时，发现老总管的目光恰好同步看来，仿佛预知他的动作，暗示老总管深藏不露。",
+    "trigger_condition": "主角听到脚步声后推窗查看，与老总管目光相遇。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "惊讶→疑惑",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "深藏不露",
+      "同步",
+      "伏笔",
+      "高手"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "在洪易嘎吱一下打开窗户的时候，老总管的眼睛一瞬间也看了过来，似乎和洪易打开窗户的时间同步，有一种先知先觉的感觉。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "小理国公赠礼暗藏野心",
+    "core_plot": "主角收到小理国公赠送的贵重文房四宝，价值数百两。主角推测对方礼贤下士、急公好义，但认为其志不小，暗示此人可能有政治野心，为后续剧情埋下伏笔。",
+    "trigger_condition": "主角收到小理国公派人赠送的贵重文房四宝。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "感激→揣摩→警惕",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "赠礼",
+      "政治野心",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "这一套文房四宝，最少都要数百两。这小理国公景雨行出手还真大方……不过我看其志不小……",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "经卷开篇暗示真经",
+    "core_plot": "经文以“如是我闻”开头，这是佛教典籍中真正听闻佛说法而记载的标志，暗示此经可能为真经而非外道典籍，为后续修炼提供合法性伏笔。",
+    "trigger_condition": "主角阅读经文时注意到开篇四字并产生疑惑。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→思考",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "真经",
+      "佛教",
+      "如是我闻"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "这篇文章开张就是四个字，“如是我闻……”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "元妃与狐族的关联",
+    "core_plot": "主角发现狐族女子元妃持有皇宫赤金钱币，暗示狐族与皇室有隐秘联系，为后续剧情埋下伏笔。",
+    "trigger_condition": "主角注意到元妃拿出皇宫赤金钱币，结合狐族藏书阁的异常，产生怀疑。",
+    "reward": null,
+    "cost_or_risk": "可能卷入皇室与狐族的秘密，带来危险。",
+    "emotional_beat": "疑惑→警觉",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "皇宫",
+      "狐族",
+      "秘密",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "那个元妃的女子，居然拿出皇宫之中的赤金钱币，和狐狸到底是什么关系？这事情扑朔迷离，也不知道是福是祸。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "肉身是渡世宝筏的隐喻",
+    "core_plot": "主角在神魂出窍遇险时，领悟到肉身是渡过苦海的宝筏这一道理，为后续重视肉身修炼、平衡神魂与肉体关系埋下伏笔。",
+    "trigger_condition": "主角经历神魂离体的危险后，反思肉身的重要性。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "恐惧→顿悟",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "肉身重要性",
+      "神魂风险",
+      "哲理伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "难怪世间如苦海，肉身是渡世的宝筏，人的神魂脱体，就等于是赤身裸体跳进海里，一下就完了。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "观想守护神像的伏笔",
+    "core_plot": "修炼者通过观想特定神像来镇压心魔，该神像在后续修炼中多次出现，帮助克服关键幻象，暗示其与修炼者前世或本源的联系。",
+    "trigger_condition": "修炼者首次观想神像以对抗舒适幻象。",
+    "reward": "成功抵御心魔，保持神智清醒。",
+    "cost_or_risk": null,
+    "emotional_beat": "警觉→安心",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "神像",
+      "心魔",
+      "修炼",
+      "守护"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易心中警觉，豁然观想，星空之中出现一个金色佛陀，慈祥，亲切，好像是自己千百世之前的前生。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "武经真伪存疑",
+    "core_plot": "主角研读官方武经时，怀疑其中内容不实，认为练武需谨慎，决定等待高人指点。此疑虑为后续发现真实功法或遭遇误导埋下伏笔。",
+    "trigger_condition": "主角翻阅武经，发现多种炼肉手法和武学，但无法判断优劣。",
+    "reward": null,
+    "cost_or_risk": "若盲目修炼可能走火入魔或练成畸形。",
+    "emotional_beat": "困惑→怀疑→谨慎",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "功法疑云",
+      "官方误导",
+      "谨慎求索"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易也明白，大乾王朝编著的《武经》，里面也只怕有很多不实在的地方。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "读书人念头强大如阳神",
+    "core_plot": "笔记中李严指出读书人刚正严明，自身念头强大纯净，近乎阳神天仙，比阴神强大。这暗示主角作为读书人可能通过修身养性获得超凡力量。",
+    "trigger_condition": "主角读到李严关于读书人念头与神佛对比的论述。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "震撼→向往",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "念头修炼",
+      "阳神",
+      "读书人优势"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "读书人刚正严明，自身念头强大纯净，已经近乎道家中的阳神天仙了。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "獒犬镇压邪气",
+    "core_plot": "设定獒犬具有镇压邪气、看穿神魂的能力，为后续獒犬被鬼仙附体反噬主人埋下伏笔，暗示更高层次力量可突破常规克制。",
+    "trigger_condition": "故事初期提及獒犬特性，后续獒犬被附体时呼应。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "平静→意外",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "设定伏笔",
+      "克制关系",
+      "反转"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "户人家，养一只獒犬，可以镇压邪气。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "妖族强者身份伏笔",
+    "core_plot": "强者自称天下八大妖仙之一，却以人类身份活动，暗示其背后有庞大势力与秘密，为后续卷入妖族与人类冲突埋下伏笔。",
+    "trigger_condition": "强者在对话中透露自身非凡身份及所属势力，但未完全展开。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "好奇→疑惑",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "身份伏笔",
+      "势力背景",
+      "妖族",
+      "强者"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "我虽然是天下八大妖仙之一，但如今却是正正经经的人。我住在北方。元突王朝的白家。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "女子暴露皇宫金币身份",
+    "core_plot": "神秘女子拿出赤金金币作为定金，主角认出这是只有皇宫才有的‘药金’钱币，从而推断女子身份不简单，可能来自皇宫。",
+    "trigger_condition": "女子展示金币作为预付定金。",
+    "reward": "主角获得线索，推断女子与皇宫有关。",
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→警觉→推断",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "金币",
+      "皇宫身份",
+      "线索"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“这金的成色，不是一般的金子。只有皇宫里面才有这样的钱。”洪易看了这金钱之后，心中一愣，原来这个金币的颜色是赤色的。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "强者名号埋线",
+    "core_plot": "通过敌人提及强者姓名，暗示其强大背景，为后续强者登场和主角与之结交做铺垫。",
+    "trigger_condition": "敌人遭遇主角团队时，以强者名号作为威慑。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "警惕→好奇",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "强者铺垫",
+      "名号"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“回去告诉杨拓，就说我白子岳迟早会找他一分高下。叫他等着吧。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "白先生与八大妖仙",
+    "core_plot": "狐妖提及白先生（白子岳）是天下八大妖仙之一，暗示存在一个超越种族的强者圈子，为后续引入高阶势力做铺垫。",
+    "trigger_condition": "主角询问狐妖修炼来源，狐妖回答曾受白先生指点。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "好奇→向往",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "妖仙设定",
+      "强者组织",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "白先生叫做白子岳，很有名气呢，是天下八大妖仙之一。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "科举取消骑射与武功价值",
+    "core_plot": "主角意识到科举取消骑射是时代背景，但武功高强在军队中能获得高位和爵位，为母亲争得封君名号，为后续修炼武功埋下动机。",
+    "trigger_condition": "主角思考自身条件不足，无法请教师买弓马，但知道武功在军队中的价值。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "无奈→希望",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "科举",
+      "武功",
+      "封君",
+      "动机"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "如果练好了武功，考中进士，文武双全，进入大乾王朝的军队系统之后，地位会很高。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "元妃晋升皇贵妃",
+    "core_plot": "贵族对话透露元妃因回答‘道理最大’被皇帝加封皇贵妃，暗示元妃受宠且智慧过人，为后续元妃成为主角重要助力或关键人物埋下伏笔。",
+    "trigger_condition": "猎队中永春郡主向景雨行讲述宫中消息。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "平淡→好奇→重视",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "宫廷秘闻",
+      "智慧受赏",
+      "潜在盟友"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "元妃说道理最大，令皇上龙心大悦，就加封为皇贵妃了。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角无力感",
+    "core_plot": "主角面对强敌时深感自身武力不足，产生无力感，为后续获得力量或机缘埋下伏笔。",
+    "trigger_condition": "主角目睹追猎者强大，无法用言语或现有能力阻止。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "焦虑→无力→决心",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "成长伏笔",
+      "心理描写",
+      "决心"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "可恨，我若是武术大宗师……洪易想来想去，也没有想到好的办法阻止这群人，心底深处有一种无力的感觉。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "武经注解价值伏笔",
+    "core_plot": "主角获得一部有高僧注解的武经，但当前无法修炼，暗示未来随着实力提升，注解内容将成为关键突破点。",
+    "trigger_condition": "主角获得一部残缺武学大全，其中包含高人的批注，但自身修为不足。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "期待→重视",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "秘籍伏笔",
+      "修炼线索",
+      "高人注解",
+      "成长铺垫"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "还有里面是一部武经，虽然不可以练，不过可以做参考...这部武经里面有些和尚的注解，还是可以看一看的。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角对妖鬼的认知铺垫",
+    "core_plot": "主角通过对话展现对妖鬼的深刻了解，包括妖鬼无形无血肉等知识，为后续遭遇狐妖埋下伏笔。",
+    "trigger_condition": "主角与神秘女子讨论妖鬼特性。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "自信→展示学识",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "妖鬼知识",
+      "主角能力",
+      "铺垫"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“嗯，你不是妖鬼一类。妖鬼都是无形的念头所化，就算功力深厚，能显化出来，也不过是冷冰冰的一团，不会有血肉之躯的感觉。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "灵酒功效伏笔",
+    "core_plot": "主角饮用灵酒后身体发热、神清气爽，暗示酒有特殊功效，为后续提升实力或触发事件埋线。",
+    "trigger_condition": "主角接受强者赠酒并饮用。",
+    "reward": "暂时获得身体增益（暖洋洋、轻飘飘）。",
+    "cost_or_risk": null,
+    "emotional_beat": "舒适→好奇",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "灵物",
+      "功效暗示"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“咕咚咕咚，洪易连灌三口，还意犹未尽，只觉得这酒越喝，身体越是暖和，轻飘飘好像要飞起来一样，但是头脑也越来越清醒，没有一点醉意。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "赠诗引为知音",
+    "core_plot": "主角即兴赋诗，强者听后深受触动，引为知音，二人豪饮畅谈，展现主角文采与强者狂放。",
+    "trigger_condition": "主角受强者款待后，以诗回赠。",
+    "reward": "获得强者认可与友谊。",
+    "cost_or_risk": null,
+    "emotional_beat": "豪迈→感动→畅快",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "文采",
+      "知音",
+      "豪情"
+    ],
+    "quality_score": 10,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“长剑横九野，高冠拂玄穹，独步圣明世，四海称英雄？”……白子岳全身一震，细细品味着……“喝酒，喝酒，就冲你这首诗，深得我心，可谓是天涯相见遇知音。”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "正气凛然对鬼魅",
+    "core_plot": "主角在深山古寺中遭遇疑似鬼魅的艳丽女子，虽手无缚鸡之力，但坚信正气可驱邪，以刚正言辞喝退对方，展现读书人的气节与胆识。",
+    "trigger_condition": "主角在古寺夜读时，房间内突然出现一名艳丽女子，疑似鬼魅。",
+    "reward": "女子被主角正气所慑，转而嬉笑，未加害于他。",
+    "cost_or_risk": null,
+    "emotional_beat": "恐惧→镇定→刚正→释然",
+    "applicable_scene_type": "key",
+    "tags": [
+      "正气",
+      "胆识",
+      "读书人",
+      "鬼魅"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "我洪易自幼读书，虽然远远算不上正直聪明，但道理节操还是守得住的。你赶快出去。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "观想星辰灌顶入定",
+    "core_plot": "主角在子时独自于院中，盘坐结印，观想漫天星辰光辉灌顶而入，与神魂结合，经历种种幻象，但守定心神，最终进入修炼状态，展现了其定力与悟性。",
+    "trigger_condition": "主角熟读经文后，选择子时在寂静院中修炼，抬头观星后闭目存想。",
+    "reward": "成功进入神魂修炼状态，为后续壮大神魂奠定基础。",
+    "cost_or_risk": "修炼过程中幻象丛生，若定力不足可能走火入魔。",
+    "emotional_beat": "专注→平静→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "修炼",
+      "观想",
+      "定力"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "夜里子时，四周无人，寂静一片之时，洪易站在自己的院子中间，抬头望着天上稀疏的星斗，深深的看了几眼，随后闭上眼睛，背诵着经文之中的修行方法。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "发现武经道经的狂喜",
+    "core_plot": "主角在狐族藏书阁中意外发现梦寐以求的禁书《武经》《道经》，如获至宝，体现其对知识的渴望和机遇的把握。",
+    "trigger_condition": "主角在石室中巡视，看到中央书架上的《武经》《道经》。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "震惊→狂喜",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光时刻",
+      "知识渴望",
+      "禁书",
+      "机遇"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易看见之后，如获至宝的扑了上去。对于这两部大书，他可是想看已久了。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "灵兽舍身救主",
+    "core_plot": "主角神魂濒临消散时，一只小白狐以神魂形态冲入，抱住主角神魂推回身体，牺牲自己部分力量（或承受风险）救下主角，展现灵兽的忠诚与善良。",
+    "trigger_condition": "主角陷入神魂消散的绝境，灵兽恰好出现并具备救助能力。",
+    "reward": null,
+    "cost_or_risk": "灵兽可能消耗自身神魂力量或承受反噬。",
+    "emotional_beat": "绝望→震惊→感动",
+    "applicable_scene_type": "key",
+    "tags": [
+      "灵兽救主",
+      "舍身相救",
+      "神魂互动"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "突然看见了一个浑身素白的小女孩突然跑了进来，一把把自己抱住，推向了自己的身体。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "明悟大道至简，简化修炼法门",
+    "core_plot": "主角面对复杂咒语手诀，回忆草堂笔记中‘大道至简’的议论，通过磨墨写字静心，摒弃繁杂步骤，直接观想跃塔，成功神魂出壳，展现其悟性和批判精神。",
+    "trigger_condition": "主角阅读到复杂修炼法门，感到头大无法熟记。",
+    "reward": "成功实现神魂出壳，获得修炼突破。",
+    "cost_or_risk": null,
+    "emotional_beat": "烦躁→明悟→自信→成功",
+    "applicable_scene_type": "key",
+    "tags": [
+      "悟性",
+      "大道至简",
+      "批判精神",
+      "突破"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "大道至简，那些道士偏偏要搞出繁杂的手诀，咒语来。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "克服飞升幻象的惊险时刻",
+    "core_plot": "修炼者在经历重重幻象后，面对最诱人的飞升幻象，几乎神魂出窍，关键时刻观想守护神像稳住心神，避免魂飞魄散。",
+    "trigger_condition": "修炼者克服前序幻象后，遭遇最终飞升诱惑。",
+    "reward": "成功守住神魂，修炼更进一步。",
+    "cost_or_risk": "若被诱惑，神魂出窍则魂飞魄散。",
+    "emotional_beat": "艰辛→诱惑→警觉→后怕→庆幸",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "修炼",
+      "幻象",
+      "心魔",
+      "惊险"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易的神魂忍不住让这股大力扯离身体，欲向天上飘去。就在这个紧要关头，豁然，星空之中又出现了那个似乎是自己前世的弥陀佛。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "鬼仙附体反噬",
+    "core_plot": "神秘强者以鬼仙手段附体獒犬，反噬主人，展现强大神通和豪迈气概。",
+    "trigger_condition": "追猎者即将发现主角藏身处，神秘歌声响起。",
+    "reward": null,
+    "cost_or_risk": "獒犬被杀，但附体转移，显示对方游刃有余。",
+    "emotional_beat": "紧张→震惊→敬畏",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "神通展示",
+      "强者登场"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "突然之间，异变陡生。十多只獒犬中突然一只最大的獒猛然的转过了头，好像是被什么东西附上了身一样，眼睛之中闪烁着凶狠的光，吼叫一声，猛的朝景雨行一行人猛扑过去。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "离别时强者的洒脱",
+    "core_plot": "强者与主角告别时，长笑高歌，潇洒步入山林，展现其豪迈不羁、超然物外的性格魅力，令主角感动。",
+    "trigger_condition": "主角与强者及其同伴在深山分别，强者以洒脱姿态离去。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "感动→敬佩→向往",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光时刻",
+      "角色魅力",
+      "洒脱",
+      "离别",
+      "豪迈"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "白子岳突然长笑一声，高歌酒神曲，一步一步走入了山林之中。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "识破典籍毒计，心境清明",
+    "core_plot": "主角通过批判性阅读，识破官方典籍中的致命陷阱，并推断出武经同样存在问题，展现其独立思考与洞察力。",
+    "trigger_condition": "主角在修炼后反思道经内容，结合历史背景分析。",
+    "reward": "获得对修炼体系的深刻理解，避免死亡风险。",
+    "cost_or_risk": null,
+    "emotional_beat": "愤怒→冷静→清明",
+    "applicable_scene_type": "key",
+    "tags": [
+      "智慧闪光",
+      "批判思维",
+      "主角高光"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "想通了问题，洪易心中一片清明。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "体悟身心合一",
+    "core_plot": "主角练习拳法后感受到全身力量凝聚于拳，产生酥麻舒适和力量感，领悟到强壮体魄能坚定心神，获得自信与踏实。",
+    "trigger_condition": "主角集中精神空击一拳，全身肌肉震动。",
+    "reward": "获得力量感与自信，领悟体魄与心神的关系。",
+    "cost_or_risk": null,
+    "emotional_beat": "满足→喜悦→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "体悟",
+      "自信",
+      "身心合一",
+      "成长"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "全身的大块肉在这一拳之间都震动了一下...有一种说不出的酥麻舒服和力量感。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "狐群慌乱中主角挺身而出",
+    "core_plot": "面对獒犬逼近，狐群惊恐失措，主角虽自身实力不足，但决心保护它们，展现出责任感和勇气。",
+    "trigger_condition": "三只白狐听到獒犬叫声后极度恐惧，向主角求助。",
+    "reward": null,
+    "cost_or_risk": "主角可能暴露行踪，与贵族猎队发生冲突。",
+    "emotional_beat": "恐惧→担忧→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "挺身而出",
+      "保护弱小",
+      "勇气"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易看见三个小白狐慌乱的模样，心中也略微的慌乱。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "庶子立志为母正名",
+    "core_plot": "主角在简陋的房间里读书，心中回忆起母亲被气死的往事，立下通过科举为母亲争得夫人名分的决心。",
+    "trigger_condition": "主角在清晨读书时，触景生情想起母亲。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "悲伤→愤怒→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "励志",
+      "亲情",
+      "决心"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "能不能为死去的母亲正名分，就看开春的恩科和秋天的会考了。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "婢女无礼，主角隐忍蓄势",
+    "core_plot": "侯府婢女小宁对主角呼来喝去，言语轻蔑，主角血气上涌、双拳微握，但最终克制情绪，冷静应对。展现主角身处逆境却隐忍坚韧的性格魅力。",
+    "trigger_condition": "婢女小宁用脚踢门，进屋后对主角的炭火和态度表示鄙夷。",
+    "reward": null,
+    "cost_or_risk": "主角尊严受辱，但选择隐忍，可能积累怨气或招致进一步欺凌。",
+    "emotional_beat": "愤怒→克制→冷静",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐忍",
+      "逆境",
+      "性格展现"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易眉毛一皱，血涌到了脸上，双拳微微握紧，拿眼睛看着这个小宁。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "舍身引敌的义气",
+    "core_plot": "主角为保护弱小同伴，决定牺牲自己引开追猎者，展现重情重义的高光时刻。",
+    "trigger_condition": "追猎者逼近，同伴面临生命危险。",
+    "reward": null,
+    "cost_or_risk": "可能被追猎者识破或杀害。",
+    "emotional_beat": "恐惧→坚定→从容",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "义气",
+      "牺牲精神"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "说什么也不能让小殊，小菲，小桑他们遭难。她们既然叫我哥哥，我自然要把她们当妹妹，人以国士待我，我以烈士报之。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "立下练武封爵之志",
+    "core_plot": "主角在了解武学体系后，决心练武以考中进士、立战功封爵，从而提升母亲地位，超越赵夫人。这一目标展现了他的孝心和野心。",
+    "trigger_condition": "主角读完武经开头，联想到父亲和母亲的地位。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "不甘→决心→憧憬",
+    "applicable_scene_type": "key",
+    "tags": [
+      "决心",
+      "孝心",
+      "目标设定"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "我要是学了武艺，考中进士，再去军队里面...封个爵位，那我母亲的名分...远远高过赵夫人了。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角坚定信念对抗妖鬼",
+    "core_plot": "主角在深夜古庙中面对疑似妖鬼的女子，内心自我激励要气盛刚正，不示弱，展现出读书人的胆识和坚定信念。",
+    "trigger_condition": "主角怀疑女子是妖鬼，感到恐惧但强迫自己镇定。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "恐惧→自我激励→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "信念",
+      "胆识",
+      "读书人"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "气盛……不能示弱，一示弱，对方就侵害过来了。念头要刚正坚定。洪易狠狠瞪灯下女人的时候，心中给自己打气，坚定信念。对付妖鬼，洪易坚信首先要气盛。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "妖仙狂放不羁",
+    "core_plot": "强者以附体神通惊退敌人后，与主角饮酒高歌，展现其潇洒狂放、神通自在的个性。",
+    "trigger_condition": "强者与主角独处饮酒时。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "轻松→羡慕→向往",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "高光",
+      "个性展现",
+      "潇洒",
+      "神通"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“真是狂放不羁的少年，神通自在，真是潇洒啊。”看见白子岳这样狂放不羁，却形骸丝毫不散的神态模样，洪易想起他刚才的神通，不由心中暗暗的羡慕。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "与狐妖的温馨互动",
+    "core_plot": "主角神魂出窍与三只狐妖化形为小女孩聊天玩耍，归壳后狐妖献上干果茶水，主角感受到久违的温暖与亲情。",
+    "trigger_condition": "主角修炼后与狐妖交流，狐妖以人形陪伴。",
+    "reward": "获得情感慰藉与友谊。",
+    "cost_or_risk": null,
+    "emotional_beat": "孤独→温暖→感动",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "温馨日常",
+      "跨种族情谊",
+      "治愈"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易看着三个跳来跳去的小狐狸，想起了神魂出窍的时候，三个喊自己小易哥哥的女孩，心中涌起一股的暖意。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "读书人的道理与实力觉醒",
+    "core_plot": "主角面对父亲威严时，深刻反思读书人的道理需要实力支撑，决心自己争取功名，为母亲争得封号，展现角色成长和坚定意志。",
+    "trigger_condition": "主角在父亲面前感到压力，意识到没有实力则道理虚浮。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "压抑→觉醒→坚定→决心",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "成长",
+      "决心",
+      "道理",
+      "实力",
+      "亲情"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "面对自己父亲威严的时候，洪易终于明白了，自己没有实力，读书人的镇定，大义，都有些虚浮。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "面对威严父亲的镇定",
+    "core_plot": "主角被权威长辈召见，在充满压迫感的环境中，内心默念镇定口诀，强作镇定地应对。长辈的威严让主角几乎瘫软，但主角凭借意志和之前的锻炼勉强支撑，展现了超出年龄的坚韧。",
+    "trigger_condition": "主角被权威长辈单独召见，身处庄严肃穆的大厅，长辈言语冰冷、气势逼人。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "紧张→强撑镇定→后怕",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "心理博弈",
+      "坚韧",
+      "成长"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易心中想着，镇定了一下惴惴不安的神思，随着老总管踏进了正府。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "侠女轻功离去",
+    "core_plot": "神秘女子在交谈后突然起身，施展轻功瞬间远去，留下主角对其身份充满好奇与赞叹。",
+    "trigger_condition": "天色已晚，女子决定离开。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "惊叹→向往→好奇",
+    "applicable_scene_type": "key",
+    "tags": [
+      "轻功",
+      "神秘身份",
+      "高光时刻"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "元妃抬起头来，看了看天色，突然站起身来，一个纵身，人就到了三十步开外，几个纵身，就消失在了山林之中。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角练武初显成效",
+    "core_plot": "主角独自练习拳法，感受到身体力量增强，从手无缚鸡之力的书生变得有力，内心充满满足与踏实，标志修炼之路正式开启。",
+    "trigger_condition": "主角在无人打扰的环境中练习基础拳法，并感受到明显进步。",
+    "reward": "身体力量增强，自信心提升，获得继续修炼的动力。",
+    "cost_or_risk": null,
+    "emotional_beat": "满足→喜悦→坚定",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "成长高光",
+      "修炼成果",
+      "自信",
+      "蜕变"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "自己再也不是手无缚鸡之力的书生了。只要这样练下去，会越来越强的。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "读书人悟透修炼真谛",
+    "core_plot": "主角作为读书人，凭借理解力迅速领悟武经和道经开篇的比喻，将武术和仙术的本质归纳为肉身与神魂的修炼，展现出超越常人的悟性。",
+    "trigger_condition": "主角阅读武经和道经的开篇，并思考两者的关系。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "专注→顿悟→自信",
+    "applicable_scene_type": "key",
+    "tags": [
+      "智慧",
+      "悟性",
+      "角色魅力"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易是读书人，自然很容易就理解书的文字是什么意思。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角拒绝高薪保持警惕",
+    "core_plot": "面对神秘女子提供的高薪教书工作，主角虽然心动但保持理智，以‘君子爱财取之有道’为由拒绝，并警惕其中风险。",
+    "trigger_condition": "女子展示金币并邀请主角立即前往。",
+    "reward": null,
+    "cost_or_risk": "可能失去高薪机会，但避免了潜在危险。",
+    "emotional_beat": "心动→克制→警惕",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "理智",
+      "不贪财",
+      "警惕"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“君子爱财，取之有道，你要请教书先生居然出十两金子一个月，可见学生也并不是那么简单教的。你把钱收起来，还是找个时间去看看吧。”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "科举与战功双线晋升",
+    "core_plot": "主角设定目标：通过科举获得文官功名，同时练武积累战功以封爵，为母亲争得名分。当前阶段：先强身健体，打好基础。",
+    "trigger_condition": "主角意识到自身地位低下，需要功名爵位来改变命运。",
+    "reward": "获得社会地位、家族认可、为母争光。",
+    "cost_or_risk": "需投入大量时间精力，可能遭遇政敌或战场危险。",
+    "emotional_beat": "决心→规划→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "任务链",
+      "科举",
+      "战功",
+      "封爵",
+      "成长"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "考科举，得功名，立战功，封爵位。这些都是一步一步要进行的事情。",
+    "material_type": "task"
+  },
+  {
+    "title": "神魂修炼十层次",
+    "core_plot": "主角明确神魂修炼的十个阶段：定神、出壳、夜游、日游、驱物、显形、附体、夺舍、雷劫、阳神，当前处于出壳阶段，需逐步提升。",
+    "trigger_condition": "主角通过典籍了解修炼体系，并开始实践。",
+    "reward": "每阶段能力提升，最终达到阳神。",
+    "cost_or_risk": "出壳后易魂飞魄散，需谨慎。",
+    "emotional_beat": "决心→谨慎→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "修炼体系",
+      "阶段任务",
+      "成长路径"
+    ],
+    "quality_score": 9,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "修炼神的十个层次，定神，出壳，夜游，日游，驱物，显形，附体，夺舍，雷劫，阳神。",
+    "material_type": "task"
+  },
+  {
+    "title": "科考与家法赌约",
+    "core_plot": "权威长辈因主角犯错，定下条件：若主角在即将到来的科举考试中中举，则免去家法惩罚；若未中，则执行家法。主角被迫接受，将科考视为必须完成的任务，暗中努力。",
+    "trigger_condition": "主角因小事触犯家规，长辈以科举成绩为条件决定是否执行惩罚。",
+    "reward": "免去家法惩罚，获得一百两银钱资助备考。",
+    "cost_or_risk": "若未中举，将遭受家法（如棍打）。",
+    "emotional_beat": "紧张→接受→决心",
+    "applicable_scene_type": "key",
+    "tags": [
+      "科举",
+      "赌约",
+      "压力"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "你若是中了举人，自然一笔勾销，若是不得中，家法一样执行。",
+    "material_type": "task"
+  },
+  {
+    "title": "克服观想幻象的修炼任务",
+    "core_plot": "修炼者需要依次克服舒适、刺痛、恶鬼、温柔、战场、腐烂、飞升等七重幻象，每次失败都有严重后果，成功则提升神魂修为。",
+    "trigger_condition": "修炼者开始修炼观想法。",
+    "reward": "神魂得到锻炼，修为提升。",
+    "cost_or_risk": "任一环节失败可能导致疯癫或死亡。",
+    "emotional_beat": "舒适→痛苦→恐惧→诱惑→坚定→超脱",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "任务链",
+      "修炼",
+      "幻象",
+      "心魔",
+      "成长"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "洪易再次定神，静坐，结印，内观星光入脑。",
+    "material_type": "task"
+  },
+  {
+    "title": "科举晋升之路",
+    "core_plot": "主角以科举为目标，先考中举人，再中进士，最终金榜题名，从而为母亲加封夫人名分，改变自身命运。",
+    "trigger_condition": "主角意识到只有科举才能改变地位。",
+    "reward": "获得功名，提升社会地位，为母亲正名。",
+    "cost_or_risk": "备考艰辛，竞争激烈，可能失败。",
+    "emotional_beat": "希望→压力→成就感",
+    "applicable_scene_type": "key",
+    "tags": [
+      "科举",
+      "成长",
+      "目标驱动"
+    ],
+    "quality_score": 8,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "先考中举人，再中进士，金榜题名，加封三代……",
+    "material_type": "task"
+  },
+  {
+    "title": "神魂出窍修炼与交流",
+    "core_plot": "主角在灵兽指导下，利用檀香保护安全出窍，学习与灵兽神魂交流，并尝试食用灵果增强体质，为后续修炼神魂和与灵兽合作打下基础。",
+    "trigger_condition": "主角获得檀香和灵果，灵兽主动示范出窍交流。",
+    "reward": "掌握安全出窍技巧、获得灵果增益、建立与灵兽的沟通渠道。",
+    "cost_or_risk": "需消耗檀香资源，初次尝试仍有轻微风险。",
+    "emotional_beat": "犹豫→尝试→成功→喜悦",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "神魂修炼",
+      "灵兽指导",
+      "资源利用"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "小白狐狸叼了一根长长的香进来，点上火...要洪易学它。",
+    "material_type": "task"
+  },
+  {
+    "title": "科考备考：揣摩考官学派",
+    "core_plot": "主角为通过科考，主动研究前朝宰相李严的笔记，意图通过理解其学派思想来迎合考官，从而高中。任务包括阅读笔记、领悟寓言、调整文章风格。",
+    "trigger_condition": "主角意识到科考需迎合考官学派，而李严是主流学派创始人。",
+    "reward": "科考高中，改变命运",
+    "cost_or_risk": "若揣摩错误，可能落榜；耗费大量时间精力。",
+    "emotional_beat": "焦虑→专注→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "科考",
+      "学派研究",
+      "策略"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "考试之前，揣摩考官的学派，思想，喜好而做文章，那是极其重要的。",
+    "material_type": "task"
+  },
+  {
+    "title": "保护狐族同伴",
+    "core_plot": "主角面临追猎者威胁，目标从引开追猎者到借助外力化解危机，阶段包括：发现危险→试图引敌→无力感→意外获救。",
+    "trigger_condition": "追猎者带着獒犬逼近狐族藏身处。",
+    "reward": "狐族暂时安全，主角获得成长。",
+    "cost_or_risk": "主角暴露自身，可能被追猎者怀疑。",
+    "emotional_beat": "慌乱→决心→无力→希望",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "任务链",
+      "保护",
+      "成长"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "犬吠声越来越接近，情况已经愈见危急。洪易把桌子一拍，长身而起，大踏几步，猛的掀开棉帘子，走出了石室。",
+    "material_type": "task"
+  },
+  {
+    "title": "接受狐妖教书任务",
+    "core_plot": "主角被神秘女子强行带到狐妖山谷，被迫接受为狐妖幼崽教书的任务，但任务内容、地点、报酬均未明确，处于被动接受状态。",
+    "trigger_condition": "主角被女子强行带到狐妖山谷，目睹狐妖读书场景。",
+    "reward": "月薪十两赤金（但未确认是否兑现）。",
+    "cost_or_risk": "主角陷入妖鬼巢穴，人身安全受威胁，任务可能涉及危险。",
+    "emotional_beat": "震惊→被迫接受→未知",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "任务链",
+      "教书",
+      "狐妖",
+      "被迫"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“走吧，现在找个教书先生可真难啊，难得碰到你这个明白的读书人，虽然年龄小了一点，不过不怕鬼，不怕妖，倒是难得，就是你了。”女子自言自语的道，站起身来。",
+    "material_type": "task"
+  },
+  {
+    "title": "护送狐族脱险",
+    "core_plot": "主角需保护狐族不被猎狐者捕获，过程中遭遇强敌，最终借助强者之力化解危机。",
+    "trigger_condition": "主角发现狐族被猎狐者围攻。",
+    "reward": "狐族安全，主角获得强者好感。",
+    "cost_or_risk": "主角自身可能陷入危险。",
+    "emotional_beat": "紧迫→担忧→释然",
+    "applicable_scene_type": "key",
+    "tags": [
+      "任务链",
+      "保护",
+      "救援",
+      "危机"
+    ],
+    "quality_score": 7,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "“要是今天白子岳不出现，一窝狐狸已经凶多吉少了。”",
+    "material_type": "task"
+  },
+  {
+    "title": "整理藏书任务",
+    "core_plot": "隐居者请求主角为其十万册藏书分类整理，以便后代阅读。主角接受任务，需按经史子集分类，耗时可能较长。",
+    "trigger_condition": "隐居者提出整理书籍的请求。",
+    "reward": "获得隐居者信任及更多知识交流机会。",
+    "cost_or_risk": "耗费大量时间精力，可能耽误其他事务。",
+    "emotional_beat": "接受→认真→期待",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "分类整理",
+      "知识管理",
+      "任务链"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "其实这次请先生来，一半是教教这些小孩子，另外一半是想先生为我们整理整理书籍。",
+    "material_type": "task"
+  },
+  {
+    "title": "狐族藏书分类任务",
+    "core_plot": "主角接受狐族长老委托，为藏书阁书籍分类整理，以便小狐狸阅读，任务需大量时间和精力，但可借此阅读藏书。",
+    "trigger_condition": "狐族长老请求主角帮忙分类藏书，主角同意。",
+    "reward": "获得狐族信任，自由阅读藏书阁所有书籍。",
+    "cost_or_risk": "耗费大量时间精力，可能耽误其他计划。",
+    "emotional_beat": "平静→期待",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "任务",
+      "分类",
+      "藏书",
+      "狐族"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "那我今天晚上开始给书籍分类整理。",
+    "material_type": "task"
+  },
+  {
+    "title": "从书生到武者",
+    "core_plot": "主角获得基础拳法后，开始自主修炼，目标是通过持续练习增强体魄，掌握武学基础，为后续更高深的修炼做准备。",
+    "trigger_condition": "主角获得修炼功法并具备自修基础，决心改变自身弱小的现状。",
+    "reward": "身体素质提升，力量增强，获得自保能力。",
+    "cost_or_risk": "修炼需持之以恒，可能因不得法而受伤或走火入魔。",
+    "emotional_beat": "决心→努力→成就感",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "修炼任务",
+      "成长",
+      "基础",
+      "自主"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "斗室之中，洪易双腿一前一后站立...这正是牛魔大力拳之中的“牛魔顶角”中的一个动作。",
+    "material_type": "task"
+  },
+  {
+    "title": "整理分类数万册藏书",
+    "core_plot": "主角花费三天时间对山谷石室中的数万册典籍进行分类整理，为后续系统学习打下基础。",
+    "trigger_condition": "主角获得大量藏书，需要建立知识体系。",
+    "reward": "掌握藏书分布，便于后续查阅。",
+    "cost_or_risk": "耗时耗力，可能错过其他机会。",
+    "emotional_beat": "充实→满足",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "知识管理",
+      "基础建设",
+      "准备工作"
+    ],
+    "quality_score": 6,
+    "source_work": "《阳神》（校对版全本）作者：梦入神机",
+    "source_snippet": "读了三天的书，总算给一小半书籍一一分类。",
+    "material_type": "task"
+  }
+]

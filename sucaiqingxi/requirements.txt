@@ -1,0 +1,20 @@
+# ===== 剧情素材库 ETL 依赖 =====
+# 原则：原生 Python + 轻量库，无 Scrapy / LangChain 等重型框架
+
+# 数据库
+psycopg2-binary>=2.9.9        # PostgreSQL 驱动
+pgvector>=0.2.5               # 向量类型适配（register_vector）
+
+# 向量化（本地 bge-small-zh-v1.5，512 维，与诛仙库同源）
+sentence-transformers>=2.7.0  # 首次运行自动下载模型权重（约 100MB）
+numpy>=1.24.0                 # 批内相似度矩阵计算（去重）
+
+# LLM 结构化抽取
+requests>=2.31.0             # 调用 OpenAI-compatible chat 接口
+
+# 配置
+python-dotenv>=1.0.0         # 读取 .env
+
+# 二期向量服务（embedding_server.py / serve_embedding.py）
+flask>=3.0.0                 # 轻量 HTTP 服务，供 Node 查询时调用
+waitress>=3.0.0              # 生产级 WSGI 服务器（serve_embedding.py 常驻托管）

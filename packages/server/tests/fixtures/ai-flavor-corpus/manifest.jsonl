@@ -1,0 +1,315 @@
+{"file":"blocking/b-001.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-002.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-003.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-004.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-005.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-006.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-007.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-008.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-009.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-010.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-011.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-012.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-013.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-014.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-015.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-016.txt","expectedLevel":"red","expectedRules":["万能形容词"],"source":"程序化构造","note":"密集堆砌万能形容词轰炸"}
+{"file":"blocking/b-017.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-018.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-019.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-020.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-021.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-022.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-023.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-024.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-025.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-026.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-027.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-028.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-029.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-030.txt","expectedLevel":"red","expectedRules":["套路化连接词","客观陈述腔"],"source":"程序化构造","note":"连接词+陈述腔组合达 10 分"}
+{"file":"blocking/b-031.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-032.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-033.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-034.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-035.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-036.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-037.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-038.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-039.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-040.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-041.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-042.txt","expectedLevel":"red","expectedRules":["句首重复","元叙述"],"source":"程序化构造","note":"连续 4 行同句首 + 元叙述堆叠"}
+{"file":"blocking/b-043.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-044.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-045.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-046.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-047.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-048.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-049.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-050.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-051.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-052.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-053.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-054.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-055.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-056.txt","expectedLevel":"red","expectedRules":["句式均匀度"],"source":"程序化构造","note":"14 句×22 字刻意等长，均匀度单独触发 red"}
+{"file":"blocking/b-057.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-058.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-059.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-060.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-061.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-062.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-063.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-064.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-065.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-066.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-067.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-068.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-069.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-070.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-071.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-072.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-073.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-074.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-075.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-076.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-077.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-078.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-079.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-080.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-081.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-082.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-083.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-084.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-085.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-086.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-087.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-088.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-089.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-090.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-091.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-092.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-093.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-094.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-095.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-096.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-097.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-098.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-099.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"blocking/b-100.txt","expectedLevel":"red","expectedRules":["抽象判断词"],"source":"程序化构造","note":"混合型：主打 抽象判断词，多维凑分 ≥10"}
+{"file":"blocking/b-101.txt","expectedLevel":"red","expectedRules":["填充短语"],"source":"程序化构造","note":"混合型：主打 填充短语，多维凑分 ≥10"}
+{"file":"blocking/b-102.txt","expectedLevel":"red","expectedRules":["凑字副词"],"source":"程序化构造","note":"混合型：主打 凑字副词，多维凑分 ≥10"}
+{"file":"blocking/b-103.txt","expectedLevel":"red","expectedRules":["套路化连接词"],"source":"程序化构造","note":"混合型：主打 套路化连接词，多维凑分 ≥10"}
+{"file":"blocking/b-104.txt","expectedLevel":"red","expectedRules":["客观陈述腔"],"source":"程序化构造","note":"混合型：主打 客观陈述腔，多维凑分 ≥10"}
+{"file":"blocking/b-105.txt","expectedLevel":"red","expectedRules":["元叙述"],"source":"程序化构造","note":"混合型：主打 元叙述，多维凑分 ≥10"}
+{"file":"advisory/a-001.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-002.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-003.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-004.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-005.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-006.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-007.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-008.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-009.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-010.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-011.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-012.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-013.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-014.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-015.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-016.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-017.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-018.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-019.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-020.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-021.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-022.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-023.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-024.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-025.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-026.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-027.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-028.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-029.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-030.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-031.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-032.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-033.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-034.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-035.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-036.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-037.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-038.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-039.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-040.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-041.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-042.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-043.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-044.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-045.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-046.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-047.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-048.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-049.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-050.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-051.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-052.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-053.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-054.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-055.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-056.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-057.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-058.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-059.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-060.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-061.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-062.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-063.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-064.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-065.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-066.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-067.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-068.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-069.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-070.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-071.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-072.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-073.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-074.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-075.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-076.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-077.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-078.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-079.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-080.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-081.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-082.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-083.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-084.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-085.txt","expectedLevel":"yellow","expectedRules":[],"source":"程序化构造","note":"词表词轻度命中，totalFlags 5~9 不越线"}
+{"file":"advisory/a-086.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-087.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-088.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-089.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-090.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-091.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-092.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-093.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-094.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-095.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-096.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-097.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-098.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-099.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-100.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-101.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-102.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-103.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-104.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"advisory/a-105.txt","expectedLevel":"yellow","expectedRules":["句式均匀度"],"source":"程序化构造","note":"句长两峰分布，均匀度 0.62~0.78"}
+{"file":"clean/c-001.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-002.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-003.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-004.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-005.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-006.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-007.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-008.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-009.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-010.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-011.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-012.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-013.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-014.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-015.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-016.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：对话体，长短句交错"}
+{"file":"clean/c-017.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-018.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-019.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-020.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-021.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-022.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-023.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-024.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-025.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-026.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-027.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-028.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-029.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-030.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-031.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-032.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：战斗快节奏，长短句交错"}
+{"file":"clean/c-033.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-034.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-035.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-036.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-037.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-038.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-039.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-040.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-041.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-042.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-043.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-044.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-045.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-046.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-047.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-048.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：环境描写抒情，长短句交错"}
+{"file":"clean/c-049.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-050.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-051.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-052.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-053.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-054.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-055.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-056.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-057.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-058.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-059.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-060.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-061.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-062.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-063.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-064.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：内心独白，长短句交错"}
+{"file":"clean/c-065.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-066.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-067.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-068.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-069.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-070.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-071.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-072.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-073.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-074.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-075.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-076.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-077.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-078.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-079.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-080.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：古风文言夹杂，长短句交错"}
+{"file":"clean/c-081.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-082.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-083.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-084.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-085.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-086.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-087.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-088.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-089.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-090.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-091.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-092.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-093.txt","expectedLevel":"green","expectedRules":[],"source":"程序化构造","note":"真人风格骨架填充：普通叙事，长短句交错"}
+{"file":"clean/c-094.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-095.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-096.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-097.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-098.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-099.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-100.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-101.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-102.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-103.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-104.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}
+{"file":"clean/c-105.txt","expectedLevel":"green","expectedRules":["豁免"],"source":"程序化构造","note":"豁免场景：标记段剥离后扫描为 green，剥离前为 red"}

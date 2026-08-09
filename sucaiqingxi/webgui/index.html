@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文风与领域知识蒸馏 · 控制台</title>
+<style>
+  :root{
+    --bg:#0f1420; --panel:#1a2233; --panel2:#141b29; --line:#2a3550;
+    --txt:#e6ecf7; --muted:#8a97b0; --accent:#4f8cff; --accent2:#38d39f;
+    --warn:#ffb454; --danger:#ff6b6b; --radius:10px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);font-size:14px}
+  header{padding:14px 22px;background:linear-gradient(90deg,#182034,#101725);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px}
+  header h1{font-size:17px;margin:0;font-weight:600}
+  header .sub{color:var(--muted);font-size:12px}
+  header .db{margin-left:auto;font-size:12px;color:var(--muted)}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#555;margin-right:5px;vertical-align:middle}
+  .dot.ok{background:var(--accent2)} .dot.bad{background:var(--danger)}
+  .tabs{display:flex;gap:4px;padding:0 22px;background:var(--panel2);border-bottom:1px solid var(--line)}
+  .tab{padding:12px 18px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;font-weight:500}
+  .tab.active{color:var(--txt);border-bottom-color:var(--accent)}
+  .wrap{padding:22px;max-width:1180px;margin:0 auto}
+  .page{display:none} .page.active{display:block}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:18px}
+  .card h2{font-size:14px;margin:0 0 14px;color:var(--txt);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .field{display:flex;flex-direction:column;gap:5px}
+  .field.full{grid-column:1/-1}
+  label{font-size:12px;color:var(--muted)}
+  label .req{color:var(--danger)}
+  input[type=text],input[type=number],select{background:var(--panel2);border:1px solid var(--line);color:var(--txt);padding:9px 11px;border-radius:7px;font-size:13px;width:100%}
+  input:focus,select:focus{outline:none;border-color:var(--accent)}
+  .path-row{display:flex;gap:8px}
+  .path-row input{flex:1}
+  .checks{display:flex;gap:20px;flex-wrap:wrap;margin-top:2px}
+  .checks label{display:flex;align-items:center;gap:6px;color:var(--txt);cursor:pointer;font-size:13px}
+  .btn{background:var(--accent);color:#fff;border:none;padding:9px 18px;border-radius:7px;cursor:pointer;font-size:13px;font-weight:500}
+  .btn:hover{filter:brightness(1.1)} .btn:disabled{opacity:.5;cursor:not-allowed}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+  .btn.sm{padding:5px 11px;font-size:12px}
+  .btn.danger{background:var(--danger)}
+  .actions{margin-top:16px;display:flex;gap:10px;align-items:center}
+  .console{background:#0a0e17;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-family:Consolas,"Cascadia Code",monospace;font-size:12.5px;line-height:1.6;height:340px;overflow-y:auto;white-space:pre-wrap;word-break:break-all}
+  .console .warn{color:var(--warn)} .console .err{color:var(--danger)} .console .info{color:#b8c6e0}
+  .status-bar{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:12px;color:var(--muted)}
+  .pill{padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600}
+  .pill.running{background:rgba(79,140,255,.18);color:var(--accent)}
+  .pill.done{background:rgba(56,211,159,.18);color:var(--accent2)}
+  .pill.failed{background:rgba(255,107,107,.18);color:var(--danger)}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:500;font-size:12px}
+  tr:hover td{background:var(--panel2)}
+  .tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 7px;font-size:11px;margin:1px 2px;color:var(--muted)}
+  .kt{padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600}
+  .kt.term{background:rgba(79,140,255,.16);color:#7db0ff}
+  .kt.rule{background:rgba(56,211,159,.16);color:#4fe0b0}
+  .kt.pitfall{background:rgba(255,107,107,.16);color:#ff8f8f}
+  .kt.expression{background:rgba(255,180,84,.16);color:#ffc978}
+  .kt.case{background:rgba(180,120,255,.16);color:#c79bff}
+  .subtabs{display:flex;gap:6px;margin-bottom:14px}
+  .subtab{padding:7px 14px;cursor:pointer;color:var(--muted);border:1px solid var(--line);border-radius:7px;font-size:13px}
+  .subtab.active{color:#fff;background:var(--accent);border-color:var(--accent)}
+  .toolbar{display:flex;gap:10px;margin-bottom:12px;align-items:center;flex-wrap:wrap}
+  .toolbar input,.toolbar select{width:auto;min-width:150px}
+  .muted{color:var(--muted)}
+  .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50}
+  .modal-bg.show{display:flex}
+  .modal{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:min(760px,92vw);max-height:86vh;overflow:auto;padding:22px}
+  .modal h3{margin:0 0 4px;font-size:16px}
+  .modal .close{float:right;cursor:pointer;color:var(--muted);font-size:20px;line-height:1}
+  .kv{display:grid;grid-template-columns:130px 1fr;gap:8px 14px;margin-top:12px;font-size:13px}
+  .kv .k{color:var(--muted)}
+  .kv .v{word-break:break-word}
+  .brow-item{padding:8px 12px;border-radius:6px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+  .brow-item:hover{background:var(--panel2)}
+  .brow-item .sz{color:var(--muted);font-size:11px}
+  .brow-dir{color:var(--warn)} .brow-file{color:var(--accent2)}
+  .empty{text-align:center;color:var(--muted);padding:30px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);padding:11px 20px;border-radius:8px;z-index:99;display:none}
+  .toast.show{display:block}
+  .toast.err{border-color:var(--danger);color:#ffb0b0}
+  code{background:var(--panel2);padding:1px 6px;border-radius:4px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>文风与领域知识蒸馏</h1>
+  <span class="sub">本地控制台 · 复用现有 ETL 管线</span>
+  <span class="db" id="dbStatus"><span class="dot"></span>连接检测中…</span>
+</header>
+
+<div class="tabs">
+  <div class="tab active" data-page="style">🎨 文风蒸馏</div>
+  <div class="tab" data-page="domain">📚 领域知识蒸馏</div>
+  <div class="tab" data-page="material">🧩 剧情素材抽取</div>
+  <div class="tab" data-page="benchmark">🗡 对标拆解</div>
+  <div class="tab" data-page="results">🗂 结果管理</div>
+</div>
+
+<div class="wrap">
+  <!-- ============ 文风蒸馏 ============ -->
+  <div class="page active" id="page-style">
+    <div class="card">
+      <h2>文风蒸馏参数（distill_style.py）</h2>
+      <div class="grid">
+        <div class="field full">
+          <label>TXT 文件或目录 <span class="req">*</span>（目录=多本合并蒸馏一套风格）</label>
+          <div class="path-row">
+            <input type="text" id="s_path" placeholder="如 K:\忘语作品集\  或单本 .txt 的绝对路径">
+            <button class="btn ghost sm" onclick="openBrowser('s_path')">📁 浏览</button>
+          </div>
+        </div>
+        <div class="field"><label>预设名 <span class="req">*</span>（幂等键）</label><input type="text" id="s_preset" placeholder="忘语·凡人流"></div>
+        <div class="field"><label>作者</label><input type="text" id="s_author" placeholder="忘语"></div>
+        <div class="field"><label>project_id（空=全局共享 NULL）</label><input type="number" id="s_project" placeholder="留空"></div>
+        <div class="field"><label>max-chunks（验证用，空=全量）</label><input type="number" id="s_maxchunks" placeholder="如 20"></div>
+        <div class="field full"><label>dump 导出 JSON 文件名（可选）</label><input type="text" id="s_dump" placeholder="style_check.json"></div>
+        <div class="field full">
+          <div class="checks">
+            <label><input type="checkbox" id="s_dryrun" checked> dry-run（只蒸馏不入库）</label>
+            <label><input type="checkbox" id="s_nolocal"> 关闭本地量化</label>
+            <label><input type="checkbox" id="s_noreduce"> 关闭 LLM 归纳</label>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="s_run" onclick="runStyle()">▶ 开始蒸馏</button>
+        <span class="muted" id="s_hint">建议先用 dry-run + max-chunks 小样验证</span>
+      </div>
+    </div>
+    <div class="card" id="s_logcard" style="display:none">
+      <div class="status-bar">
+        <span>运行日志</span><span class="pill" id="s_pill"></span>
+        <span id="s_elapsed"></span><span class="muted" id="s_cmd"></span>
+      </div>
+      <div class="console" id="s_console"></div>
+    </div>
+  </div>
+
+  <!-- ============ 领域知识 ============ -->
+  <div class="page" id="page-domain">
+    <div class="card">
+      <h2>领域知识蒸馏参数（extract_domain_knowledge.py）</h2>
+      <div class="grid">
+        <div class="field full">
+          <label>TXT 文件或目录 <span class="req">*</span></label>
+          <div class="path-row">
+            <input type="text" id="d_path" placeholder="如 K:\专业书\法医学.txt">
+            <button class="btn ghost sm" onclick="openBrowser('d_path')">📁 浏览</button>
+          </div>
+        </div>
+        <div class="field"><label>领域（RAG 过滤召回用）</label><input type="text" id="d_domain" placeholder="中医 / 刑侦 / 军事"></div>
+        <div class="field"><label>来源书名（空=取文件名）</label><input type="text" id="d_book" placeholder="法医学"></div>
+        <div class="field"><label>project_id（空=全局共享 NULL）</label><input type="number" id="d_project" placeholder="留空"></div>
+        <div class="field"><label>max-chunks（验证用，空=全量）</label><input type="number" id="d_maxchunks" placeholder="如 20"></div>
+        <div class="field full"><label>dump 导出 JSON 文件名（可选）</label><input type="text" id="d_dump" placeholder="kn.json"></div>
+        <div class="field full"><div class="checks">
+          <label><input type="checkbox" id="d_dryrun" checked> dry-run（只抽取不入库）</label>
+        </div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="d_run" onclick="runDomain()">▶ 开始抽取</button>
+        <span class="muted">正式入库会向量化并做批内+库内两级去重</span>
+      </div>
+    </div>
+    <div class="card" id="d_logcard" style="display:none">
+      <div class="status-bar">
+        <span>运行日志</span><span class="pill" id="d_pill"></span>
+        <span id="d_elapsed"></span><span class="muted" id="d_cmd"></span>
+      </div>
+      <div class="console" id="d_console"></div>
+    </div>
+  </div>
+
+  <!-- ============ 剧情素材抽取 ============ -->
+  <div class="page" id="page-material">
+    <div class="card">
+      <h2>剧情素材抽取参数（extract_materials.py）</h2>
+      <div class="muted" style="margin:-6px 0 12px">一次抽取四类模式：🌟 奇遇 / 🧵 伏笔 / ✨ 高光 / 📋 任务链，自动分表入库</div>
+      <div class="grid">
+        <div class="field full">
+          <label>TXT 文件或目录 <span class="req">*</span>（目录=批量逐本抽取）</label>
+          <div class="path-row">
+            <input type="text" id="m_path" placeholder="如 K:\网文合集\  或单本 .txt 的绝对路径">
+            <button class="btn ghost sm" onclick="openBrowser('m_path')">📁 浏览</button>
+          </div>
+        </div>
+        <div class="field"><label>作品名（空=取文件名）</label><input type="text" id="m_work" placeholder="凡人修仙传"></div>
+        <div class="field"><label>max-chunks（验证用，空=全量）</label><input type="number" id="m_maxchunks" placeholder="如 20"></div>
+        <div class="field full"><label>dump 导出 JSON 文件名（可选）</label><input type="text" id="m_dump" placeholder="materials_check.json"></div>
+        <div class="field full"><div class="checks">
+          <label><input type="checkbox" id="m_dryrun" checked> dry-run（只抽取不入库）</label>
+        </div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="m_run" onclick="runMaterial()">▶ 开始抽取</button>
+        <span class="muted">正式入库会向量化并做批内+库内两级去重，project_id 由 .env 的 TARGET_PROJECT_ID 控制</span>
+      </div>
+    </div>
+    <div class="card" id="m_logcard" style="display:none">
+      <div class="status-bar">
+        <span>运行日志</span><span class="pill" id="m_pill"></span>
+        <span id="m_elapsed"></span><span class="muted" id="m_cmd"></span>
+      </div>
+      <div class="console" id="m_console"></div>
+    </div>
+  </div>
+
+  <!-- ============ 对标拆解 ============ -->
+  <div class="page" id="page-benchmark">
+    <div class="card">
+      <h2>对标拆解参数（benchmark_analyze.py）</h2>
+      <div class="muted" style="margin:-6px 0 12px">章节切分 → 骨架（起承转合+情绪曲线）+ 情节模式 单次合并拆解，入 benchmark 两表</div>
+      <div class="grid">
+        <div class="field full">
+          <label>TXT 文件 <span class="req">*</span>（需含「第X章」标题行）</label>
+          <div class="path-row">
+            <input type="text" id="b_path" placeholder="如 K:\网文合集\某某.txt">
+            <button class="btn ghost sm" onclick="openBrowser('b_path')">📁 浏览</button>
+          </div>
+        </div>
+        <div class="field"><label>作品名（空=取文件名）</label><input type="text" id="b_work" placeholder="阳神"></div>
+        <div class="field"><label>作者</label><input type="text" id="b_author" placeholder="梦入神机"></div>
+        <div class="field"><label>project_id（空=全局共享 NULL）</label><input type="number" id="b_project" placeholder="留空"></div>
+        <div class="field"><label>拆解范围</label>
+          <select id="b_scope"><option value="volume">volume 按章序号区间</option><option value="sample">sample 抽样（每 N 章抽 1）</option></select>
+        </div>
+        <div class="field"><label>起始章序号（volume）</label><input type="number" id="b_from" placeholder="1"></div>
+        <div class="field"><label>结束章序号（volume）</label><input type="number" id="b_to" placeholder="30"></div>
+        <div class="field"><label>抽样步长（sample）</label><input type="number" id="b_step" placeholder="10"></div>
+        <div class="field"><label>max-chapters（验证用，空=不限）</label><input type="number" id="b_maxch" placeholder="如 5"></div>
+        <div class="field full"><label>dump 导出 JSON 文件名（可选）</label><input type="text" id="b_dump" placeholder="bench_check.json"></div>
+        <div class="field full"><div class="checks">
+          <label><input type="checkbox" id="b_dryrun" checked> dry-run（只拆解不入库）</label>
+          <label><input type="checkbox" id="b_force"> force（重拆已有章节）</label>
+        </div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="b_run" onclick="runBenchmark()">▶ 开始拆解</button>
+        <span class="muted">已拆章节自动跳过（幂等）；建议先 dry-run + max-chapters 小样验证</span>
+      </div>
+    </div>
+    <div class="card" id="b_logcard" style="display:none">
+      <div class="status-bar">
+        <span>运行日志</span><span class="pill" id="b_pill"></span>
+        <span id="b_elapsed"></span><span class="muted" id="b_cmd"></span>
+      </div>
+      <div class="console" id="b_console"></div>
+    </div>
+
+    <div class="card">
+      <h2>高质量节点回流（benchmark_reflux.py）</h2>
+      <div class="muted" style="margin:-6px 0 12px">拆解 plot 节点按 material_type 回流 plot_material_* 四表（库内去重，幂等）</div>
+      <div class="grid">
+        <div class="field"><label>书目 ID（留空=全部）</label><input type="text" id="rf_book" placeholder="如 1"></div>
+        <div class="field"><label>质量分门槛</label><input type="number" id="rf_quality" value="7" min="0" max="10"></div>
+        <div class="field"><label>project_id（留空=沿用 item）</label><input type="text" id="rf_project" placeholder="空=沿用"></div>
+        <div class="field"><label>本次上限（0=不限）</label><input type="number" id="rf_limit" value="0" min="0"></div>
+        <div class="field full"><div class="checks">
+          <label><input type="checkbox" id="rf_dryrun"> dry-run（只统计不入库）</label>
+        </div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="rf_run" onclick="runReflux()">⇥ 开始回流</button>
+        <span class="muted">已回流节点自动跳过；去重阈值 0.86 与素材库一致</span>
+      </div>
+    </div>
+    <div class="card" id="rf_logcard" style="display:none">
+      <div class="status-bar">
+        <span>回流日志</span><span class="pill" id="rf_pill"></span>
+        <span id="rf_elapsed"></span><span class="muted" id="rf_cmd"></span>
+      </div>
+      <div class="console" id="rf_console"></div>
+    </div>
+
+    <div class="card">
+      <h2>变量级拆解（benchmark_variables.py）</h2>
+      <div class="muted" style="margin:-6px 0 12px">9 变量抽取 + 启发式减法测试（需先完成骨架/情节拆解）</div>
+      <div class="grid">
+        <div class="field"><label>书目 ID <span class="req">*</span></label><input type="text" id="vx_book" placeholder="如 2"></div>
+        <div class="field"><label>输入骨架上限</label><input type="number" id="vx_maxsk" value="30"></div>
+        <div class="field"><label>输入节点上限</label><input type="number" id="vx_maxpl" value="30"></div>
+        <div class="field full"><div class="checks">
+          <label><input type="checkbox" id="vx_skip"> 跳过减法测试</label>
+          <label><input type="checkbox" id="vx_force"> force（重抽变量）</label>
+          <label><input type="checkbox" id="vx_dryrun"> dry-run</label>
+        </div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="vx_run" onclick="runVariables()">◈ 变量级拆解</button>
+        <span class="muted">已有变量节点自动跳过（幂等）</span>
+      </div>
+    </div>
+    <div class="card" id="vx_logcard" style="display:none">
+      <div class="status-bar">
+        <span>变量拆解日志</span><span class="pill" id="vx_pill"></span>
+        <span id="vx_elapsed"></span><span class="muted" id="vx_cmd"></span>
+      </div>
+      <div class="console" id="vx_console"></div>
+    </div>
+
+    <div class="card">
+      <h2>六维质量检测（benchmark_quality.py）</h2>
+      <div class="muted" style="margin:-6px 0 12px">节奏/情绪曲线/冲突/伏笔/钩子/减法 六维对比（零 LLM 纯统计）</div>
+      <div class="grid">
+        <div class="field"><label>被检书目 ID <span class="req">*</span></label><input type="text" id="qa_book" placeholder="如 1"></div>
+        <div class="field"><label>标准对标书目（逗号分隔）</label><input type="text" id="qa_stdbooks" placeholder="如 2 或 2,3"></div>
+        <div class="field"><label>或人工预设 JSON 路径</label><input type="text" id="qa_stdjson" placeholder="留空则用对标聚合"></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="qa_run" onclick="runQuality()">✔ 开始检测</button>
+        <button class="btn sm" onclick="showQualityReport()">查看报告</button>
+        <span class="muted">报告存 outputs/quality-report-book&lt;N&gt;.md</span>
+      </div>
+    </div>
+    <div class="card" id="qa_logcard" style="display:none">
+      <div class="status-bar">
+        <span>质量检测日志</span><span class="pill" id="qa_pill"></span>
+        <span id="qa_elapsed"></span><span class="muted" id="qa_cmd"></span>
+      </div>
+      <div class="console" id="qa_console"></div>
+    </div>
+
+    <div class="card">
+      <h2>变量替换工作流（benchmark_substitute.py）</h2>
+      <div class="muted" style="margin:-6px 0 12px">变量骨架 → 目标题材实例化（领域知识库 RAG 驱动映射，需先有变量节点）</div>
+      <div class="grid">
+        <div class="field"><label>书目 ID <span class="req">*</span></label><input type="text" id="st_book" placeholder="如 2"></div>
+        <div class="field"><label>目标题材 <span class="req">*</span></label><input type="text" id="st_domain" placeholder="如 都市/科幻/女频古言"></div>
+        <div class="field"><label>知识召回条数</label><input type="number" id="st_topk" value="6"></div>
+        <div class="field"><label>导出 JSON（可空）</label><input type="text" id="st_dump" placeholder="如 outputs/subst.json"></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="st_run" onclick="runSubstitute()">⇄ 生成替换方案</button>
+        <span class="muted">无领域知识命中时自动降级关键字/常识迁移</span>
+      </div>
+    </div>
+    <div class="card" id="st_logcard" style="display:none">
+      <div class="status-bar">
+        <span>变量替换日志</span><span class="pill" id="st_pill"></span>
+        <span id="st_elapsed"></span><span class="muted" id="st_cmd"></span>
+      </div>
+      <div class="console" id="st_console"></div>
+    </div>
+  </div>
+
+  <!-- ============ 结果管理 ============ -->
+  <div class="page" id="page-results">
+    <div class="subtabs">
+      <div class="subtab active" data-r="style" onclick="switchResult('style')">文风预设 style_preset</div>
+      <div class="subtab" data-r="domain" onclick="switchResult('domain')">领域知识 plot_domain_knowledge</div>
+      <div class="subtab" data-r="material" onclick="switchResult('material')">剧情素材 plot_material_*</div>
+      <div class="subtab" data-r="benchmark" onclick="switchResult('benchmark')">对标拆解 benchmark_*</div>
+    </div>
+
+    <div class="card" id="res-style">
+      <div class="toolbar">
+        <input type="text" id="rs_q" placeholder="搜索预设名/作者" onkeydown="if(event.key==='Enter')loadStyle()">
+        <button class="btn sm" onclick="loadStyle()">查询</button>
+        <span class="muted" id="rs_count"></span>
+      </div>
+      <table><thead><tr><th>ID</th><th>预设名</th><th>作者</th><th>质量</th><th>置信度</th><th>样本字数</th><th>心智/意象</th><th>ver</th><th>更新时间</th><th></th></tr></thead>
+      <tbody id="rs_body"></tbody></table>
+    </div>
+
+    <div class="card" id="res-domain" style="display:none">
+      <div class="toolbar">
+        <input type="text" id="rd_q" placeholder="搜索标题/正文" onkeydown="if(event.key==='Enter')loadDomain()">
+        <select id="rd_type"><option value="">全部类型</option><option value="term">term 术语</option><option value="rule">rule 规则</option><option value="pitfall">pitfall 误区</option><option value="expression">expression 表达</option><option value="case">case 案例</option></select>
+        <input type="text" id="rd_domain" placeholder="领域过滤" style="min-width:120px">
+        <button class="btn sm" onclick="loadDomain()">查询</button>
+        <span class="muted" id="rd_count"></span>
+      </div>
+      <table><thead><tr><th>ID</th><th>类型</th><th>领域</th><th>标题</th><th>正文预览</th><th>质量</th><th>来源</th><th>时间</th><th></th></tr></thead>
+      <tbody id="rd_body"></tbody></table>
+    </div>
+
+    <div class="card" id="res-material" style="display:none">
+      <div class="toolbar">
+        <select id="rm_table" onchange="loadMaterial()">
+          <option value="encounter">🌟 奇遇 encounter</option>
+          <option value="foreshadow">🧵 伏笔 foreshadow</option>
+          <option value="highlight">✨ 高光 highlight</option>
+          <option value="task">📋 任务链 task</option>
+        </select>
+        <input type="text" id="rm_q" placeholder="搜索标题/核心剧情" onkeydown="if(event.key==='Enter')loadMaterial()">
+        <select id="rm_scene"><option value="">全部场景</option><option value="key">key 关键</option><option value="transition">transition 过渡</option><option value="foreshadow">foreshadow 伏笔</option></select>
+        <button class="btn sm" onclick="loadMaterial()">查询</button>
+        <span class="muted" id="rm_count"></span>
+      </div>
+      <table><thead><tr><th>ID</th><th>标题</th><th>核心剧情预览</th><th>场景</th><th>标签</th><th>质量</th><th>来源</th><th>时间</th><th></th></tr></thead>
+      <tbody id="rm_body"></tbody></table>
+    </div>
+
+    <div class="card" id="res-benchmark" style="display:none">
+      <div class="toolbar">
+        <input type="text" id="rb_q" placeholder="搜索作品名/作者" onkeydown="if(event.key==='Enter')loadBenchBooks()">
+        <button class="btn sm" onclick="loadBenchBooks()">查询书目</button>
+        <span class="muted" id="rb_count"></span>
+      </div>
+      <table><thead><tr><th>ID</th><th>作品</th><th>作者</th><th>状态</th><th>章节数</th><th>节点数</th><th>字数</th><th>更新</th><th></th></tr></thead>
+      <tbody id="rb_body"></tbody></table>
+      <div id="rb_items" style="display:none;margin-top:16px">
+        <div class="toolbar">
+          <span id="rb_items_title" style="font-weight:600"></span>
+          <select id="rbi_type" onchange="loadBenchItems()">
+            <option value="">全部类型</option><option value="skeleton">🦴 骨架 skeleton</option>
+            <option value="plot">🧩 情节 plot</option><option value="variable">🔧 变量 variable</option>
+            <option value="arc">🌊 长篇 arc</option>
+          </select>
+          <input type="text" id="rbi_q" placeholder="搜索标题/正文" onkeydown="if(event.key==='Enter')loadBenchItems()">
+          <button class="btn sm" onclick="loadBenchItems()">查询节点</button>
+          <span class="muted" id="rbi_count"></span>
+        </div>
+        <table><thead><tr><th>ID</th><th>章</th><th>类型</th><th>标题</th><th>内容预览</th><th>标签</th><th>质量</th><th></th></tr></thead>
+        <tbody id="rbi_body"></tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 文件浏览 modal -->
+<div class="modal-bg" id="browBg">
+  <div class="modal">
+    <span class="close" onclick="closeModal('browBg')">×</span>
+    <h3>选择 TXT 文件 / 目录</h3>
+    <div class="muted" id="browPath" style="margin:6px 0 12px;word-break:break-all"></div>
+    <div id="browList"></div>
+  </div>
+</div>
+
+<!-- 详情 modal -->
+<div class="modal-bg" id="detailBg">
+  <div class="modal">
+    <span class="close" onclick="closeModal('detailBg')">×</span>
+    <h3 id="detailTitle">详情</h3>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ============ 通用 ============
+const $ = id => document.getElementById(id);
+const PFX = {style:'s', domain:'d', material:'m', benchmark:'b', reflux:'rf', variables:'vx', quality:'qa', substitute:'st'};  // 任务种类 -> 前缀
+function toast(msg, err){const t=$('toast');t.textContent=msg;t.className='toast show'+(err?' err':'');setTimeout(()=>t.className='toast',2600);}
+function closeModal(id){$(id).classList.remove('show');}
+async function api(url, opt){const r=await fetch(url,opt);const j=await r.json();if(!r.ok)throw new Error(j.error||('HTTP '+r.status));return j;}
+
+// 标签页
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active'); $('page-'+t.dataset.page).classList.add('active');
+  if(t.dataset.page==='results'){loadStyle();}
+});
+
+// 健康检查
+(async()=>{try{const h=await api('/api/health');const el=$('dbStatus');
+  if(h.db==='ok'){el.innerHTML='<span class="dot ok"></span>数据库已连接 · '+h.port;}
+  else{el.innerHTML='<span class="dot bad"></span>DB: '+h.db;}
+}catch(e){$('dbStatus').innerHTML='<span class="dot bad"></span>服务异常';}})();
+
+// ============ 运行 + 日志轮询 ============
+let pollTimer=null;
+function renderLine(line){
+  let cls='info';
+  if(/\[ERROR\]|失败|错误|Traceback/.test(line))cls='err';
+  else if(/\[WARN|WARNING\]|告警|警告|打折|跳过/.test(line))cls='warn';
+  const d=document.createElement('div'); d.className=cls; d.textContent=line; return d;
+}
+async function runTask(kind, payload){
+  const prefix=PFX[kind];
+  $(prefix+'_run').disabled=true;
+  $(prefix+'_logcard').style.display='block';
+  const con=$(prefix+'_console'); con.innerHTML='';
+  try{
+    const res=await api('/api/run/'+kind,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    $(prefix+'_cmd').textContent=res.cmd;
+    pollLoop(kind, res.task_id, 0);
+  }catch(e){toast(e.message,true);$(prefix+'_run').disabled=false;}
+}
+function setPill(prefix,status){const p=$(prefix+'_pill');p.className='pill '+status;
+  p.textContent={running:'运行中',done:'完成',failed:'失败'}[status]||status;}
+async function pollLoop(kind, tid, offset){
+  const prefix=PFX[kind];
+  if(pollTimer)clearTimeout(pollTimer);
+  try{
+    const t=await api('/api/task/'+tid+'?offset='+offset);
+    const con=$(prefix+'_console'); const atBottom=con.scrollTop+con.clientHeight>=con.scrollHeight-30;
+    t.lines.forEach(l=>con.appendChild(renderLine(l)));
+    if(t.lines.length&&atBottom)con.scrollTop=con.scrollHeight;
+    setPill(prefix,t.status);
+    $(prefix+'_elapsed').textContent='耗时 '+t.elapsed+'s';
+    if(t.status==='running'){pollTimer=setTimeout(()=>pollLoop(kind,tid,t.next_offset),1200);}
+    else{$(prefix+'_run').disabled=false;
+      if(t.status==='done')toast('任务完成'); else toast('任务失败 (code '+t.returncode+')',true);}
+  }catch(e){toast(e.message,true);$(prefix+'_run').disabled=false;}
+}
+function runStyle(){
+  const path=$('s_path').value.trim(), preset=$('s_preset').value.trim();
+  if(!path){toast('请填写 TXT 路径',true);return;}
+  if(!preset){toast('请填写预设名',true);return;}
+  runTask('style',{path,preset_name:preset,author:$('s_author').value,
+    project_id:$('s_project').value,max_chunks:$('s_maxchunks').value,dump:$('s_dump').value,
+    dry_run:$('s_dryrun').checked,no_local_stats:$('s_nolocal').checked,no_reduce:$('s_noreduce').checked});
+}
+function runDomain(){
+  const path=$('d_path').value.trim();
+  if(!path){toast('请填写 TXT 路径',true);return;}
+  runTask('domain',{path,domain:$('d_domain').value,source_book:$('d_book').value,
+    project_id:$('d_project').value,max_chunks:$('d_maxchunks').value,dump:$('d_dump').value,
+    dry_run:$('d_dryrun').checked});
+}
+function runMaterial(){
+  const path=$('m_path').value.trim();
+  if(!path){toast('请填写 TXT 路径',true);return;}
+  runTask('material',{path,source_work:$('m_work').value,
+    max_chunks:$('m_maxchunks').value,dump:$('m_dump').value,
+    dry_run:$('m_dryrun').checked});
+}
+function runReflux(){
+  runTask('reflux',{book_id:$('rf_book').value,min_quality:$('rf_quality').value,
+    project_id:$('rf_project').value,limit:$('rf_limit').value,dry_run:$('rf_dryrun').checked});
+}
+function runVariables(){
+  const book=$('vx_book').value.trim();
+  if(!book){toast('请填写书目 ID',true);return;}
+  runTask('variables',{book_id:book,max_skeletons:$('vx_maxsk').value,max_plots:$('vx_maxpl').value,
+    skip_subtraction:$('vx_skip').checked,force:$('vx_force').checked,dry_run:$('vx_dryrun').checked});
+}
+function runQuality(){
+  const book=$('qa_book').value.trim();
+  if(!book){toast('请填写被检书目 ID',true);return;}
+  if(!$('qa_stdbooks').value.trim()&&!$('qa_stdjson').value.trim()){toast('请指定标准来源（对标书目或预设 JSON）',true);return;}
+  runTask('quality',{book_id:book,standard_books:$('qa_stdbooks').value,standard_json:$('qa_stdjson').value});
+}
+async function showQualityReport(){
+  const book=$('qa_book').value.trim();
+  if(!book){toast('请先填写被检书目 ID',true);return;}
+  try{
+    const j=await api('/api/results/quality/report?book='+encodeURIComponent(book));
+    $('detailTitle').textContent='质量检测报告 book#'+book;
+    $('detailBody').innerHTML='<pre style="white-space:pre-wrap;font-size:12px">'
+      +j.content.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</pre>';
+    $('detailBg').classList.add('show');
+  }catch(e){toast(e.message,true);}
+}
+function runSubstitute(){
+  const book=$('st_book').value.trim(), domain=$('st_domain').value.trim();
+  if(!book){toast('请填写书目 ID',true);return;}
+  if(!domain){toast('请填写目标题材',true);return;}
+  runTask('substitute',{book_id:book,target_domain:domain,top_k:$('st_topk').value,dump:$('st_dump').value});
+}
+function runBenchmark(){
+  const path=$('b_path').value.trim();
+  if(!path){toast('请填写 TXT 路径',true);return;}
+  runTask('benchmark',{path,source_work:$('b_work').value,author:$('b_author').value,
+    project_id:$('b_project').value,scope:$('b_scope').value,
+    from_chapter:$('b_from').value,to_chapter:$('b_to').value,
+    sample_step:$('b_step').value,max_chapters:$('b_maxch').value,dump:$('b_dump').value,
+    dry_run:$('b_dryrun').checked,force:$('b_force').checked});
+}
+
+// ============ 文件浏览 ============
+let browTarget=null;
+function openBrowser(target){browTarget=target;$('browBg').classList.add('show');navBrowse(null);}
+async function navBrowse(dir){
+  try{
+    const j=await api('/api/browse'+(dir?('?dir='+encodeURIComponent(dir)):''));
+    $('browPath').textContent=j.dir;
+    const list=$('browList'); list.innerHTML='';
+    const useBtn=document.createElement('div');
+    useBtn.className='brow-item'; useBtn.style.borderBottom='1px solid var(--line)';
+    useBtn.innerHTML='<span class="brow-dir">✔ 选用当前目录（多本合并蒸馏）</span>';
+    useBtn.onclick=()=>{$(browTarget).value=j.dir;closeModal('browBg');};
+    list.appendChild(useBtn);
+    if(j.parent){const up=document.createElement('div');up.className='brow-item';
+      up.innerHTML='<span class="brow-dir">⬆ 上级目录</span>';up.onclick=()=>navBrowse(j.parent);list.appendChild(up);}
+    j.dirs.forEach(name=>{const it=document.createElement('div');it.className='brow-item';
+      it.innerHTML='<span class="brow-dir">📁 '+name+'</span>';
+      it.onclick=()=>navBrowse(j.dir.replace(/[\\/]$/,'')+'\\'+name);list.appendChild(it);});
+    j.files.forEach(f=>{const it=document.createElement('div');it.className='brow-item';
+      it.innerHTML='<span class="brow-file">📄 '+f.name+'</span><span class="sz">'+(f.size/1024/1024).toFixed(2)+' MB</span>';
+      it.onclick=()=>{$(browTarget).value=f.path;closeModal('browBg');};list.appendChild(it);});
+    if(!j.dirs.length&&!j.files.length){const e=document.createElement('div');e.className='empty';e.textContent='（无子目录 / 无 .txt 文件）';list.appendChild(e);}
+  }catch(e){toast(e.message,true);}
+}
+
+// ============ 结果管理 ============
+function switchResult(r){
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.toggle('active',x.dataset.r===r));
+  $('res-style').style.display=r==='style'?'block':'none';
+  $('res-domain').style.display=r==='domain'?'block':'none';
+  $('res-material').style.display=r==='material'?'block':'none';
+  $('res-benchmark').style.display=r==='benchmark'?'block':'none';
+  if(r==='style')loadStyle(); else if(r==='domain')loadDomain();
+  else if(r==='benchmark')loadBenchBooks(); else loadMaterial();
+}
+async function loadStyle(){
+  try{const j=await api('/api/results/style?q='+encodeURIComponent($('rs_q').value.trim()));
+    const b=$('rs_body');b.innerHTML='';
+    $('rs_count').textContent=j.rows.length+' 条';
+    if(!j.rows.length){b.innerHTML='<tr><td colspan="10" class="empty">暂无数据</td></tr>';return;}
+    j.rows.forEach(r=>{const tr=document.createElement('tr');
+      tr.innerHTML=`<td>${r.id}</td><td>${esc(r.style_name)}</td><td>${esc(r.author||'-')}</td>
+        <td>${r.quality_score}</td><td>${r.confidence}</td><td>${r.sample_word_count}</td>
+        <td>${r.n_mind}/${r.n_img}</td><td>${r.version}</td><td class="muted">${r.update_time||'-'}</td>
+        <td><button class="btn ghost sm" onclick="showStyle(${r.id})">详情</button>
+        <button class="btn danger sm" onclick="delStyle(${r.id})">删</button></td>`;
+      b.appendChild(tr);});
+  }catch(e){toast(e.message,true);}
+}
+async function showStyle(id){
+  try{const j=await api('/api/results/style/'+id);const d=j.data;
+    $('detailTitle').textContent='文风预设：'+d.style_name;
+    const arr=k=>(d[k]||[]).map(x=>'<span class="tag">'+esc(x)+'</span>').join(' ')||'<span class="muted">—</span>';
+    $('detailBody').innerHTML=`<div class="kv">
+      <div class="k">作者</div><div class="v">${esc(d.author||'-')}</div>
+      <div class="k">样本作品</div><div class="v">${(d.source_works||[]).map(esc).join('、')||'-'}</div>
+      <div class="k">置信度/质量</div><div class="v">${d.confidence} / ${d.quality_score} · 样本 ${d.sample_word_count} 字 · ver ${d.version}</div>
+      <div class="k">核心心智</div><div class="v">${arr('mental_models')}</div>
+      <div class="k">决策启发式</div><div class="v">${arr('decision_heuristics')}</div>
+      <div class="k">专属意象</div><div class="v">${arr('core_imagery')}</div>
+      <div class="k">禁用表达</div><div class="v">${arr('forbidden_words')}</div>
+      <div class="k">视角规则</div><div class="v">${arr('perspective_rules')}</div>
+      <div class="k">反模式</div><div class="v">${arr('anti_patterns')}</div>
+      <div class="k">描写比例</div><div class="v"><code>${esc(JSON.stringify(d.description_ratio))}</code></div>
+      <div class="k">句式规则</div><div class="v"><code>${esc(JSON.stringify(d.sentence_rules))}</code></div>
+      <div class="k">本地量化</div><div class="v"><code>${esc(JSON.stringify(d.local_stats))}</code></div>
+    </div>`;
+    $('detailBg').classList.add('show');
+  }catch(e){toast(e.message,true);}
+}
+async function delStyle(id){if(!confirm('确认软删除该文风预设？(is_deleted=true，可在库中恢复)'))return;
+  try{await api('/api/results/style/'+id+'/delete',{method:'POST'});toast('已软删除');loadStyle();}catch(e){toast(e.message,true);}}
+
+async function loadDomain(){
+  try{const qs='q='+encodeURIComponent($('rd_q').value.trim())+'&type='+$('rd_type').value+'&domain='+encodeURIComponent($('rd_domain').value.trim());
+    const j=await api('/api/results/domain?'+qs);const b=$('rd_body');b.innerHTML='';
+    $('rd_count').textContent=j.rows.length+' 条';
+    if(!j.rows.length){b.innerHTML='<tr><td colspan="9" class="empty">暂无数据</td></tr>';return;}
+    j.rows.forEach(r=>{const tr=document.createElement('tr');
+      tr.innerHTML=`<td>${r.id}</td><td><span class="kt ${r.knowledge_type}">${r.knowledge_type}</span></td>
+        <td>${esc(r.applicable_domain||'-')}</td><td>${esc(r.title)}</td>
+        <td class="muted">${esc(r.preview||'')}…</td><td>${r.quality_score}</td>
+        <td class="muted">${esc(r.source_book||'-')}</td><td class="muted">${r.created_at||'-'}</td>
+        <td><button class="btn ghost sm" onclick="showDomain(${r.id})">详情</button>
+        <button class="btn danger sm" onclick="delDomain(${r.id})">删</button></td>`;
+      b.appendChild(tr);});
+  }catch(e){toast(e.message,true);}
+}
+async function showDomain(id){
+  try{const j=await api('/api/results/domain/'+id);const d=j.data;
+    $('detailTitle').textContent='['+d.knowledge_type+'] '+d.title;
+    $('detailBody').innerHTML=`<div class="kv">
+      <div class="k">类型/领域</div><div class="v"><span class="kt ${d.knowledge_type}">${d.knowledge_type}</span> ${esc(d.applicable_domain||'-')}</div>
+      <div class="k">质量分</div><div class="v">${d.quality_score}</div>
+      <div class="k">标签</div><div class="v">${(d.tags||[]).map(x=>'<span class="tag">'+esc(x)+'</span>').join(' ')||'-'}</div>
+      <div class="k">正文</div><div class="v">${esc(d.content)}</div>
+      <div class="k">来源书</div><div class="v">${esc(d.source_book||'-')}</div>
+      <div class="k">原文片段</div><div class="v muted">${esc(d.source_snippet||'-')}</div>
+      <div class="k">入库时间</div><div class="v">${d.created_at||'-'}</div>
+    </div>`;
+    $('detailBg').classList.add('show');
+  }catch(e){toast(e.message,true);}
+}
+async function delDomain(id){if(!confirm('确认软删除该知识条目？'))return;
+  try{await api('/api/results/domain/'+id+'/delete',{method:'POST'});toast('已软删除');loadDomain();}catch(e){toast(e.message,true);}}
+
+// ---- 剧情素材（4 表切换）----
+function curMatTable(){return $('rm_table').value;}
+async function loadMaterial(){
+  try{const tk=curMatTable();
+    const qs='table='+tk+'&q='+encodeURIComponent($('rm_q').value.trim())+'&scene='+$('rm_scene').value;
+    const j=await api('/api/results/material?'+qs);const b=$('rm_body');b.innerHTML='';
+    $('rm_count').textContent=j.rows.length+' 条';
+    if(!j.rows.length){b.innerHTML='<tr><td colspan="9" class="empty">暂无数据</td></tr>';return;}
+    j.rows.forEach(r=>{const tr=document.createElement('tr');
+      const tags=(r.tags||[]).slice(0,4).map(x=>'<span class="tag">'+esc(x)+'</span>').join(' ');
+      tr.innerHTML=`<td>${r.id}</td><td>${esc(r.title)}</td>
+        <td class="muted">${esc(r.preview||'')}…</td><td class="muted">${esc(r.scene_type||'-')}</td>
+        <td>${tags||'-'}</td><td>${r.quality_score}</td>
+        <td class="muted">${esc(r.source_work||'-')}</td><td class="muted">${r.created_at||'-'}</td>
+        <td><button class="btn ghost sm" onclick="showMaterial(${r.id})">详情</button>
+        <button class="btn danger sm" onclick="delMaterial(${r.id})">删</button></td>`;
+      b.appendChild(tr);});
+  }catch(e){toast(e.message,true);}
+}
+async function showMaterial(id){
+  try{const tk=curMatTable();const j=await api('/api/results/material/'+tk+'/'+id);const d=j.data;
+    $('detailTitle').textContent=esc(d.title);
+    $('detailBody').innerHTML=`<div class="kv">
+      <div class="k">核心剧情</div><div class="v">${esc(d.core_plot)}</div>
+      <div class="k">触发条件</div><div class="v">${esc(d.trigger_condition||'-')}</div>
+      <div class="k">收益</div><div class="v">${esc(d.reward||'-')}</div>
+      <div class="k">代价/风险</div><div class="v">${esc(d.cost_or_risk||'-')}</div>
+      <div class="k">情绪曲线</div><div class="v">${esc(d.emotional_beat||'-')}</div>
+      <div class="k">适用场景</div><div class="v">${esc(d.applicable_scene_type||'-')}</div>
+      <div class="k">标签</div><div class="v">${(d.tags||[]).map(x=>'<span class="tag">'+esc(x)+'</span>').join(' ')||'-'}</div>
+      <div class="k">质量分</div><div class="v">${d.quality_score}</div>
+      <div class="k">来源作品</div><div class="v">${esc(d.source_work||'-')}</div>
+      <div class="k">原文片段</div><div class="v muted">${esc(d.source_snippet||'-')}</div>
+      <div class="k">入库时间</div><div class="v">${d.created_at||'-'}</div>
+    </div>`;
+    $('detailBg').classList.add('show');
+  }catch(e){toast(e.message,true);}
+}
+async function delMaterial(id){if(!confirm('确认软删除该素材？(is_deleted=true)'))return;
+  try{const tk=curMatTable();await api('/api/results/material/'+tk+'/'+id+'/delete',{method:'POST'});toast('已软删除');loadMaterial();}catch(e){toast(e.message,true);}}
+
+// ---- 对标拆解（书目 → 节点 → 详情含情绪曲线）----
+let rbBookId=null;
+async function loadBenchBooks(){
+  try{const j=await api('/api/results/benchmark/books?q='+encodeURIComponent($('rb_q').value.trim()));
+    const b=$('rb_body');b.innerHTML='';
+    $('rb_count').textContent=j.rows.length+' 本';
+    if(!j.rows.length){b.innerHTML='<tr><td colspan="9" class="empty">暂无书目（先到「对标拆解」tab 跑任务）</td></tr>';return;}
+    j.rows.forEach(r=>{const tr=document.createElement('tr');
+      const st={'pending':'待拆解','analyzing':'拆解中','partial':'部分完成','done':'已完成'}[r.status]||r.status;
+      tr.innerHTML=`<td>${r.id}</td><td>${esc(r.title)}</td><td>${esc(r.author||'-')}</td>
+        <td class="muted">${st}</td><td>${r.total_chapters}</td><td>${r.n_items}</td>
+        <td class="muted">${r.total_chars}</td><td class="muted">${r.updated_at||'-'}</td>
+        <td><button class="btn ghost sm" onclick="pickBenchBook(${r.id},'${esc(r.title)}')">节点</button>
+        <button class="btn danger sm" onclick="delBenchBook(${r.id})">删</button></td>`;
+      b.appendChild(tr);});
+  }catch(e){toast(e.message,true);}
+}
+function pickBenchBook(id,title){rbBookId=id;$('rb_items').style.display='block';
+  $('rb_items_title').textContent='《'+title+'》拆解节点';loadBenchItems();}
+async function loadBenchItems(){
+  if(!rbBookId)return;
+  try{const qs='book='+rbBookId+'&type='+$('rbi_type').value+'&q='+encodeURIComponent($('rbi_q').value.trim());
+    const j=await api('/api/results/benchmark/items?'+qs);const b=$('rbi_body');b.innerHTML='';
+    $('rbi_count').textContent=j.rows.length+' 条';
+    if(!j.rows.length){b.innerHTML='<tr><td colspan="8" class="empty">暂无节点</td></tr>';return;}
+    j.rows.forEach(r=>{const tr=document.createElement('tr');
+      const tags=(r.tags||[]).slice(0,4).map(x=>'<span class="tag">'+esc(x)+'</span>').join(' ');
+      const tk={'skeleton':'🦴','plot':'🧩','variable':'🔧','arc':'🌊'}[r.item_type]||'';
+      tr.innerHTML=`<td>${r.id}</td><td>${r.chapter_idx||'-'}</td><td>${tk} ${r.item_type}</td>
+        <td>${esc(r.title)}</td><td class="muted">${esc(r.preview||'')}…</td>
+        <td>${tags||'-'}</td><td>${r.quality_score}</td>
+        <td><button class="btn ghost sm" onclick="showBenchItem(${r.id})">详情</button>
+        <button class="btn danger sm" onclick="delBenchItem(${r.id})">删</button></td>`;
+      b.appendChild(tr);});
+  }catch(e){toast(e.message,true);}
+}
+function curveSVG(curve){
+  if(!curve||!curve.length)return '<span class="muted">—</span>';
+  const W=320,H=80,P=8,n=curve.length;
+  const pts=curve.map((v,i)=>[P+(W-2*P)*(n===1?0.5:i/(n-1)), H-P-(H-2*P)*(v/10)]);
+  const line=pts.map(p=>p.map(x=>x.toFixed(1)).join(',')).join(' ');
+  const dots=pts.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="var(--accent2)"/>`).join('');
+  return `<svg width="${W}" height="${H}" style="background:var(--panel2);border-radius:8px">
+    <polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2"/>${dots}
+    ${curve.map((v,i)=>`<text x="${pts[i][0].toFixed(1)}" y="${(pts[i][1]-6).toFixed(1)}" fill="var(--muted)" font-size="9" text-anchor="middle">${v}</text>`).join('')}
+  </svg>`;
+}
+async function showBenchItem(id){
+  try{const j=await api('/api/results/benchmark/items/'+id);const d=j.data;
+    $('detailTitle').textContent='['+d.item_type+'] 第'+(d.chapter_idx||'-')+'章 '+d.title;
+    const ratios=(d.setup_ratio!=null)?[d.setup_ratio,d.develop_ratio,d.turn_ratio,d.resolve_ratio]
+      .map((v,i)=>['起','承','转','合'][i]+' '+Math.round(v*100)+'%').join(' · '):'-';
+    $('detailBody').innerHTML=`<div class="kv">
+      <div class="k">来源书目</div><div class="v">${esc(d.book_title||'-')}</div>
+      <div class="k">起承转合</div><div class="v">${ratios}</div>
+      <div class="k">情绪曲线</div><div class="v">${curveSVG(d.emotion_curve)}</div>
+      <div class="k">内容</div><div class="v">${esc(d.content).replace(/\n/g,'<br>')}</div>
+      <div class="k">钩子手法</div><div class="v">${esc(d.hook||'-')}</div>
+      <div class="k">标签</div><div class="v">${(d.tags||[]).map(x=>'<span class="tag">'+esc(x)+'</span>').join(' ')||'-'}</div>
+      <div class="k">质量分</div><div class="v">${d.quality_score}</div>
+      <div class="k">原文定位</div><div class="v muted">char ${d.char_start} - ${d.char_end}</div>
+      <div class="k">原文片段</div><div class="v muted">${esc(d.source_snippet||'-')}</div>
+      <div class="k">入库时间</div><div class="v">${d.created_at||'-'}</div>
+    </div>`;
+    $('detailBg').classList.add('show');
+  }catch(e){toast(e.message,true);}
+}
+async function delBenchItem(id){if(!confirm('确认软删除该拆解节点？'))return;
+  try{await api('/api/results/benchmark/items/'+id+'/delete',{method:'POST'});toast('已软删除');loadBenchItems();}catch(e){toast(e.message,true);}}
+async function delBenchBook(id){if(!confirm('确认软删除该书目？（其下节点不会级联软删，仅书目不可见）'))return;
+  try{await api('/api/results/benchmark/books/'+id+'/delete',{method:'POST'});toast('已软删除');loadBenchBooks();}catch(e){toast(e.message,true);}}
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+</script>
+</body>
+</html>

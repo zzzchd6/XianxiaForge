@@ -1,0 +1,1518 @@
+[
+  {
+    "title": "隐藏任务触发与完成",
+    "core_plot": "主角通过耐心与NPC对话，触发一系列隐藏任务链，逐步完成多个看似无关的支线任务（如送水、送食物、买糕点、帮助下棋、收集素材等），最终获得稀有奖励。整个过程无人告知任务存在或奖励，全凭主角的探索精神和推理能力。",
+    "trigger_condition": "主角愿意与看似无用的NPC长时间对话，并留意其细节需求。",
+    "reward": "稀有物品（如住宿券）和他人敬畏。",
+    "cost_or_risk": "耗费大量时间和精力，可能一无所获。",
+    "emotional_beat": "好奇→耐心→惊喜→成就感",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "NPC互动",
+      "奖励获取"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“首先与在镇门口发传单的老大爷对话，他会给你讲述这个镇子的故事……这里要耐心听完，才能触发下一环。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "隐藏奖励触发",
+    "core_plot": "主角在镇门口与看似无关紧要的老大爷对话，耐心听完其絮叨后，触发隐藏奖励线索，进而获得稀有住宿券，从而在资源紧张的环境中占据优势。",
+    "trigger_condition": "主角愿意耐心与看似无用的NPC对话，并听完其全部信息。",
+    "reward": "稀有住宿券，获得稀缺资源（如高级住宿）。",
+    "cost_or_risk": "可能被他人视为浪费时间或愚蠢，引发嫉妒和敌意。",
+    "emotional_beat": "无聊→惊喜→得意→被质疑→从容解释",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏奖励",
+      "NPC对话",
+      "耐心回报"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "首先与在镇门口发传单的老大爷对话，他会给你讲述这个镇子的故事...这里要耐心听完，才能触发下一环。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "用全部家当购买高价物品，意外引发跟风潮",
+    "core_plot": "主角在特殊地点用全部财产购买一件看似普通的物品，该物品被设定为限量且价格高昂。主角的果断购买行为引发周围观望者的跟风，导致该物品价格飙升并被抢购一空。主角因此获得卖家的暗中优待，而跟风者则付出高昂代价。",
+    "trigger_condition": "主角身处一个充满机遇和竞争的特殊环境，且拥有一定资金。",
+    "reward": "获得卖家的特殊优待（如免费晚餐）和潜在的人脉或信息。",
+    "cost_or_risk": "耗尽全部家当，面临后续资金短缺的风险。",
+    "emotional_beat": "果断→期待→意外收获→满足",
+    "applicable_scene_type": "key",
+    "tags": [
+      "奇遇",
+      "跟风",
+      "资源交换",
+      "卖家优待"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆二话不说，将全部家当——十几张苍溪州大明国的银票丢在柜台上。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "末日危机擦肩而过，天地异变开启黄金时代",
+    "core_plot": "主角所在世界面临一场足以毁灭天地的末日危机，危机在最后一刻意外解除，但并非毫无影响。天地异变开始渗透世界，预示着修仙黄金时代的到来。主角作为门派掌门，利用这次危机后的契机，决定重启中断百年的升仙大会，为门派复兴铺路。",
+    "trigger_condition": "世界面临末日危机但未发生，天地开始异变。",
+    "reward": "世界未毁灭，获得天地异变带来的修炼黄金时代机遇。",
+    "cost_or_risk": "危机虽过，但异变可能带来未知风险。",
+    "emotional_beat": "绝望→震惊→庆幸→期待→隐忧",
+    "applicable_scene_type": "key",
+    "tags": [
+      "末日危机",
+      "天地异变",
+      "黄金时代",
+      "门派复兴"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "大衍术并不绝对，但是那末日的预感并没有错，方才，九州大陆距离天地灭绝真的是擦肩而过。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "凡人获得人造灵根的机缘",
+    "core_plot": "主角出身凡人家庭，没有天生灵根，但通过服用一种特殊丹药（六和灵根）连续四十五天，可以后天获得灵根，从而踏入修仙之路。这种灵根虽然品质低劣，修炼速度极慢，但打破了仙凡壁垒，为凡人提供了修仙的可能。主角的父亲为此倾家荡产购买丹药，但主角却拒绝使用，暗示自己并非凡人，另有途径。",
+    "trigger_condition": "主角是凡人，无天生灵根，但渴望修仙；存在一种人造灵根丹药可供购买。",
+    "reward": "获得灵根（尽管是低劣的人造灵根），获得修仙资格。",
+    "cost_or_risk": "灵根品质低劣，修炼上限极低，可能终身无法筑基；需要大量金钱购买丹药。",
+    "emotional_beat": "渴望→希望→失望（对丹药品质）→神秘（主角拒绝）",
+    "applicable_scene_type": "key",
+    "tags": [
+      "凡人修仙",
+      "人造灵根",
+      "机缘",
+      "代价"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "所谓六和灵根，是千年以前，盛京仙门的祖师爷六和真人晚年的发明。以独门心法佐以天灵地宝炼制成散，连续服用四十五天，便是凡人也能拥有修仙灵根。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "主角发现高价低质商品并策划套利",
+    "core_plot": "主角发现客栈物价极不合理，一根普通萝卜售价高达十两白银，且限购。主角意识到这种定价导致商品滞销，于是利用规则漏洞：先以低价购买一根萝卜，然后利用客栈的限购政策和自身贵宾身份，计划通过转卖或制造需求来获取利润，最终目标是吃到肉。",
+    "trigger_condition": "主角身处物价异常高昂且限购的环境，且商品滞销",
+    "reward": "潜在的经济收益和食物改善",
+    "cost_or_risk": "可能激怒商家或引发市场波动",
+    "emotional_beat": "惊讶→分析→兴奋→谋划",
+    "applicable_scene_type": "key",
+    "tags": [
+      "经济套利",
+      "规则利用",
+      "物价异常"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆眼前一亮，手指在桌上不由得敲呀敲，神色越发兴奋。……“哼哼，今天晚上大概有肉吃了。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "迷雾中的随机方向选择触发新地图",
+    "core_plot": "主角在迷雾中失去方向，但通过分析发现没有错误路径，每个方向都代表机缘。主角随机选择方向前进，最终成功走出迷雾，触发新地图。",
+    "trigger_condition": "主角在封闭环境中失去方向，且环境设计为无固定路径。",
+    "reward": "成功进入下一阶段，获得机缘。",
+    "cost_or_risk": "若选择错误方向可能浪费时间或遭遇危险。",
+    "emotional_beat": "迷茫→分析→坚定→惊喜",
+    "applicable_scene_type": "key",
+    "tags": [
+      "迷雾",
+      "随机方向",
+      "机缘",
+      "地图转换"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆笑了笑：“也就是说，这条路其实根本没有错路可言，每一个方向都象征着一个人的机缘……换句话说，只要认准一个方向走，走到一定程度就会有新地图出现了。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "升仙之路的抉择：外门保底与内门冒险",
+    "core_plot": "主角在通过入门测试后，面临两个选择：接受保底的外门资格，或放弃保底继续挑战通往内门的艰难道路。外门师兄警告说，近三百年无人成功走通内门之路。主角选择冒险，书童犹豫后跟随。",
+    "trigger_condition": "主角通过入门测试，获得外门资格，同时得知还有通往内门的更艰难道路。",
+    "reward": "潜在的内门资格，以及挑战未知的机遇。",
+    "cost_or_risk": "放弃已获得的外门资格，若挑战失败则失去入门机会。",
+    "emotional_beat": "犹豫→坚定→冒险决心",
+    "applicable_scene_type": "key",
+    "tags": [
+      "选择",
+      "冒险",
+      "入门测试",
+      "外门内门"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆说：“就是说，若是选择继续，就只有一路走到缥缈峰咯？”张英冷笑：“没错，要么一路走到缥缈峰入灵剑内门，要么升仙之路就此完结，回你的红尘凡世间。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "资质测试桥上的意外入门",
+    "core_plot": "主角与同伴在一条具有特殊筛选功能的桥上攀登，桥会消耗攀登者的体力，资质越好者越轻松。主角因体质特殊，越走越轻松，而同伴则因资质不足逐渐力竭。当同伴无法继续时，主角选择停下陪伴，却意外触发桥的传送机制，直接到达终点，被守候的宗门弟子告知已通过测试，获得入门资格。",
+    "trigger_condition": "主角在特殊桥上坚持攀登，且因陪伴同伴而停下",
+    "reward": "获得宗门入门资格",
+    "cost_or_risk": "同伴因资质不足可能被淘汰，主角的陪伴行为可能被视为放弃机会",
+    "emotional_beat": "疑惑→疲惫→惊喜→意外",
+    "applicable_scene_type": "key",
+    "tags": [
+      "奇遇",
+      "测试",
+      "入门",
+      "陪伴"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆无奈地看着几乎瘫痪的王忠，最终还是摇了摇头，算了，总不能留你一个人在这儿，我陪你休息一会儿吧。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "山野少年被世家子弟联合施压，要求让出住所",
+    "core_plot": "主角因表现出色获得优越待遇，引发身份显赫的世家子弟不满。他们联合起来，通过中间人向主角施压，要求其让出住所。主角起初沉默，随后以嘲讽揭穿对方底细，激怒对方。对方亮出法宝准备动手，主角却从容不迫，宣称一人可敌三人，甚至只需一句话就能收拾他们，令旁观者震惊期待。",
+    "trigger_condition": "主角获得优于他人的待遇，且对方是重视身份地位的世家子弟",
+    "reward": "主角获得旁观者的高度期待和兴趣",
+    "cost_or_risk": "激怒对方，可能引发直接冲突，面临法宝攻击",
+    "emotional_beat": "平静→嘲讽→紧张→震惊→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "身份冲突",
+      "以弱对强",
+      "言语挑衅",
+      "法宝威胁"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆也沉下脸：“我是说，对付你们几个杂碎，我一个就够了，或者说，我只要一句话就能收拾你们。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "新手村隐藏任务触发",
+    "core_plot": "主角在初始区域因偶然因素触发隐藏任务链，通过完成一系列任务获得特殊奖励，如关键NPC好感度提升带来的后续关卡增益。该任务链的触发和完成度取决于主角的初始条件和行为选择，奖励丰厚但需要主动探索和社交互动。",
+    "trigger_condition": "主角进入隐藏区域（如特殊村庄）并主动与NPC互动",
+    "reward": "获得关键NPC好感度满值，解锁后续关卡体力消耗减半等永久增益",
+    "cost_or_risk": "可能因任务失败或选择错误导致奖励减少或失去机会",
+    "emotional_beat": "好奇→探索→惊喜→满足",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "NPC好感度",
+      "初始区域",
+      "探索奖励"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "村子承接云波图的结果，试炼者会得到不同的起点，然后根据性格和机缘的不同，在村中激发不同的任务链，根据任务完成情况得到不同的奖励，比如将村长的好感度刷满的话，进入",
+    "material_type": "encounter"
+  },
+  {
+    "title": "意外相遇触发隐藏剧情",
+    "core_plot": "主角在看似封闭无任务的环境中，偶然遇到一个关键角色（通常是旧识或重要NPC），该角色的出现打破了僵局，暗示了隐藏剧情的存在，并可能开启新的任务链或揭示世界观的深层设定。",
+    "trigger_condition": "主角处于一个看似无任务可接的封闭环境，且已尝试过常规互动无果。",
+    "reward": "获得新的剧情线索或任务起点，打破困境。",
+    "cost_or_risk": "可能卷入更复杂的阴谋或面临更高风险。",
+    "emotional_beat": "无聊→惊讶→好奇→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "偶遇",
+      "隐藏剧情",
+      "破局"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "见到那个从村外树林中走出来的人，王陆险些把漱口水都咽回去。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "因占卜失误而虚惊一场的末法危机",
+    "core_plot": "一位德高望重的预言者因老花眼误将茶剑认成年剑，错误推算出末法时代将在几盏茶内降临。他与同伴惊慌失措，准备迎接末日，甚至引发真情告白。然而流星擦肩而过，天地元气未变，预言被证实为乌龙。预言者虽松口气，却因未能说出真心话而略显失落。",
+    "trigger_condition": "预言者视力不佳且未佩戴眼镜，在占卜时拿错道具。",
+    "reward": null,
+    "cost_or_risk": "预言者因失误导致恐慌，可能影响门派声誉。",
+    "emotional_beat": "紧张→恐慌→绝望→释然→尴尬",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "乌龙预言",
+      "虚惊一场",
+      "喜剧反转"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "掌门师兄一愣：“不是年剑？”连忙低头细看，剑柄处果然不是年字，而是……怎么会是茶剑！？这不是说离末法只有三五盏茶的时间！？",
+    "material_type": "encounter"
+  },
+  {
+    "title": "凡人意外获得人造灵根",
+    "core_plot": "一个凡人因偶然机会获得了一种低劣的人造灵根，这种灵根在主流修仙界被视为废品，但主角却因此获得了踏入修仙门槛的机会，尽管前途渺茫。",
+    "trigger_condition": "主角是凡人，且通过某种途径（如购买、赠送）获得了低劣的人造灵根。",
+    "reward": "获得修仙资格（尽管灵根品质极低）。",
+    "cost_or_risk": "灵根品质低劣，无法进入主流宗门，修仙前途有限。",
+    "emotional_beat": "惊喜→怀疑→认清现实",
+    "applicable_scene_type": "key",
+    "tags": [
+      "人造灵根",
+      "废柴开局",
+      "修仙门槛"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "没错，王老爷子视若重宝的升仙散，当然就是六和散，一经服用，六和灵根到手，从此就可以和修仙说永别了。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "高价购买限量物资，发现被坑后只剩一文钱",
+    "core_plot": "主角在特殊时期以高价从商人处购买了一份限量物资，事后发现价格远超实际价值，最终仅得到一枚铜板作为找零，陷入经济困境。",
+    "trigger_condition": "主角在物资紧缺时期主动向商人支付大额金钱购买食物。",
+    "reward": "获得一份足够维持多日的食物。",
+    "cost_or_risk": "几乎耗尽所有资金，仅剩一文钱，面临后续生存风险。",
+    "emotional_beat": "自信→震惊→无奈→反思",
+    "applicable_scene_type": "key",
+    "tags": [
+      "经济陷阱",
+      "生存危机",
+      "商人套路"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘嗤笑一声：“现在镇上这物价，你花三千五百两能买到这一盒饭菜？……省着点吃，剩下的饭菜足够你吃六天。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "主角意外暴露天赋引发关注",
+    "core_plot": "主角在客栈房间内与同伴交谈时，无意中透露自己拥有顶级修炼天赋，被门外经过的客栈老板娘和另一位老者听到。老板娘原本因主角可能误食危险物品而前来查看，听到对话后震惊，但随即意识到是误会，准备离开。然而主角的天赋信息已被窃听，为后续剧情埋下伏笔。",
+    "trigger_condition": "主角在非私密场合谈论自身秘密，且附近有感知敏锐的第三方",
+    "reward": null,
+    "cost_or_risk": "主角的秘密被他人知晓，可能引来觊觎或麻烦",
+    "emotional_beat": "好奇→震惊→释然→隐忧",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "天赋暴露",
+      "窃听",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘转身欲走，却听房内对话还在继续。……“当然是天灵根。”手一抖，酒坛险些砸到脚上。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "破解隐藏任务链获得高层关注",
+    "core_plot": "主角在入门考核中意外破解了由某位高层设计的复杂任务链，这一成就被高层注意到并特别提及，从而在后续选拔中获得额外关注和潜在优待。",
+    "trigger_condition": "主角在考核中展现出超乎寻常的洞察力或能力，完成了一个被多数人忽略或无法完成的隐藏任务。",
+    "reward": "获得高层人物的关注和潜在优待，为后续发展铺路。",
+    "cost_or_risk": null,
+    "emotional_beat": "意外→惊喜→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "高层关注",
+      "考核突破"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "据说破解了那个活见鬼的任务链。资质么和我之前看的差不多，三四品之间，还算不错吧。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "封闭村庄的意外补给与信息真空",
+    "core_plot": "主角在长途跋涉后进入一个看似与世隔绝的村庄，受到热情款待，获得食物和休息。但村民对外界毫无兴趣，拒绝提供任何任务或信息，导致主角无法推进主线，陷入困惑。这种反常的封闭性成为后续剧情转折的伏笔。",
+    "trigger_condition": "主角完成一段艰难旅程后，进入一个看似和平的村庄。",
+    "reward": "获得食物、休息和临时安全环境。",
+    "cost_or_risk": "信息真空，无法获得任务线索，可能浪费时间或陷入陷阱。",
+    "emotional_beat": "放松→困惑→警惕",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "村庄",
+      "信息封锁",
+      "补给点",
+      "反常"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆的遭遇大抵如此，哪怕有心引导，也没办法将话题展开，村民们的思维就像是吃多了观音土一般顽固不化。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "质疑年龄被强势驳回",
+    "core_plot": "一名参与者质疑主办方对其年龄的判断，并搬出家族背景和证人试图证明自己符合条件。主办方以地图上找不到其家族位置为由，贬低其家族地位，并用更高级别的权威（掌门）进行威胁，迫使质疑者退缩。",
+    "trigger_condition": "参与者对主办方的筛选结果不满，并试图用背景和证人施压。",
+    "reward": "主角目睹了主办方如何应对质疑，学到了利用权威和贬低对手背景的策略。",
+    "cost_or_risk": "质疑者被当众羞辱，家族声誉受损。",
+    "emotional_beat": "愤怒→自信→被贬低→灰头土脸",
+    "applicable_scene_type": "key",
+    "tags": [
+      "质疑权威",
+      "背景压制",
+      "年龄争议",
+      "羞辱"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“地图上都找不到位置的小宗派得瑟什么？……哪儿来的破落门户也敢称世家了！？”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "迷雾中的未知考验",
+    "core_plot": "主角在通往试炼的道路上，进入一片异常浓密的迷雾区域，持续时间远超预期，导致主角开始怀疑是否走错路。主角凭借先前收集的情报，推测迷雾是切换试炼场景的缓冲地带，但实际迷雾范围超出常理，暗示背后有更高层次的干预或隐藏考验。主角保持信心，继续探索，但内心开始产生疑虑。",
+    "trigger_condition": "主角进入试炼之路的迷雾区域，且迷雾持续时间异常长。",
+    "reward": null,
+    "cost_or_risk": "可能迷失方向，或遭遇未知危险，消耗体力与时间。",
+    "emotional_beat": "自信→疑惑→警惕→坚持",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "迷雾",
+      "试炼之路",
+      "未知考验",
+      "情报收集"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "迷雾的范围比预期宽广得多。本以为只是短暂的缓冲，但是当两人在迷雾中摸索着前进了不知多久，依然没有找到前路的时候，就连王陆都有些迟疑起来。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "书童意外暴露主角行踪",
+    "core_plot": "主角的随从在公共场合大声呼喊主角名字，被老板娘制止并砸酒坛警告，随后随从上楼与主角会面，主角虽不情愿但最终接纳。这一事件无意中向周围竞争者暴露了主角的身份和位置，引发后续关注。",
+    "trigger_condition": "主角的随从在客栈大堂寻找主角，大声呼喊其名字。",
+    "reward": null,
+    "cost_or_risk": "主角身份暴露，可能引来竞争者或麻烦。",
+    "emotional_beat": "紧张→意外→无奈→接纳",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "身份暴露",
+      "随从",
+      "意外事件"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "书童又愣了一下，忙不迭向老板娘到头道谢，然后就飞一般上了楼，脚步满怀欣喜。",
+    "material_type": "encounter"
+  },
+  {
+    "title": "升仙大会的混乱开场与规则澄清",
+    "core_plot": "主角参加一个选拔大会，大会开始时因规则未明确说明，导致大量不符合条件的人员涌入，造成混乱和伤亡。主办方临时澄清规则，并驱逐不合格者，引发部分人的质疑和冲突。主角旁观了整个过程，从中了解到大会的严格性和主办方的强势作风。",
+    "trigger_condition": "主角参加一个大型选拔活动，活动开始时主办方未充分说明规则。",
+    "reward": "主角获得了对选拔规则和主办方风格的清晰认知，避免了自身犯错。",
+    "cost_or_risk": null,
+    "emotional_beat": "混乱→尴尬→威慑→平静",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "选拔大会",
+      "规则澄清",
+      "混乱开场",
+      "威慑"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“不好意思刚才忘了说，大会开始之后，除了符合条件的人选外，其他任何人不能上桥，所以各位随行人员还是请回吧。”",
+    "material_type": "encounter"
+  },
+  {
+    "title": "幕后黑手修改试炼路径",
+    "core_plot": "一个高维存在（如幕后黑手或高级NPC）暗中修改了原本的试炼或任务流程，强制所有参与者进入一个预设的中间场景。该场景看似无害，实则包含深层考验或伏笔，后续会揭示其真正目的和影响。",
+    "trigger_condition": "存在一个标准化的试炼或任务流程，且有一个足够强大的角色有能力修改它。",
+    "reward": null,
+    "cost_or_risk": "试炼的公平性被破坏，参与者可能面临未知风险。",
+    "emotional_beat": "困惑→震惊→愤怒→无奈",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "修改规则",
+      "幕后黑手",
+      "试炼变数"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "某个恶趣味的人完全更改了升仙之路，非常蛮横地将一个莫名其妙的村子加在了云波图与幽冥道之间。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "任务简介中的情报价值",
+    "core_plot": "主角通过完成一系列任务，从任务简介中获取了关于试炼的深层情报，而其他竞争者只关注任务奖励，忽略了文字信息。这揭示了情报收集的重要性，为后续主角利用这些情报破解试炼关卡埋下伏笔。",
+    "trigger_condition": "主角在准备阶段完成多个任务，并仔细阅读任务简介。",
+    "reward": "获得关于试炼的隐藏情报，如试炼的复杂性和投入力度。",
+    "cost_or_risk": null,
+    "emotional_beat": "耐心→洞察→自信",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "情报收集",
+      "任务简介",
+      "隐藏信息",
+      "准备阶段"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "现在很多玩家急功近利，根本不关心任务目标和任务奖励以外的文字，殊不知真正有价值的恰恰是任务简介！",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "发明者坚持完善人造灵根",
+    "core_plot": "一位天才发明了低劣的人造灵根，虽不被世人重视，但他本人深知其潜力，耗尽毕生精力不断改进，最终创造出高品质的人造灵根，改变了整个修仙界。",
+    "trigger_condition": "发明者拥有远超时代的洞察力，且愿意为理想付出巨大代价。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "孤独坚持→最终成功",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "发明",
+      "坚持",
+      "改变世界"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "六和祖师当时有合体巅峰的修为...他将生命最后的一百年，完全献给了人造灵根。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角过往天才事迹铺垫未来成就",
+    "core_plot": "通过书童回忆，揭示主角幼时被名师评价为‘生而知之者’，学问已无可教，但主角对科举无兴趣，选择修仙。这一背景为主角在修仙路上的惊人表现埋下伏笔。",
+    "trigger_condition": "书童或他人回忆主角的过去。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "回忆→惊叹→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "天才背景",
+      "伏笔",
+      "修仙动机"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老学究临别时评价少爷是状元之才，日后位列朝堂不在话下。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "隐藏任务链的铺垫与回收",
+    "core_plot": "通过一个看似无用的NPC（如门口老人）的絮叨对话，埋下任务链的起点。后续多个NPC的互动逐步揭示任务链的环节，最终在主角完成所有步骤后，NPC给予关键奖励，回收伏笔。",
+    "trigger_condition": "主角愿意耐心听完NPC的冗长故事。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "无聊→疑惑→恍然大悟",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "NPC伏笔",
+      "任务链",
+      "耐心回报"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“老人讲完故事，会咳嗽几声，说自己口渴，这时候就要送他水喝啊。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过他人对话暗示隐藏高手",
+    "core_plot": "通过角色之间的对话，提及一个过去的人物，其表现远超当前公认的强者，但对话中只给出模糊线索（如‘上一个能在两个时辰里走出云波图的人’），引发读者好奇。随后对话者叹气并转移话题，留下悬念。这种手法在后续剧情中通过揭示该人物的身份或成就来回收伏笔。",
+    "trigger_condition": "当前有角色在某个考验中表现优异，引发其他角色对比讨论。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→震惊→好奇",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "对话伏笔",
+      "隐藏高手",
+      "对比",
+      "悬念"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "方鹤轻声说道：“没见过？周明师弟你的记性越来越差，咱们都见过的，上一个能在两个时辰里走出云波图的人……”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "同伴对书童的警告埋下背叛伏笔",
+    "core_plot": "在分别前，同伴私下警告主角要小心其书童，称其有反骨。主角当时未听清，但这一警告为后续书童可能的背叛或隐藏身份埋下伏笔。书童表面忠诚，但行为异常（如体力不支），与警告形成呼应。",
+    "trigger_condition": "同伴在离别前对主角进行私下提醒",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "亲密→警惕→疑惑",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "背叛",
+      "警告",
+      "书童"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "海云帆走到王陆身边，轻声说：小心些你的书童，以忠为名，却有些反骨增生啊。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "书童与少爷的对比暗示命运转折",
+    "core_plot": "通过书童和少爷的对话，暗示书童与少爷同岁且都符合选拔条件，但书童自认为只是仆从而未意识到自己也有资格。这为后续书童可能因仙缘而逆袭埋下伏笔。",
+    "trigger_condition": "主角团队中有地位悬殊的两人，且都满足某个关键条件。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "平淡→暗示→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "身份反差",
+      "命运转折",
+      "伏笔",
+      "仙缘"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "他却完全没想过，踏上金桥，就意味着踏上升仙之路，这条路只认仙缘，却不分什么少爷，书童。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "掌门对主角的特别关注埋下伏笔",
+    "core_plot": "掌门在对话中无意间透露了对某人的关注，并指示下属重点关注，但表面上要求一切按规矩办事。这种矛盾的态度暗示主角将获得特殊待遇或考验，为后续剧情中主角受到额外关注或遭遇非常规事件埋下伏笔。",
+    "trigger_condition": "掌门与下属对话时，提及对某人的关注，并下达矛盾指令。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "随意→暗示→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "特殊关注",
+      "矛盾指令",
+      "掌门"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "同时被掌门和小铃儿看中么……？虽然掌门说一切照规矩来，但是这种礼遇本身就已经坏了规矩啊。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "招牌题词伏笔",
+    "core_plot": "通过展示客栈招牌上的题词落款，暗示客栈背景深厚。前期看似普通，后期当冲突升级时，题词成为威慑力来源，使闹事者退缩。",
+    "trigger_condition": "客栈招牌上有知名人物的题词，但未直接说明其意义。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "平淡→疑惑→震惊→敬畏",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "背景暗示",
+      "权威威慑",
+      "细节伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "只见如家客栈四个字旁，提字人的落款赫然写着风吟。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角的异常行为被观察者注意，暗示其与众不同",
+    "core_plot": "一个具有洞察力的角色（如老板娘）注意到主角的独特行为（如果断购买高价物品），并由此推断主角与周围庸众不同。这一观察为后续主角获得特殊帮助或揭示主角隐藏身份埋下伏笔。",
+    "trigger_condition": "主角在众人犹豫时做出反常决策，被关键NPC目睹。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "好奇→认可→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "角色洞察",
+      "与众不同"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "真是有意思的人，难怪能破解那十二连环任务链，他的想法和大堂里那群空有高贵出身的废柴完全不同。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "古派排斥人造灵根导致没落",
+    "core_plot": "一个古老宗门坚持只收天然灵根弟子，排斥人造灵根，尽管人造灵根已普及且能通过数量弥补质量，但该宗门因此逐渐没落，成为笑谈。",
+    "trigger_condition": "宗门有古老传统，且人造灵根成为主流。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "固执→衰落",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "传统",
+      "没落",
+      "原教旨主义"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "灵剑派不收人造灵根...所以灵剑派近些年的没落并不令人意外。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "老板娘强势形象铺垫后续冲突",
+    "core_plot": "老板娘通过呵斥书童、砸酒坛、强卖高价酒等行为，展现其强势霸道的性格和对客人的不屑。这一形象为后续可能发生的冲突或关键帮助埋下伏笔。",
+    "trigger_condition": "客栈中出现喧哗或令老板娘不满的行为。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "不满→愤怒→威慑",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "强势角色",
+      "伏笔",
+      "客栈老板娘"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘勃然大怒，一拍柜台：“让你别吵你没听到么！？”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "危机预言与后续影响",
+    "core_plot": "通过角色使用大衍术预言末日危机，但危机并未发生，留下悬念。随后通过角色对话暗示危机带来的天地异变将影响未来，并引出升仙大会的举办，为后续剧情埋下伏笔。",
+    "trigger_condition": "角色使用预言术感知末日危机。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "紧张→疑惑→释然→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "预言术",
+      "末日危机",
+      "伏笔",
+      "天地异变"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "大衍术并不绝对，但是那末日的预感并没有错，方才，九州大陆距离天地灭绝真的是擦肩而过。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角拒绝常规修仙资源，暗示另有底牌",
+    "core_plot": "主角的父亲花费巨资购买各种修仙资源（丹药、功法）给主角，但主角全部拒绝，甚至转手卖掉。主角声称自己并非凡人，暗示自己拥有特殊身份或隐藏的修仙途径。这一行为为后续揭示主角的真实身份或特殊能力埋下伏笔。",
+    "trigger_condition": "主角获得大量常规修仙资源，但表现出不屑一顾的态度。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→好奇→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "隐藏身份",
+      "拒绝资源",
+      "神秘"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆叹了口气：“是啊，你说是为什么呢？”……“凡人修仙，的确只有一条路，但我什么时候说过我是凡人了？”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过意外对话揭示主角隐藏属性",
+    "core_plot": "主角在房间内与同伴交谈，无意中透露自己拥有顶级天赋，被门外经过的关键人物听到。关键人物原本因其他原因接近，却意外获得重要信息，从而对主角产生兴趣或警惕。这一信息在后续剧情中可能被利用或引发冲突。",
+    "trigger_condition": "主角在非完全私密的环境下谈论自身秘密，且附近有感知敏锐的角色",
+    "reward": null,
+    "cost_or_risk": "秘密泄露，可能招致麻烦",
+    "emotional_beat": "平静→震惊→释然→隐忧",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "天赋暴露",
+      "窃听",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘转身欲走，却听房内对话还在继续。……“当然是天灵根。”手一抖，酒坛险些砸到脚上。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过对话暗示设计者意图，为后续剧情铺垫",
+    "core_plot": "主角回忆之前NPC的对话（“一草一木皆是缘”），从中推断出当前谜题的设计逻辑，并据此行动。这一推断不仅解决了当前困境，还暗示了设计者的专业水平，为后续更高难度的考验埋下伏笔。",
+    "trigger_condition": "主角在困境中回忆起之前看似无关的NPC对话。",
+    "reward": "成功破解谜题，获得前进方向。",
+    "cost_or_risk": "若回忆错误或理解偏差，可能导致失败。",
+    "emotional_beat": "困惑→回忆→顿悟→自信",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "对话伏笔",
+      "设计者意图",
+      "谜题破解",
+      "回忆"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆笑了笑：“还记得那两个蓝白说的话么，一草一木皆是缘，说的不就是随便怎么走都可以么？”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "升仙之路的艰难被反复强调",
+    "core_plot": "通过外门师兄的口，反复强调升仙之路后半段的艰难，以及近三百年无人成功的记录，为后续主角可能面临的巨大挑战埋下伏笔。同时，师兄的警告也暗示了主角的选择将非同寻常。",
+    "trigger_condition": "主角做出继续前进的决定后，外门师兄进行警告。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "警告→悬念",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "挑战预告",
+      "难度铺垫"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "张英说：“升仙之路的后半段的艰难远远超出你的想象，最近三百年来都没有成功过关的案例。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "同伴的异常反应暗示其身份或秘密",
+    "core_plot": "主角随口说出一句玩笑话，同伴却露出惊讶表情并欲言又止，暗示同伴对主角的话有特殊反应，可能涉及同伴的隐秘身份或背景。后续剧情中，同伴突然告别并给出警告，呼应了之前的异常，但未完全揭示秘密，留下悬念。",
+    "trigger_condition": "主角说出看似寻常但触及同伴敏感点的言论",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "轻松→疑惑→警觉",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "身份",
+      "秘密",
+      "暗示"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "本是寻常取笑之言，海云帆听了却面露讶色，张了张嘴却没说什么。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "旁观者通过内心独白暗示主角底牌",
+    "core_plot": "在冲突升级时，旁观者通过内心独白分析局势，暗示自己有能力阻止但选择观望，以此铺垫主角即将展现的惊人底牌。旁观者期待主角的表现，若主角失败则证明其不值得关注。这种手法为后续主角的爆发埋下伏笔，同时增加悬念。",
+    "trigger_condition": "主角面临危机，旁观者有能力干预但选择旁观",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "紧张→好奇→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "旁观者视角",
+      "悬念铺垫",
+      "底牌暗示"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "海云帆在一旁，深刻地期待着。来吧，王陆，告诉我你的答案……",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过对比不同角色待遇暗示规则",
+    "core_plot": "通过展示不同角色在同一场景中的待遇差异，暗示该场景存在隐藏规则（如到达时间影响初始资源）。主角待遇最优，配角次之，后续角色更差，形成梯度对比，为后续揭示规则埋下伏笔。",
+    "trigger_condition": "多个角色先后进入同一场景",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→对比→领悟",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "对比手法",
+      "隐藏规则",
+      "待遇差异",
+      "伏笔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "同样是从云波图中穿破迷雾而来，作为第二波入村的人，海云帆的待遇比王陆差了好大一截",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "关键角色提前埋设伏笔",
+    "core_plot": "一个看似不重要的角色（如路人甲）在早期剧情中出现，与主角产生互动，但当时未显重要性。后续剧情中该角色会以关键身份再次出现，揭示其与主线或隐藏剧情的关联，形成前后呼应。",
+    "trigger_condition": "主角在早期阶段遇到一个看似普通的角色，且该角色有后续发展的潜力。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "平淡→回忆→恍然大悟",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "伏笔",
+      "角色回收",
+      "前后呼应"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "海云帆的笑容顿时有些尴尬：“小海……就小海吧，王陆兄，想不到在这里遇到你。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过道具误认制造喜剧性危机伏笔",
+    "core_plot": "角色因视力问题或粗心大意，将关键道具（如占卜剑）误认为另一物品，从而引发对灾难的错误预言。这一错误导致角色和同伴陷入恐慌，但最终危机并未发生。该手法可用于后续揭示角色性格缺陷，或为真正的危机埋下对比伏笔。",
+    "trigger_condition": "角色需要依赖特定道具进行重要判断，且道具外观相似易混淆。",
+    "reward": null,
+    "cost_or_risk": "错误预言可能损害角色权威，或导致资源浪费。",
+    "emotional_beat": "紧张→恐慌→释然→幽默",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "道具误认",
+      "喜剧伏笔",
+      "性格缺陷"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "掌门师兄一愣：“不是年剑？”连忙低头细看，剑柄处果然不是年字，而是……怎么会是茶剑！？",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过高价交易埋下主角经济拮据的伏笔",
+    "core_plot": "主角在早期经历一次看似划算实则被坑的交易，导致资金几乎清零。这一事件为后续主角无法依赖金钱、必须依靠自身能力破局的剧情埋下伏笔，并在升仙大会开始时得到呼应——主角穷得只剩一文钱，只能硬着头皮参加。",
+    "trigger_condition": "主角在资源稀缺环境下进行大额交易。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": null,
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "经济困境",
+      "伏笔",
+      "自力更生"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "片刻之后，老板娘告辞离开，而看着桌上留下的一枚破旧铜板，王陆不禁陷入深思。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过对话揭示考核深层规则",
+    "core_plot": "主角通过分析考核中遇到的对手的言论，推断出考核的真正目的和后续挑战，并以此激励同伴，同时为读者揭示后续剧情走向。",
+    "trigger_condition": "主角在考核中遇到有经验或信息的对手，并从其言语中获取关键信息。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疑惑→顿悟→坚定",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "信息揭示",
+      "规则解读",
+      "激励同伴"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "要点有三个，第一是方才那两个蓝白所说，升仙之路考验的是多个要素，资质、性情、机缘，如今我们才过了资质这一关...",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "吕明的暗示：一草一木皆是缘",
+    "core_plot": "外门师兄吕明在告别时对主角说“升仙之路无常态，一草一木皆是缘”，暗示主角在后续道路上可能会遇到与草木相关的机缘或考验，为后续剧情埋下伏笔。",
+    "trigger_condition": "主角决定继续前进，与吕明告别时。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "神秘→期待",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "暗示",
+      "机缘",
+      "自然元素"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "吕明说：“升仙之路无常态，一草一木皆是缘。”",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "通过角色对话暗示冲突即将爆发",
+    "core_plot": "通过配角的内心独白或对话，暗示主角与即将登场的强势群体之间存在不可调和的矛盾，为后续冲突做铺垫。配角选择旁观，增加悬念。",
+    "trigger_condition": "主角已建立优势地位，强势群体即将登场",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "期待→紧张→看好戏",
+    "applicable_scene_type": "foreshadow",
+    "tags": [
+      "冲突铺垫",
+      "配角视角",
+      "悬念",
+      "势力对立"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "一边是高深莫测的山野奇人王陆，一边是目中无人的修仙世家，这狭小的山村不可能容下两方人马，见面之后必然天雷地火。",
+    "material_type": "foreshadow"
+  },
+  {
+    "title": "主角展示超凡推理与耐心",
+    "core_plot": "主角在众人面前详细解释一个复杂隐藏任务的完整流程，令在场所有自诩聪明的权贵子弟震惊。主角以理所当然的态度表明自己完成了整个任务链，展现出远超常人的耐心、推理能力和冒险精神，成为众人焦点。",
+    "trigger_condition": "主角被质疑或需要解释自己如何获得稀有奖励。",
+    "reward": "获得他人敬畏和神秘感。",
+    "cost_or_risk": "可能引来嫉妒或调查。",
+    "emotional_beat": "平淡→震惊→敬佩→忌惮",
+    "applicable_scene_type": "key",
+    "tags": [
+      "智力展示",
+      "逆袭",
+      "主角光环"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“何需事先知道？眼看着一个庞大的任务链摆在眼前，任何一个合格的冒险者都会一路走到底啊！”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "山野少年以言语震慑世家子弟",
+    "core_plot": "面对三名世家子弟的联合施压和法宝威胁，主角不慌不忙，先以嘲讽揭穿对方底细，再宣称一人可敌三人，甚至只需一句话就能收拾对方。其从容自信的姿态令旁观者心跳加快，兴奋期待，而对方则羞怒交加，不顾一切祭出法宝。主角的言语和气势成为全场焦点。",
+    "trigger_condition": "主角被多人以身份和武力压制",
+    "reward": "获得旁观者的高度评价和期待",
+    "cost_or_risk": "彻底激怒对方，引发全力攻击",
+    "emotional_beat": "平静→嘲讽→紧张→震惊→兴奋",
+    "applicable_scene_type": "key",
+    "tags": [
+      "言语反击",
+      "以弱胜强",
+      "气势压制",
+      "名场面"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆也沉下脸：“我是说，对付你们几个杂碎，我一个就够了，或者说，我只要一句话就能收拾你们。”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "老板娘强势立威",
+    "core_plot": "面对一群身份高贵的闹事者，老板娘以强硬态度和背后靠山压制全场，展现其深藏不露的背景和霸气，令众人灰头土脸。",
+    "trigger_condition": "多位高身份角色在客栈内闹事，质疑老板娘的不公待遇。",
+    "reward": null,
+    "cost_or_risk": "引发众怒，但靠山足够强大，风险可控。",
+    "emotional_beat": "愤怒→震惊→憋屈→无奈",
+    "applicable_scene_type": "key",
+    "tags": [
+      "立威",
+      "扮猪吃虎",
+      "强势反击"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘的职业微笑顿时化作寒冰风雪：“吵什么？不想住可以滚啊！你当我愿意伺候你们这帮废柴啊？”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角在饥饿困境中收到意外馈赠，展现坚韧与信任",
+    "core_plot": "主角在耗尽资源后陷入困境（如饥饿），但之前建立的信任关系（与卖家）带来意外援助。主角在困境中保持尊严，不抱怨不乞求，最终获得远超预期的回报，凸显其人格魅力。",
+    "trigger_condition": "主角因之前的冒险行为陷入资源匮乏的困境。",
+    "reward": "获得关键援助（如食物），缓解当前危机。",
+    "cost_or_risk": null,
+    "emotional_beat": "隐忍→失望→惊喜→感动",
+    "applicable_scene_type": "key",
+    "tags": [
+      "人物高光",
+      "信任回报",
+      "困境反转"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆迫不及待打开食盒，屋内烛光昏暗，但那点点油光却晃得人花了眼。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "五长老在危机中展现守护姿态",
+    "core_plot": "当末法危机看似降临时，一位平时玩世不恭的女性高手瞬间收起散漫，全力施展防御法术，试图托起倾塌的苍穹。她的动作果断而强大，展现出深藏不露的实力和守护门派的决心。危机过后，她又迅速恢复常态，反差凸显其可靠本质。",
+    "trigger_condition": "门派面临看似不可抗的灾难，主角身处危机中心。",
+    "reward": null,
+    "cost_or_risk": "过度消耗法力可能留下隐患。",
+    "emotional_beat": "紧张→震惊→敬佩→安心",
+    "applicable_scene_type": "key",
+    "tags": [
+      "反差萌",
+      "守护",
+      "高手风范"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "白衣女子明眸流转，眼中映出一枚金丹的倒影疯狂转动，倒拖的竹剑被她随手拖动，懒洋洋斜划向上，却带起一道遮天光幕，仿佛要将倾塌的苍穹也托起来。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "老板娘霸气立威，震慑全场",
+    "core_plot": "老板娘在客栈中因书童喧哗而发怒，砸酒坛警告，并强行向一位客人高价出售女儿红，展现其不容挑衅的权威。全场客人被震慑，无人敢反抗。",
+    "trigger_condition": "客栈中出现不守规矩的行为。",
+    "reward": null,
+    "cost_or_risk": "可能引起客人不满，但老板娘实力强大，无人敢惹。",
+    "emotional_beat": "愤怒→威慑→敬畏",
+    "applicable_scene_type": "key",
+    "tags": [
+      "立威",
+      "强势角色",
+      "名场面"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘勃然大怒，一拍柜台：“让你别吵你没听到么！？”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角通过观察发现商机并自信谋划",
+    "core_plot": "主角面对高价低质的食物，没有抱怨或忍耐，而是冷静分析市场供需，发现商家定价策略的漏洞。他利用限购政策和自身身份，策划通过低价买入、转卖或制造需求来获取利润，展现出敏锐的商业头脑和自信。这一行为让同伴困惑，但主角胸有成竹。",
+    "trigger_condition": "主角身处物价异常且商品滞销的环境，且拥有一定资源或身份",
+    "reward": "潜在的经济收益和食物改善",
+    "cost_or_risk": "可能引发商家不满或市场反噬",
+    "emotional_beat": "困惑→分析→兴奋→自信",
+    "applicable_scene_type": "key",
+    "tags": [
+      "商业头脑",
+      "自信谋划",
+      "规则利用"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆眼前一亮，手指在桌上不由得敲呀敲，神色越发兴奋。……“哼哼，今天晚上大概有肉吃了。”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角宣言击穿一切难关的气势",
+    "core_plot": "主角在同伴满足于当前成就时，发表宣言表明自己追求更高目标的决心，展现出超越常人的野心和自信，形成人物高光时刻。",
+    "trigger_condition": "主角在取得初步成功后，面对同伴的满足或退缩，需要坚定信念并激励他人。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "满足→震撼→振奋",
+    "applicable_scene_type": "key",
+    "tags": [
+      "宣言",
+      "野心",
+      "激励"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "身为攻略者，就当有击穿云层与天空，打通一切难关的气势！",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角的自信与决断",
+    "core_plot": "面对外门师兄的警告和书童的犹豫，主角展现出自信和决断力，坚持选择挑战内门之路，并幽默地自称“升仙开塞露”，彰显其不畏艰难、敢于冒险的性格。",
+    "trigger_condition": "主角面临选择，外门师兄警告风险，书童犹豫。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "自信→幽默→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "自信",
+      "决断",
+      "幽默",
+      "主角高光"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆说：“无妨，本人专业冒险几十年，外号就是升仙开塞露，区区艰难险阻何需介怀。”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角以无厘头方式化解世家挑衅",
+    "core_plot": "当强势世家子弟以身份压人要求主角让出住所时，主角以装傻充愣、插科打诨的方式回应，完全无视对方的威势，用荒诞对话瓦解对方的严肃气场，展现主角的独特风格和自信。",
+    "trigger_condition": "主角被强势角色无理要求或挑衅",
+    "reward": "挫败对手气势，维护自身地位",
+    "cost_or_risk": "可能激化矛盾，引来后续报复",
+    "emotional_beat": "紧张→滑稽→轻松→暗藏危机",
+    "applicable_scene_type": "key",
+    "tags": [
+      "反套路",
+      "言语交锋",
+      "装傻",
+      "化解冲突"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆把玉米一拍：“就是不知道才问啊！你他妈果然是有病吧？”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "幕后黑手舌战群儒捍卫设计",
+    "core_plot": "一个被众人指责的幕后设计者，在面对权威的质问时，以独特的理念和逻辑进行反击，将看似胡闹的设计解释为更高层次的考验，并引用历史案例佐证，从而在气势和道理上压制对手，展现其深谋远虑和独特智慧。",
+    "trigger_condition": "设计者的作品遭到权威人士的强烈质疑和指责。",
+    "reward": "维护了自己的设计，并获得部分人的理解或默许。",
+    "cost_or_risk": "加深与权威的矛盾，可能招致后续报复。",
+    "emotional_beat": "紧张→对峙→反转→得意",
+    "applicable_scene_type": "key",
+    "tags": [
+      "舌战",
+      "理念碰撞",
+      "高光时刻"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "遭到如此理直气壮的反驳，刘显气势略弱：“那你说是什么？”“当然是情商！”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "掌门无意间展露修为震慑下属",
+    "core_plot": "掌门在愤怒中无意间释放一丝力量，瞬间驱散了笼罩山峦的云雾大阵，令下属震惊并诚服。掌门却淡然表示这只是化神期修为，在更广阔的天地中不算什么，并提及更高层次的存在，展现出其深不可测的实力和谦逊态度。",
+    "trigger_condition": "掌门因琐事愤怒，情绪波动导致力量外泄。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "愤怒→震惊→诚服→淡然",
+    "applicable_scene_type": "key",
+    "tags": [
+      "实力展示",
+      "掌门",
+      "震慑",
+      "谦逊"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "年轻的灵剑修士一脸骇然之色，刘显则面露诚服：“掌门修为盖世无双，一丝外泄的余力便破了缥缈峰的云雾大阵……师弟心服口服。”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "客栈老板娘强势立威",
+    "core_plot": "在升仙大会前夕，客栈老板娘以雷霆手段教训了试图强住上房的权贵子弟，展现其强势性格和实力。她不仅踢飞了对方，还嘲讽其国家，维护了客栈秩序，也树立了不好惹的形象。",
+    "trigger_condition": "权贵子弟在客栈闹事，试图强占房间。",
+    "reward": "维护了客栈秩序，震慑了其他闹事者。",
+    "cost_or_risk": "可能得罪权贵，但老板娘实力强大不惧。",
+    "emotional_beat": "愤怒→震惊→解气→敬畏",
+    "applicable_scene_type": "key",
+    "tags": [
+      "立威",
+      "强势",
+      "客栈老板娘",
+      "冲突"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "老板娘并不老，看来只有十四五岁，一身粗布长袍，一条油污的围裙，但神色骄傲地像是公主。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角轻松背负同伴行李展现特殊体质",
+    "core_plot": "在众人因特殊桥的消耗而疲惫不堪时，主角却轻松地背负起同伴的行李，并声称走起来比平地还轻松。这一行为与周围人的疲惫形成鲜明对比，凸显主角的特殊体质或潜力，引起同伴的注意和惊讶。",
+    "trigger_condition": "主角在特殊桥上主动帮助同伴背负行李",
+    "reward": "获得同伴的惊讶和关注",
+    "cost_or_risk": null,
+    "emotional_beat": "轻松→惊讶→自豪",
+    "applicable_scene_type": "key",
+    "tags": [
+      "高光",
+      "体质",
+      "轻松",
+      "对比"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆一边叹着气一边将王忠的背囊食盒等接了过来，毫不吃力地背负上去。怪了，我怎么觉着走起来比平地还轻松？",
+    "material_type": "highlight"
+  },
+  {
+    "title": "师兄弟以权威镇压质疑者",
+    "core_plot": "当参与者刘韩龙质疑年龄判定并炫耀家族背景时，师弟通过地图上找不到其家族位置来贬低其家族，师兄则搬出掌门权威进行威胁，两人配合默契，彻底压制了质疑者的气焰，维护了大会秩序。",
+    "trigger_condition": "有人公开质疑主办方的权威或决定。",
+    "reward": "主角见识了如何用权威和贬低手段有效压制质疑。",
+    "cost_or_risk": "质疑者被当众羞辱，可能怀恨在心。",
+    "emotional_beat": "质疑→反击→压制→灰头土脸",
+    "applicable_scene_type": "key",
+    "tags": [
+      "权威压制",
+      "配合默契",
+      "羞辱",
+      "立威"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“地图上都找不到位置的小宗派得瑟什么？……哪儿来的破落门户也敢称世家了！？”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角在困境中展现自信与智慧",
+    "core_plot": "主角在迷雾中长时间行走，体力消耗巨大，但依然保持自信，并通过对游戏机制的理解向同伴解释迷雾可能是试炼场景切换的缓冲地带。主角的冷静分析和强大自信让同伴折服，凸显其超越常人的洞察力和心理素质。",
+    "trigger_condition": "主角在试炼之路中遭遇异常迷雾，同伴开始怀疑。",
+    "reward": null,
+    "cost_or_risk": null,
+    "emotional_beat": "疲惫→自信→解释→折服",
+    "applicable_scene_type": "key",
+    "tags": [
+      "自信",
+      "智慧",
+      "分析能力",
+      "主角光环"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆擦了擦头上的汗水：“唉，感觉不到方才金桥上的充沛助力了……行李都变得重了几分似的。”……“少爷我已经完全听不明白你在说什么了……”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "主角自曝已有灵根",
+    "core_plot": "在众人以为主角是凡人时，主角突然透露自己早已拥有灵根，令身边人震惊，展现主角隐藏实力或深谋远虑。",
+    "trigger_condition": "主角之前被误认为是凡人，且拥有隐藏的灵根。",
+    "reward": "获得他人敬畏或信任。",
+    "cost_or_risk": "可能暴露底牌，引来关注。",
+    "emotional_beat": "震惊→敬佩",
+    "applicable_scene_type": "key",
+    "tags": [
+      "反转",
+      "隐藏实力",
+      "震惊"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“我什么时候说过我是凡人了？”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "父亲倾家荡产支持儿子修仙",
+    "core_plot": "主角的父亲为了支持儿子修仙，不惜花费大量银两购买丹药和功法，甚至在新纳小妾的同时仍全力资助儿子。他茶饭不思，瘦了十斤，最终凑齐了价值二十万两的资源。这种无私的父爱展现了角色的高光时刻，令人感动。",
+    "trigger_condition": "儿子表现出强烈的修仙愿望，父亲虽不理解但全力支持。",
+    "reward": "获得父亲的资源支持（情感上）",
+    "cost_or_risk": "家庭经济伤筋动骨，父亲身心俱疲",
+    "emotional_beat": "担忧→决心→感动",
+    "applicable_scene_type": "key",
+    "tags": [
+      "父爱",
+      "牺牲",
+      "支持",
+      "感动"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王老爷那一个月茶米不思，夜不能寐，瘦了整整十斤，终于让他找到了办法。……为了让王陆能顺利成仙，王老爷可是豁出老本了，舐犊情深，令小书童既是羡慕，又是感动。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "旁观者点破师兄弟真实身份",
+    "core_plot": "书童误以为师兄弟是门童，少爷纠正并指出两人是抽到下签才被罚当门童的修士，且实力强大。通过对话揭示了看似低微身份下的真实实力，形成反差。",
+    "trigger_condition": "有角色被低估，随后被他人点破真实身份或实力。",
+    "reward": "主角获得了对主办方实力的正确认知。",
+    "cost_or_risk": null,
+    "emotional_beat": "误解→惊讶→敬畏",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "身份反差",
+      "实力揭示",
+      "旁观者视角"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“门童？真是瞎了你的狗眼……没听他们说么，是抽签抽到下签才被发配来当门童，方才两人御剑飞仙，轻描淡写地分开拥挤的上千人，你们家门童有这么威武？”",
+    "material_type": "highlight"
+  },
+  {
+    "title": "仙门修士冷场后强行主持大会",
+    "core_plot": "在万众瞩目的升仙大会开场时，两位仙门修士发表致辞后自行鼓掌，却因气场太强无人附和导致冷场。师兄尴尬地转移话题，师弟则直接怼质疑者，最终在兄弟争吵中草草宣布开始。这一场景展现了修士的威严与不接地气，形成反差萌。",
+    "trigger_condition": "仙门修士在大型公开场合主持仪式，但缺乏与凡人的互动经验。",
+    "reward": null,
+    "cost_or_risk": "可能损害仙门形象，但无实质损失。",
+    "emotional_beat": "期待→冷场→尴尬→滑稽",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "名场面",
+      "反差萌",
+      "仙凡互动"
+    ],
+    "quality_score": 5,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "然后两人非常淡定地自顾自鼓起掌来，可惜仙家修士的气场太强，震慑之下无人附和，当即冷场。",
+    "material_type": "highlight"
+  },
+  {
+    "title": "隐藏住宿券任务链",
+    "core_plot": "任务链从与镇门口老人对话开始，需依次完成：听故事→送水→送食物→询问不满→得知千层糕→去糕点铺发现售罄→得知茶馆老板买走→去茶馆帮老板下棋获胜→获得千层糕→给老人→获得推荐信→找镇长→收集素材→去裁缝铺→出村→最终获得铜戒指交给老人，得到住宿券。多阶段推进，每步需推理和探索。",
+    "trigger_condition": "主角与镇门口老人对话并耐心听完故事。",
+    "reward": "稀有住宿券。",
+    "cost_or_risk": "耗时一整天，可能中途放弃。",
+    "emotional_beat": "困惑→坚持→惊喜→成就感",
+    "applicable_scene_type": "key",
+    "tags": [
+      "多阶段任务",
+      "隐藏任务",
+      "推理"
+    ],
+    "quality_score": 10,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“之后要去柳记的点心铺，店主会告诉你千层糕已经卖完了……前往茶馆，老板正忙着和客人下棋……暗中支招帮他取胜，之后就会免费得到一份千层糕。”",
+    "material_type": "task"
+  },
+  {
+    "title": "升仙大会隐藏任务链",
+    "core_plot": "主角通过触发隐藏任务链：与镇口老大爷对话→获得线索→完成后续环节→最终获得稀有奖励。任务链需要耐心和探索，奖励丰厚但易被忽视。",
+    "trigger_condition": "主角主动与镇口老大爷对话并耐心倾听。",
+    "reward": "稀有住宿券等隐藏奖励。",
+    "cost_or_risk": "可能被他人抢先或任务链被破坏。",
+    "emotional_beat": "好奇→坚持→收获→被质疑→证明",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "探索奖励",
+      "多阶段"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "首先与在镇门口发传单的老大爷对话...这里要耐心听完，才能触发下一环。",
+    "material_type": "task"
+  },
+  {
+    "title": "升仙考核多阶段任务链",
+    "core_plot": "主角参与一个多阶段的升仙考核，第一阶段是资质测试（金桥），通过后进入第二阶段（缥缈峰选拔），后续还有更多未知阶段。主角需要依次克服每个阶段的挑战，最终才能加入核心门派。",
+    "trigger_condition": "主角参加大型选拔活动，活动设计为多阶段淘汰制。",
+    "reward": "通过所有阶段后获得加入核心门派的资格。",
+    "cost_or_risk": "每个阶段都可能失败被淘汰，且前期消耗过多体力会影响后续表现。",
+    "emotional_beat": "期待→紧张→坚持→希望",
+    "applicable_scene_type": "key",
+    "tags": [
+      "多阶段考核",
+      "选拔",
+      "成长"
+    ],
+    "quality_score": 9,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "升仙之路考验的是多个要素，资质、性情、机缘，如今我们才过了资质这一关...",
+    "material_type": "task"
+  },
+  {
+    "title": "升仙大会筹备与举办",
+    "core_plot": "门派掌门在末日危机后决定重启中断百年的升仙大会，以选拔新人复兴门派。大会条件宽松，吸引天下少年。随着大会临近，各地少年汇聚，引发冲突和秩序问题。任务链包括：发布大会消息→各地少年响应→筹备期间冲突→大会正式举行。",
+    "trigger_condition": "末日危机后，掌门决定复兴门派，重启升仙大会。",
+    "reward": "选拔到优秀弟子，门派复兴有望。",
+    "cost_or_risk": "大会可能引发势力冲突，管理混乱。",
+    "emotional_beat": "期待→兴奋→紧张→冲突→希望",
+    "applicable_scene_type": "key",
+    "tags": [
+      "升仙大会",
+      "门派复兴",
+      "选拔",
+      "冲突"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "下一次，就定在十二年后，届时天地异变也该有所显现，不奢求太多，若能再次重现百年前的盛世，灵剑派就复兴有望。",
+    "material_type": "task"
+  },
+  {
+    "title": "参加升仙大会：从准备到登桥",
+    "core_plot": "主角在经历经济困境后，等待六天迎来升仙大会。大会开始，仙门修士宣布规则模糊，要求参与者沿金桥攀登，尽力而为，并警告有危险可求救。主角因迟到被堵在镇外，只能远眺，最终随着人流踏上金桥。",
+    "trigger_condition": "主角处于特殊时期（如升仙大会前夕），且已解决基本生存问题。",
+    "reward": "获得参加升仙大会的资格，有机会进入仙门。",
+    "cost_or_risk": "可能面临未知危险或失败风险。",
+    "emotional_beat": "平静→期待→紧张→坚定",
+    "applicable_scene_type": "key",
+    "tags": [
+      "升仙大会",
+      "入门试炼",
+      "任务链开端"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "我宣布，升仙大会正式开始！",
+    "material_type": "task"
+  },
+  {
+    "title": "迷雾迷宫任务链：无路径选择到出口",
+    "core_plot": "任务链分为三个阶段：1）进入迷雾，失去方向感；2）分析环境，发现无固定路径，每个方向都是机缘；3）随机选择方向，最终走出迷雾。过程中主角通过推理和回忆NPC对话来坚定信心，克服迷茫。",
+    "trigger_condition": "主角进入一个封闭且感官被屏蔽的迷宫环境。",
+    "reward": "成功走出迷宫，进入下一区域。",
+    "cost_or_risk": "若长时间无法走出，可能消耗资源或遭遇危险。",
+    "emotional_beat": "困惑→分析→坚定→成功",
+    "applicable_scene_type": "key",
+    "tags": [
+      "迷雾",
+      "迷宫",
+      "推理",
+      "机缘",
+      "任务链"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆说着，俯下身，手指捻起了脚下的尘土。",
+    "material_type": "task"
+  },
+  {
+    "title": "攀登测试桥以获取入门资格",
+    "core_plot": "主角与同伴参与一场通过攀登特殊桥来筛选资质的测试。桥会消耗攀登者的体力，资质越好越轻松。主角轻松前进，同伴逐渐力竭。主角选择陪伴同伴停下，却意外触发传送，直接到达终点，被宗门弟子告知通过测试。任务完成，但同伴未能通过。",
+    "trigger_condition": "主角参与宗门入门测试，需攀登特殊桥",
+    "reward": "获得宗门入门资格",
+    "cost_or_risk": "同伴可能被淘汰，主角的陪伴行为可能被视为放弃",
+    "emotional_beat": "轻松→疑惑→意外→欣喜",
+    "applicable_scene_type": "key",
+    "tags": [
+      "任务",
+      "测试",
+      "入门",
+      "陪伴"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "恭喜二位在金桥上一路攀援至此，按照师门规矩，可与我们师兄弟二人一道回归山门，入逍遥峰修道。",
+    "material_type": "task"
+  },
+  {
+    "title": "隐藏任务链的触发与推进",
+    "core_plot": "主角在一个看似无任务的环境中，通过偶然事件（如遇到关键NPC）触发隐藏任务链。任务链包含多个阶段，如提升特定NPC好感度、完成系列小任务，最终获得特殊奖励，并影响后续主线路径。",
+    "trigger_condition": "主角处于一个封闭或看似无任务的环境，且具备触发隐藏任务的条件（如特定身份、道具或NPC关系）。",
+    "reward": "获得特殊奖励（如体力减半、关键道具等），并解锁后续主线的新选项。",
+    "cost_or_risk": "任务失败可能失去奖励或触发负面后果。",
+    "emotional_beat": "无聊→惊喜→投入→成就感",
+    "applicable_scene_type": "key",
+    "tags": [
+      "隐藏任务",
+      "好感度",
+      "奖励"
+    ],
+    "quality_score": 8,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "村子承接云波图的结果，试炼者会得到不同的起点，然后根据性格和机缘的不同，在村中激发不同的任务链。",
+    "material_type": "task"
+  },
+  {
+    "title": "凡人修仙的筹备任务链",
+    "core_plot": "主角想要修仙，但身为凡人没有灵根。父亲作为支持者，首先寻找方法，得知需要服用升仙散（六和灵根）四十五天才能获得灵根。然后父亲购买丹药，但主角拒绝使用。之后主角转而参加升仙大会，父亲再次提供盘缠和资源。任务链包括：1. 父亲寻找修仙方法；2. 购买丹药；3. 主角拒绝；4. 主角决定参加升仙大会；5. 父亲再次提供支持。最终主角前往灵剑山，任务链暂时完成，但主角的修仙之路仍充满未知。",
+    "trigger_condition": "主角是凡人，渴望修仙，但缺乏灵根和途径。",
+    "reward": "获得修仙资格（通过升仙大会）",
+    "cost_or_risk": "家庭经济巨大消耗，主角可能失败",
+    "emotional_beat": "希望→挫折→坚持→再次希望",
+    "applicable_scene_type": "key",
+    "tags": [
+      "任务链",
+      "凡人修仙",
+      "父爱",
+      "筹备"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆沉默了一会儿，感动地点了点头，然而第二天将那堆货加了五成价卖给了隔壁求仙若渴的王大富和王小虎。……一个月前，灵剑山升仙大会的消息传入村中，再次掀起波澜。",
+    "material_type": "task"
+  },
+  {
+    "title": "解决食物短缺的套利任务链",
+    "core_plot": "主角面临食物价格高昂且限购的困境，决定通过套利策略解决。第一阶段：观察市场，发现萝卜滞销且限购；第二阶段：利用贵宾身份以低价购买一根萝卜；第三阶段：计划通过转卖或制造需求（如向其他顾客推销）来获取资金，最终购买肉类。任务链包含市场分析、规则利用和谈判等环节。",
+    "trigger_condition": "主角身处物价异常且商品滞销的环境，且拥有一定资源或身份",
+    "reward": "解决食物问题，获得经济收益",
+    "cost_or_risk": "可能激怒商家或引发市场波动",
+    "emotional_beat": "困扰→分析→兴奋→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "经济套利",
+      "任务链",
+      "规则利用"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "王陆皱着眉：“这良心可不当饭吃啊……我最讨厌萝卜。”……“哼哼，今天晚上大概有肉吃了。”",
+    "material_type": "task"
+  },
+  {
+    "title": "升仙试炼中的多阶段关卡",
+    "core_plot": "主角参与一个多阶段的试炼，每个阶段有不同考验（如云波图、村庄探索）。试炼由幕后人物设计，但设计者可能临时修改规则，增加意外关卡。主角需通过每个阶段，最终获得进入核心区域的资格。阶段之间通过观察者的评论和地图变化来衔接。",
+    "trigger_condition": "主角参加一个由多个关卡组成的选拔或试炼。",
+    "reward": "通过所有阶段后获得进入核心区域或更高地位的资格。",
+    "cost_or_risk": "每个阶段可能失败，导致淘汰或损失。",
+    "emotional_beat": "紧张→探索→意外→期待",
+    "applicable_scene_type": "key",
+    "tags": [
+      "试炼",
+      "多阶段",
+      "关卡",
+      "选拔"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "云波图后面……应该是根据试炼者的表现，连接赤脊山、冰风谷、青云峡、幽冥道中的一个，若是能一路走到最后，就有资格进入缥缈峰。",
+    "material_type": "task"
+  },
+  {
+    "title": "升仙之路：从外门到内门的挑战",
+    "core_plot": "主角通过入门测试后，面临任务：要么接受外门资格，要么放弃保底，独自挑战通往内门的艰难道路。外门师兄告知近三百年无人成功，但主角仍选择前进。任务包含阶段：选择挑战→获得警告→坚持前进→（后续未知）。",
+    "trigger_condition": "主角通过入门测试，获得外门资格，同时得知有通往内门的道路。",
+    "reward": "内门资格（潜在）",
+    "cost_or_risk": "失去外门资格，若失败则失去入门机会",
+    "emotional_beat": "犹豫→冒险决心→悬念",
+    "applicable_scene_type": "key",
+    "tags": [
+      "任务链",
+      "选择",
+      "挑战",
+      "入门"
+    ],
+    "quality_score": 7,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "张英说：“要么一路走到缥缈峰入灵剑内门，要么升仙之路就此完结，回你的红尘凡世间。”",
+    "material_type": "task"
+  },
+  {
+    "title": "升仙大会的准备与后勤",
+    "core_plot": "掌门委托下属负责升仙大会的后勤工作，包括准备灵石、剑典，甚至麻将等娱乐物品，并计划与另一峰进行赌局。下属虽感无奈，但接受任务，并决定重点关注某些候选人。任务链包括：接受委托→准备物资→安排娱乐→关注特殊人选。",
+    "trigger_condition": "掌门因故无法亲自处理升仙大会，将任务交给下属。",
+    "reward": null,
+    "cost_or_risk": "可能因赌局输掉法宝，或分散精力影响大会公正。",
+    "emotional_beat": "无奈→接受→计划→期待",
+    "applicable_scene_type": "transition",
+    "tags": [
+      "后勤任务",
+      "升仙大会",
+      "赌局",
+      "关注候选人"
+    ],
+    "quality_score": 6,
+    "source_work": "《从前有座灵剑山》（精校版全本）作者：国王陛下",
+    "source_snippet": "“哦对了，记得跟你的师弟们说，带好灵石和剑典……唉，把麻将也带上吧，这次升仙大会大概要搞很久，别弄得太无聊了……”",
+    "material_type": "task"
+  }
+]

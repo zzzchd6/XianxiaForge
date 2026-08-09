@@ -1,0 +1,4 @@
+  File "<string>", line 20
+    print(f'  q={q} [{sw[:15] if sw else \
+                     ^
+SyntaxError: '{' was never closed
